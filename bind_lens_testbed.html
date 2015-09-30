@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>lens.js bind_lens testbed</title>
+<script type="text/javascript" src="lens.js"></script>
+<link rel="stylesheet" media="screen" href="testbed.css"></link>
+<script type="text/javascript">
+function loader() {
+    initLenses();
+    model_info = get_dom_object('old_model');
+    var get_model = function () { return ""; };
+    window.setInterval(function () { model_info.value = get_model(); }, 100);
+    
+    function cycle(lens, callback) {
+        var model = 5;
+        function dom_update(v) {
+           model = v;
+        }
+        get_model = function () { return model; };
+        model_update = lens.bind_to('test', dom_update, 250, 500);
+        model_update(model);
+
+        window.setTimeout(function () {
+            var test = get_dom_object('test');
+            test.firstChild.nodeValue = 15;
+            
+            window.setTimeout(function () {
+                model = 0;
+                model_update(model);
+                
+                window.setTimeout(function () {
+                    unbind_lens('test');
+                    if (!equal(lens.bindings, [])) {
+                        error('cycle', 'Unbound the lens, but the bindings ' +
+                                       'aren\'t empty: ' + lens.bindings);
+                    }
+                    callback();
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    };
+    
+    runTests = function () {
+        cycle(plus(5, 0),
+              function () {
+                  lens = span_tag({}, times(5, 0));
+                  cycle(lens, function () { });
+        });                    
+    };
+};
+</script>
+</head>
+<body onload="loader();">
+<h1 id="header">lens.js bind_lens testbed</h1>
+<input type="button" onclick="runTests();" value="Run tests" />
+<span id="test"></span><br />
+<div>Model value: <input type="text" id="old_model" /></div>
+<div>bind_lens is tested with two lenses: first, <tt>plus(5, 0)</tt>,
+then <tt>span_tag({ id: 'test' }, times(5, 0))</tt>.  In each case, the model
+starts out as 5, then the view is changed to fifteen, and then the model to
+five again.  So the view should go through 10, 15, 5, 25, 15, 0; the model will
+go through 5, 10, 0, 5, 3, 0.</div>
+</body>
+</html>

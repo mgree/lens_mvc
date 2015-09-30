@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Lens Editor</title>
+<script type="text/javascript" src="lens.js"></script>
+<script type="text/javascript" src="flapjax.js"></script>
+<script type="text/javascript">
+/* <!-- */
+initLenses();
+set_error_handler(throw_on_error);
+
+function toJSON(o) {
+    var m = {
+            '\b': '\\b',
+            '\t': '\\t',
+            '\n': '\\n',
+            '\f': '\\f',
+            '\r': '\\r',
+            '"' : '\\"',
+            '\\': '\\\\'
+        };
+    var s = {
+            array: function (x) {
+                var a = ['['], b, f, i, l = x.length, v;
+                for (i = 0; i < l; i += 1) {
+                    v = x[i];
+                    f = s[typeof v];
+                    if (f) {
+                        v = f(v);
+                        if (typeof v == 'string') {
+                            if (b) {
+                                a[a.length] = ',';
+                            }
+                            a[a.length] = v;
+                            b = true;
+                        }
+                    }
+                }
+                a[a.length] = ']';
+                return a.join('');
+            },
+            'boolean': function (x) {
+                return String(x);
+            },
+            'null': function (x) {
+                return "null";
+            },
+            number: function (x) {
+                return isFinite(x) ? String(x) : 'null';
+            },
+            object: function (x) {
+                if (x) {
+                    if (x instanceof Array) {
+                        return s.array(x);
+                    } else if (x instanceof String) {
+                        return s.string(x);
+                    } else if (dom_obj(x)) {
+                        if (x.nodeType == document.TEXT_NODE) {
+                            return s.string(x.nodeValue);
+                        }
+                        
+                        var attribs = x.attributes || [];
+                        var attribs_clean = {};
+                        for (var i = 0;i < attribs.length;i++) {
+                            var attrib = attribs[i];
+                            attribs_clean[attrib.nodeName] = attrib.nodeValue;
+                        }
+
+                        var a = ["{ tag: ", s.string(x.nodeName.toLowerCase()),
+                                 ", attribs: ", s.object(attribs_clean),
+                                 ", children: ", s.array(x.childNodes || []), " }"];
+
+                        return a.join('');
+                    }
+                    var a = ['{'], b, f, i, v;
+                    for (i in x) {
+                        v = x[i];
+                        f = s[typeof v];
+                        if (f) {
+                            v = f(v);
+                            if (typeof v == 'string') {
+                                if (b) {
+                                    a[a.length] = ',';
+                                }
+                                a.push(s.string(i), ':', v);
+                                b = true;
+                            }
+                        }
+                    }
+                    a[a.length] = '}';
+                    return a.join('');
+                }
+                return 'null';
+            },
+            string: function (x) {
+                if (/["\\\x00-\x1f]/.test(x)) {
+                    x = x.replace(/([\x00-\x1f\\"])/g, function(a, b) {
+                        var c = m[b];
+                        if (c) {
+                            return c;
+                        }
+                        c = b.charCodeAt();
+                        return '\\u00' +
+                            Math.floor(c / 16).toString(16) +
+                            (c % 16).toString(16);
+                    });
+                }
+                return '"' + x + '"';
+            }
+        };
+        
+        return s[typeof o](o);
+}
+
+function fromJSON(s) {
+    s.replace(/"(\\.|[^"\\])*"/g, '');
+    
+    if (/[^,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]/.test(s)) {
+        throw 'malformed string';
+    }
+    
+    return eval('(' + s + ')');
+}
+
+function clear_log() {
+    var log = get_dom_object('log');
+    
+    while (log.childNodes.length > 1) {
+        var children = log.childNodes;
+        for (var i = 0;i < children.length;i++) {
+            var child = children[i];
+            if (child.nodeName.toLowerCase() != 'input') {
+                log.removeChild(child);
+            }
+        }
+    }
+    
+    return false;
+}
+
+function log_msg(src, msg, error) {
+    error = error ? ' error' : '';
+    var node = make_dom_node('div', { 'class': 'log ' + src + error }, 
+                             msg instanceof Array ? msg : [msg]);
+
+    var log = get_dom_object('log');
+    log.insertBefore(node, log.firstChild);
+}
+
+function render_call(fun, args) {
+    var call = fun;
+    
+    if (args.length > 0) {
+        call += '(';
+        for (var i = 0;i < args.length;i++) {
+            var arg = args[i];
+            call += is_lens(arg) ? arg.name : toJSON(arg);
+            if (i + 1 < args.length) { call += ', '; }
+        }
+        call += ')';
+    }
+    
+    return call;
+}
+
+function stack_window_maker(stack) {
+    return function () {
+        var win = window.open('', '', 'height=300,width=300');
+        
+        if (!win) {
+            log_error('log', 'Couldn\'t open pop-up stack.');
+            return false;
+        }
+        
+        var doc = win.document;
+        doc.write('<html><head>\n\t<title>Stack trace</title>\n');
+        doc.write('<link rel="stylesheet" media="screen" href="editor.css" />\n');
+        doc.write('</head>\n<body>\n');
+        doc.write('<p>Stack trace:</p>\n');
+        var html = make_dom_node('div', {}, [render_stack(stack, true)]).innerHTML;
+        doc.write(html);
+        doc.write('\n</body>\n</html>');
+        doc.close(); // necessary on some browsers
+        
+        return false;
+    };
+}
+
+function stack_button(text, action) {
+    var node = make_dom_node('a', { 'class': 'stack_button', 'href': '#' },
+                             [text]);
+    add_event_handler(node, 'click', action ? action : 
+                                              function () { return false; });
+    return node;
+}
+
+function stack_buttons(stack) {
+    return make_dom_node('div', { 'class': 'stack_buttons' },
+                         [stack_button('Pop out', stack_window_maker(stack))]);
+}
+
+function render_frame(frame) {
+    var fun = make_dom_node('span', { 'class': 'stack_frame call' },
+                            [render_call(frame.fun, 
+                                         frame.args ? frame.args : [])]);
+    var ctx = make_dom_node('span', { 'class': 'stack_frame ctx' },
+                            [frame.context ? frame.context : '']);
+    
+    return make_dom_node('div', { 'class': 'stack_frame' }, [fun, ctx]);
+}
+
+function render_stack(stack, no_buttons) {
+    no_buttons = no_buttons || false;
+    var frames = make_dom_node('div', { 'class': 'stack_trace' }, 
+                               no_buttons ? [] : [stack_buttons(stack)]);
+    
+    for (var i = 0;i < stack.length;i++) {
+        frames.appendChild(render_frame(stack[i]));
+    }
+    
+    return frames;
+}
+
+function log_error(src, msg, e) {
+    if (e instanceof LensException) {
+        var stack_trace = render_stack(e.stack());
+        
+        return log_msg(src, [msg, stack_trace], true);
+    } else {
+        return log_msg(src, msg + ': ' + e, true);
+    }
+}
+
+var __lens;
+function current_lens() {
+    return __lens || update_current_lens();
+}
+
+function update_current_lens() {
+    var lens;
+    try {
+        // try to parse...
+        lens = eval(get_dom_object('lens_out').value);
+        lens.bind({ 'get': run_get,
+                    'putback': run_putback });
+        if (!is_lens(lens)) { throw lens + ' is not a lens'; }
+        
+        // success!
+        log_msg('lens', 'Parsed lens; top lens type is \'' + lens.name + '\'');        
+    } catch (e) {
+        log_error('lens', 'Lens parse error', e);
+        return id_lens();
+    }
+    
+    __lens = lens;
+    return lens;
+}
+
+function current_model() {
+    var val;
+    try {
+        eval('val = ' + get_dom_object('model_out').value);
+    } catch (e) {
+        log_error('model', 'Couldn\'t parse model', e);
+        return undefined;
+    }
+    
+    return val;
+}
+
+function current_view() {
+    var val;
+    try {
+        if (activeView == 'source') {
+            val = get_dom_object('view_out').value;
+            
+            if (lastWasDOM) {
+                var node = make_dom_node('div', {}, []);
+                node.innerHTML = val;
+                
+                val = (node.childNodes.length == 1) ? node.childNodes[0] :
+                                                      clone(node.childNodes, true);
+            } else {
+                eval('val = ' + val);
+            }
+        } else { // activeView == 'render'
+            val = get_dom_object('view_out').childNodes;
+            
+            if (val.length == 1) { val = val[0]; }
+            if (!lastWasDOM) { val = jsify(val); }
+        }
+    } catch (e) {
+        log_error('view', 'View extraction error', e);
+    }
+    
+    return val;
+}
+
+function view_source_value(val) {
+    /* how we view the 'source' of a value: 
+     * if the last get was a DOM, then we want its HTML source
+     * if the last get as an object, JSON it so we can print it
+     * otherwise, just show the value
+     */
+    return lastWasDOM ? make_dom_node('div', {}, [val]).innerHTML :
+           typeof val == 'object' ? toJSON(val) : val;
+}
+
+var lastWasDOM = false;
+var activeView = 'source';
+var defaultRun = run_get; 
+
+function change_default_run(id) {    
+    var old = id == 'model' ? 'view' : 'model';
+    var old_dir = get_dom_object(old + '_dir');
+    var new_dir = get_dom_object(id + '_dir');
+    
+    old_dir.setAttribute('class', 'dir');
+    new_dir.setAttribute('class', 'dir active_dir');
+    
+    var dir = get_dom_object('dir');
+    dir.innerHTML = { 'model': '&rArr;', 'view': '&lArr;' }[id];
+    defaultRun = { 'model': run_get, 'view': run_putback }[id];
+}
+
+function append_view(node, view) {
+    if (view instanceof Array) {
+        for (var i = 0;i < view.length;i++) {
+            node.appendChild(view);
+            attach_handler(view, function (e) { 
+                window.setTimeout(run_putback, 5); return true; 
+            });
+        }
+    } else {
+        node.appendChild(view);
+        attach_handler(view, function (e) { 
+            window.setTimeout(run_putback, 5); return true; 
+        });
+    }
+}
+
+function make_render_view(view) {
+    var node = make_dom_node('div', { 'id': 'view_out', 'class': 'view' }, []);
+    
+    // stick the current view in there
+    append_view(node, domify(view));
+    
+    return node;
+}
+
+function make_source_view(view) {
+    var node = make_dom_node('textarea', { 'id': 'view_out',
+                                           'name': 'view_out',
+                                           'class': 'view',
+                                           'rows': 14,
+                                           'cols': 50 },
+                             []);
+    
+    // set value to the current view (which is the old view -- render)
+    node.value = view_source_value(jsify(view));
+    
+    // catch keypresses in the textarea, and putback when they occur
+    add_event_handler(node, 'keypress',
+        function (e) { window.setTimeout(run_putback, 5); return true; });
+    
+    return node;
+}
+
+function replace_view(id, make_new_view) {
+    // do nothing if we're already looking at the view
+    if (id == activeView) { return false; }
+    
+    /* we have to get here because of a complicated problem with innerHTML.
+     * we're going to 'view source' of a DOM node by looking at its innerHTML
+     * value -- this happens in view_source_value.  but innerHTML is static, so
+     * we need to recreate a new, static DOM node with any possible edits
+     * included.  in the end, this means we're just emulating Hu, et al.'s CYCLE
+     * rule -- hehehe.
+     */
+    if (id == 'source') { run_get(); }    
+    var view_val = current_view();
+    
+    // make the old tab inactive
+    var old = id == 'render' ? 'source' : 'render';
+    var old_view = get_dom_object('view_' + old);
+    old_view.setAttribute('class', 'view selection');
+    
+    // make the new tab active
+    var new_view = get_dom_object('view_' + id);
+    new_view.setAttribute('class', 'view selection active_selection');
+    
+    // update the actual view
+    var view_out = get_dom_object('view_out');
+    view_out.parentNode.replaceChild(make_new_view(view_val), view_out);
+    activeView = id;
+    
+    /* we have to get here so that lenses which attach events manually, e.g. to
+     * buttons, get a chance to re-run and attach the events for real (they 
+     * won't show up in source view, so just keeping the old model isn't enough */
+    if (id == 'render') { run_get(); }
+    
+    // capture, to prevent page reload
+    return false;
+}
+
+function run_parse() {
+    // reload the lens and then run in the default direction
+    defaultRun(update_current_lens());
+}
+
+function run_get(lens) {
+    lens = (is_lens(lens) && lens) || current_lens();
+    
+    var view = get_dom_object('view_out');
+    
+    // run the get...
+    var val;
+    try {
+        val = lens.get(current_model());
+    } catch (e) {
+        log_error('get', 'Couldn\'t run get on current_model', e);
+    }
+    // keep track of whether the last get produced a DOM object
+    lastWasDOM = dom_obj(val);
+    
+    if (activeView == 'source') {
+        view.value = view_source_value(val);
+    } else { // activeView == 'render'
+        while (view.hasChildNodes()) {
+            view.removeChild(view.firstChild);
+        }
+        
+        append_view(view, domify(val));
+    }
+}
+
+function run_putback(lens) {
+    lens = (is_lens(lens) && lens) || current_lens();
+
+    // run the putback...
+    var val;
+    try {
+        val = lens.putback(current_view(), current_model());
+    } catch (e) {
+        log_error('putback', 
+                  'Couldn\'t run putback on current view and model', e);
+    }
+    
+    var model = get_dom_object('model_out');
+    // update the model -- JSON it so it's pretty-printable
+    model.value = toJSON(val);
+}
+/* --> */
+</script>
+<link rel="stylesheet" media="screen" href="editor.css" />
+</head>
+<body>
+<h1 id="header">Lens Editor</h1>
+<div id="container">
+  <div id="model_view">
+    <div id="model">
+      <textarea id="model_out" name="model_out" class="model" 
+                rows="15" cols="50"
+                onkeypress="window.setTimeout(run_get, 5); return true;">{}</textarea>
+    </div>
+    <div id="active">
+      <a href="#" id="model_dir" class="dir active_dir"
+         onclick="return change_default_run('model');">model</a>
+      <span id="dir">&rArr;</span>
+      <a href="#" id="view_dir" class="dir"
+         onclick="return change_default_run('view');">view</a><br /><br />
+      Select a default data source to be used when a new lens is given.
+    </div>
+    <div id="view">
+      <div id="view_slections">
+        <a class="view selection" id="view_render" href="#" 
+           onclick="return replace_view('render', make_render_view);">Render</a>
+        <a class="view selection active_selection" id="view_source" href="#" 
+           onclick="return replace_view('source', make_source_view);">Source</a>
+      </div>
+      <textarea id="view_out" name="view_out" class="view" rows="14" cols="50"
+                onkeypress="window.setTimeout(run_putback, 5); return true;">{}</textarea>
+    </div>
+  </div>
+  <div id="lens">
+    <textarea id="lens_out" name="lens_out" class="lens" rows="10" cols="115"
+              onkeypress="window.setTimeout(run_parse, 5); return true;">id_lens()</textarea>
+  </div>
+  <div id="log">
+    <input type="button" id="clear" onclick="return clear_log();" value="Clear" />
+  </div>
+</div>
+</body>
+</html>

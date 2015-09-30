@@ -1,0 +1,3644 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+ Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="lens.js Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>lens.js</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Implements the lens bidirectional tree combinators for JavaScript and
+ Flapjax.
+ 
+ <BR/><BR/><B>Version: </B>1<BR/><BR/><B>Author:</B> Michael Greenberg
+ <BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="Binding.html">Binding</a></b></td>
+    <td><p>A binding of a lens.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LAcond.html">LAcond</a></b></td>
+    <td><p>Applies one of two lenses based on predicates on the concrete and abstract
+ trees.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LAdd.html">LAdd</a></b></td>
+    <td>Adds a given property with a given value.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LArith.html">LArith</a></b></td>
+    <td>A refinement of the <a href="LOp.html#">LOp</a> lens -- for binary arithmetic operators.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LCcond.html">LCcond</a></b></td>
+    <td><p>Applies one of two lenses based on a predicate on the concrete tree.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LConcat.html">LConcat</a></b></td>
+    <td>Concatenates sublists, separating them by a spacer.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LCond.html">LCond</a></b></td>
+    <td><p>The generalized conditional.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LConst.html">LConst</a></b></td>
+    <td>The constant lens.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LConstTag.html">LConstTag</a></b></td>
+    <td>A DOM-element constructing lens for static DOM elements, such as br and hr.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LCopy.html">LCopy</a></b></td>
+    <td>Copies a concrete-tree property to a new, read-only property in the
+ abstract tree.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="Lens.html">Lens</a></b></td>
+    <td><p>Lenses work over two domains, A ("abstract") and C ("concrete").</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LensException.html">LensException</a></b></td>
+    <td>A general exception for lenses.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LError.html">LError</a></b></td>
+    <td>The error lens; triggers an error on either get or putback.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LFilter.html">LFilter</a></b></td>
+    <td>In the get direction, projects the concrete tree down to only those
+ properties matching pred.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LFocus.html">LFocus</a></b></td>
+    <td>Focuses concrete tree on a single property, projecting away all other
+ properties of the object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LFork.html">LFork</a></b></td>
+    <td>A simplified <a href="LXfork.html#">LXfork</a>.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LGroup.html">LGroup</a></b></td>
+    <td><p>Groups a list into sublists of size n, e.g.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LHead.html">LHead</a></b></td>
+    <td>Gets the first element of a list.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LHoist.html">LHoist</a></b></td>
+    <td><p>A primitive lens for working with objects; it will 'hoist' a property
+ of a single property object, e.g.:</p>
+ <code>
+ <br /> &gt; h = new LHoist('foo')
+ <br /> &gt; h.get({foo : 5})
+ <br /> 5
+ <br /> &gt; h.putback(5, _) // _ is anything
+ <br /> { 'foo': 5 }
+ </code>
+ <p>By Pierce and Foster's definition, hoist should only accept objects with a
+ single property.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LHoistNonunique.html">LHoistNonunique</a></b></td>
+    <td><p>Hoists (see <a href="LHoist.html#">LHoist</a>) a property from among others, merging its
+ sub-properties into the root tree.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LId.html">LId</a></b></td>
+    <td>The identity lens.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LIndex.html">LIndex</a></b></td>
+    <td>Gets a specific index out of a list.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LLayout.html">LLayout</a></b></td>
+    <td><p>A simple lens for laying properties out in the DOM while also inserting
+ constant, structural data.</p>
+ <p>Composes <a href="LWmap.html#">LWmap</a>, chains of <a href="LAdd.html#">LAdd</a>, and <a href="LOrder.html#">LOrder</a>.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LLength.html">LLength</a></b></td>
+    <td>Gets the length of a list.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LListFilter.html">LListFilter</a></b></td>
+    <td>Filters a list, removing items that fail to matche a predicate.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LListMap.html">LListMap</a></b></td>
+    <td>Maps a function over a list, as <a href="LMap.html#">LMap</a> over an object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LMap.html">LMap</a></b></td>
+    <td>Maps a lens over the properties of an object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LMerge.html">LMerge</a></b></td>
+    <td>Merges two concrete-tree properties into a single abstract-tree property.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LOp.html">LOp</a></b></td>
+    <td>Wraps an invertible operator.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LOptionTag.html">LOptionTag</a></b></td>
+    <td>If given a primitive value on get, it will create an option with the 
+ concrete tree as both the value and the text.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LOrder.html">LOrder</a></b></td>
+    <td>Turns an object into a list, given an order on the properties.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LPlunge.html">LPlunge</a></b></td>
+    <td><p>The dual of <a href="LHoist.html#">LHoist</a>, it pushes the concrete argument into an object
+ under a specific property in the get direction, e.g.:</p>
+ <code>
+ <br /> &gt; p = new LPlunge('foo')
+ <br /> &gt; p.get(5)
+ <br /> { foo: 5 }
+ <br /> &gt; p.putback({ foo: 5 }, _) // _ is anything
+ <br /> 5
+ </code>
+ <p>Strictness issues are as in <a href="LHoist.html#">LHoist</a>.</p>
+
+</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LPrune.html">LPrune</a></b></td>
+    <td>Removes a given property in the get direction, replacing it from the
+ concrete tree during putback.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LRename.html">LRename</a></b></td>
+    <td>Renames a property.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LRenameIfPresent.html">LRenameIfPresent</a></b></td>
+    <td>Renames a property in the concrete tree to a different property in the 
+ abstract tree -- but only if the property is present.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LReverse.html">LReverse</a></b></td>
+    <td>Reverses a list.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LRotate.html">LRotate</a></b></td>
+    <td>Rotates a list: on get, it puts the first element on the end.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LSeq.html">LSeq</a></b></td>
+    <td>The sequencing lens; runs a lens l followed by k.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LTag.html">LTag</a></b></td>
+    <td><p>A generalized DOM element maker for element tags; for text nodes, see
+ <a href="LTextTag.html#">LTextTag</a>.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LTail.html">LTail</a></b></td>
+    <td>Gets the last element of a list.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LTextTag.html">LTextTag</a></b></td>
+    <td>Creates DOM text nodes on get.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LWmap.html">LWmap</a></b></td>
+    <td><p>Maps different lenses over different properties; it is a generalization of
+ <a href="LMap.html#">LMap</a>.</p>
+ <p>It has a slightly strange calling convention, to wit:</p>
+ <code>
+ <br />&gt; wmap = new LWmap([prop1, prop2, prop3], lens1, prop4, lens2)
+ </code>
+ <p>This will run lens1 over prop1, prop2, and prop3's values and lens2 on
+ prop4.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="LXfork.html">LXfork</a></b></td>
+    <td><p>Splits a concrete tree, passing part through one lens and part through
+ another.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="Predicate.html">Predicate</a></b></td>
+    <td><p>Creates a predicate from an object, returning a single-argument function
+ that returns true on certain input, as described below.</p>
+ <p>In general, wherever a predicate is asked for by a function, any of the
+ types in the left-hand column of the table below may be supplied.</p>
+ <table>
+ <tr><td>typeof p</td><td>behavior of returned function in terms of argument
+ c</td></tr>
+ <tr><td>function</td><td>p</td></tr>
+ <tr><td>Predicate</td><td>p.matches</td></tr>
+ <tr><td>Array</td><td>true if c is a value in p</td></tr>
+ <tr><td>object</td><td>true if c is value of one of p's properties</td></tr>
+ <tr><td>anything else</td><td>true if c === p</td></tr>
+
+</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+	<a name="method_summary"><!-- --></a>
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+			<td colspan=2>
+				<font size="+2">
+					<b>Method Summary</b>
+				</font>
+			</td>
+		</tr>
+	
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;function</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!add_event_handler">add_event_handler</a></b>(&lt;DOM:element&gt; obj, &lt;String&gt; event, &lt;function&gt; handler)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Adds an event handler to a DOM node without replacing any existing handlers.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!alert_on_error">alert_on_error</a></b>(source, msg)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 One possible behavior on error: alert.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!attach_handler">attach_handler</a></b>(&lt;DOM:element&gt; obj, &lt;function&gt; handler)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Recursively attaches events to a DOM object.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;function</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!bind_lens">bind_lens</a></b>(&lt;<a href="Lens.html">Lens</a>&gt; lens, &lt;String&gt; dom_id, &lt;function&gt; dom_update_callback, &lt;int&gt; polling)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 <p>Binds a lens to a given id in the document.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!clone">clone</a></b>(o, as_array)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Clones an object or an array (shallowly); anything else is simply returned.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!debugger_on_error">debugger_on_error</a></b>(source, msg)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 One possible behavior on error: start a debugger with the debugger keyword.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!dom_obj">dom_obj</a></b>(o)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;DOM:element</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!domify">domify</a></b>(o)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Turns an object into a displayable DOM element.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;boolean</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!equal">equal</a></b>(o1, o2)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Recursively tests equality of objects.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;DOM:element</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!get_dom_object">get_dom_object</a></b>(&lt;String&gt; name, &lt;boolean&gt; strict)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Gets a DOM object in a portable/intelligent way.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;boolean</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!has_prop">has_prop</a></b>(o, &lt;String&gt; p)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Determines whether p is a property of o.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;boolean</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!is_editable">is_editable</a></b>(o)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 A predicate for DOM objects which are editable, and which events must be
+ caught for.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;boolean</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!is_lens">is_lens</a></b>(o)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Returns true if a given object is a lens.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!jsify">jsify</a></b>(&lt;DOM:node&gt; e, orig)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Turns a DOM element into a JavaScript object -- as best it can.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Contract</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!lens_c">lens_c</a></b>(&lt;Contract&gt; get_c, &lt;Contract&gt; putback_c)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 A contract for a lens object.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Contract</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!lens_constructor">lens_constructor</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 A contract for a <a href="Lens.html#">Lens</a>-derived lens constructor, that enforces
+ a calling convention, as well as get and putback contracts on the generated
+ lens.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!log_on_error">log_on_error</a></b>(source, msg)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 One possible behavior on error: log the error to the Firebug console.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!make_arith_lens">make_arith_lens</a></b>(&lt;String&gt; name, &lt;function&gt; op, &lt;function&gt; inv, &lt;function&gt; guard)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Generates and registers arithmetic lenses.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!make_dom_node">make_dom_node</a></b>(&lt;String&gt; name, attribs, &lt;Array&gt; children)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Creates a DOM node.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;function</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!make_lens_function">make_lens_function</a></b>(&lt;<a href="Lens.html">Lens</a>&gt; lens, &lt;String&gt; name)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Converts a lens constructor into a lens function.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!make_tag_lens">make_tag_lens</a></b>(&lt;String&gt; name, &lt;String&gt; placement)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 <p>Makes an <a href="LTag.html#">LTag</a>-derived lens.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!merge_objects">merge_objects</a></b>(&lt;Object&gt; o1, &lt;Object&gt; o2, &lt;function&gt; error)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Merges two objects.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!nodify">nodify</a></b>(o, id)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Turns objects into span elements with ids.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!nonzero_v">nonzero_v</a></b>(v, d)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The guard used in LTimes and LDivide to prevent v==0 from occuring.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!set_error_handler">set_error_handler</a></b>(&lt;function&gt; handler)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Sets the current error handler.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!split_object">split_object</a></b>(&lt;Object&gt; o, &lt;function&gt; pred)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Splits an object in two: one whose properties all match a predicate, and the
+ rest which fail.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!throw_on_error">throw_on_error</a></b>(source, msg)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 One possible behavior on error: throw.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;<a href="Lens.html">Lens</a></code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!unbind_lens">unbind_lens</a></b>(&lt;String&gt; dom_id)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Unbinds a lens bound to the DOM id dom_id.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!update_lens_prototype">update_lens_prototype</a></b>(&lt;String&gt; name, &lt;function&gt; fun, &lt;boolean&gt; no_seq)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 <p>Updates the <a href="Lens.html#">Lens</a> prototype to have a method with the given name
+ that calls the lens function (see <a href="#make_lens_function">make_lens_function</a>) fun as the
+ second argument to an LSeq, e.g.
+		      </td>
+		   </tr>
+		
+	
+	</table>
+    <p>
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">/**
+ * <span class="attrib">@fileoverview</span>
+ * Implements the lens bidirectional tree combinators for JavaScript and
+ * Flapjax.
+ * 
+ * <span class="attrib">@author</span> Michael Greenberg
+ * <span class="attrib">@version</span> 1
+ */</span>
+
+<span class="comment">// TODO module-ize -- need exports</span>
+<span class="comment">///**</span>
+<span class="comment">// * Initializes the lens system.</span>
+<span class="comment">// *</span>
+<span class="comment">// * <span class="attrib">@param</span> contracts Either the results of initContracts from contracts.js, or</span>
+<span class="comment">// *     false; if it is the contracts object, then contracts will be applied to</span>
+<span class="comment">// *     lenses for better error reporting.</span>
+<span class="comment">// * <span class="attrib">@param</span> {boolean} provideGlobal If true (the default), then lens identifiers</span>
+<span class="comment">// *     will be exported into the global scope</span>
+<span class="comment">// */</span>
+<span class="comment">//function initLenses(contracts, provideGlobal) {</span>
+
+<span class="comment">/*******************************
+ * {{{ INITIALIZATION
+ *******************************/</span>
+
+
+<span class="comment">/* By default, contracts do nothing.
+ */</span>
+var nil = <span class="reserved">function</span> () { };
+var contracts = contracts || {
+	Contract: nil,
+	ContractViolationException: nil,
+	ContractArgsException: nil,
+	flat: nil,
+	func: nil,
+	args: nil,
+	varargs: nil,
+	or: nil,
+	guarded: <span class="reserved">function</span> (ctc, val) { <span class="reserved">return</span> <span class="reserved">function</span> (pos, neg) { <span class="reserved">return</span> val; }; },
+	guard: <span class="reserved">function</span> (ctc, val, pos, neg) { <span class="reserved">return</span> val; },
+	cInstanceof: nil,
+	cTypeof: nil,
+	cNum: nil,
+	cBool: nil,
+	cString: nil,
+	cFunction: nil,
+	cAny: nil,
+	cArrayof: nil,
+	cArray: nil };
+var provideGlobal = provideGlobal || true;
+
+<span class="comment">// INITIALIZATION }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ UTILITY FUNCTIONS
+ *******************************/</span>
+
+<span class="comment">/**
+ * Determines whether p is a property of o.  If o is not an object, then this
+ * function returns true for all p.
+ *
+ * <span class="attrib">@param</span> o The value to test
+ * <span class="attrib">@param</span> {String} p The property to check for
+ * <span class="attrib">@return</span> {boolean} True if p in o
+ */</span>
+<span class="reserved">function</span> has_prop(o, p) {
+	<span class="reserved">return</span> typeof o == <span class="literal">'object'</span> &amp;&amp; p in o;
+}
+
+<span class="reserved">function</span> dom_obj(o) {
+    <span class="reserved">return</span> typeof o == <span class="literal">'object'</span> &amp;&amp; (o instanceof Node || o.nodeType &gt; 0);
+}
+
+<span class="comment">/**
+ * Recursively tests equality of objects.  equal(o, undefined) for
+ * any o.
+ *
+ * <span class="attrib">@param</span> o1 First value to compare
+ * <span class="attrib">@param</span> o2 Second value to compare
+ * <span class="attrib">@return</span> {boolean} true if o1 and o2 are recursively equal 
+ */</span>
+<span class="reserved">function</span> equal(o1, o2) {
+    <span class="reserved">if</span> (o1 === o2 || o1 == o2) { <span class="reserved">return</span> true; }
+    <span class="reserved">if</span> (o1 === undefined || o2 === undefined) { <span class="reserved">return</span> true; }
+      
+    <span class="reserved">if</span> (typeof o1 == <span class="literal">'object'</span> &amp;&amp; typeof o2 == <span class="literal">'object'</span>) {
+        <span class="comment">// special case for DOM nodes -- just compare types, children, and vals</span>
+        <span class="reserved">if</span> (dom_obj(o1) &amp;&amp; dom_obj(o2)) {
+            <span class="reserved">return</span> o1.nodeType == o2.nodeType &amp;&amp;
+                   equal(o1.attributes, o2.attributes) &amp;&amp; 
+                   equal(o1.nodeValue, o2.nodeValue);
+        }
+    
+        var checked = {};
+        
+        <span class="comment">// check each property in o1...</span>
+        <span class="reserved">for</span> (var p in o1) {
+            <span class="comment">// if it matches (recursively), then mark it as checked and go on...</span>
+            <span class="reserved">if</span> (p in o2 &amp;&amp; equal(o1[p], o2[p])) {
+                checked[p] = true;
+            <span class="comment">// if it doesn't match, then we can exit early with false            </span>
+            } <span class="reserved">else</span> {
+                <span class="reserved">return</span> false;
+            }
+        }
+        
+        <span class="comment">// now we check properties in o1 that we haven't already seen...</span>
+        <span class="reserved">for</span> (p in o2) {
+            <span class="comment">// if it doesn't match, return false early</span>
+            <span class="reserved">if</span> (!(p in checked) &amp;&amp; (!(p in o1) || !equal(o1[p], o2[p]))) {
+                <span class="reserved">return</span> false;
+            }
+        }
+        
+        <span class="comment">// if we made it here, everything is equal!</span>
+        <span class="reserved">return</span> true;
+    }
+    
+    <span class="comment">// if o1 and o2 aren't objects, then they're functions -- nothing we can do</span>
+    <span class="comment">// if they're not ==</span>
+    <span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ * Clones an object or an array (shallowly); anything else is simply returned.
+ *
+ * <span class="attrib">@param</span> o The value to be cloned
+ * <span class="attrib">@param</span> as_array Set to true to force the argument to be treated as an array;
+ *     the default is false
+ * <span class="attrib">@return</span> A shallow copy of the object
+ */</span>
+<span class="reserved">function</span> clone(o, as_array) {
+    as_array = as_array || false;
+    
+    <span class="reserved">if</span> (typeof o != <span class="literal">'object'</span>) {
+        <span class="reserved">return</span> o;
+    }
+    
+    <span class="reserved">if</span> (o instanceof Array || as_array) {
+        var arr = [];
+        <span class="reserved">for</span> (var i = 0;i &lt; o.length;i++) {
+            arr.push(o[i]);
+        }
+        
+        <span class="reserved">return</span> arr;
+    }
+    
+    var copy = {};
+    <span class="reserved">for</span> (var prop in o) {
+        copy[prop] = o[prop];
+    }
+    
+    <span class="reserved">return</span> copy;
+}
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Creates a predicate from an object, returning a single-argument function
+ * that returns true on certain input, as described below.&lt;/p&gt;
+ * &lt;p&gt;In general, wherever a predicate is asked for by a function, any of the
+ * types in the left-hand column of the table below may be supplied.&lt;/p&gt;
+ * &lt;table&gt;
+ * &lt;tr&gt;&lt;td&gt;typeof p&lt;/td&gt;&lt;td&gt;behavior of returned function in terms of argument
+ * c&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;function&lt;/td&gt;&lt;td&gt;p&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;Predicate&lt;/td&gt;&lt;td&gt;p.matches&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;Array&lt;/td&gt;&lt;td&gt;true if c is a value in p&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;object&lt;/td&gt;&lt;td&gt;true if c is value of one of p's properties&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;anything else&lt;/td&gt;&lt;td&gt;true if c === p&lt;/td&gt;&lt;/tr&gt;
+ *
+ * <span class="attrib">@param</span> p The predicate source
+ */</span>
+<span class="reserved">function</span> Predicate(p) {
+    var tp = typeof p;
+    
+    <span class="reserved">this</span>.matches = (tp == <span class="literal">'function'</span>) ? p :
+                   (p instanceof Predicate) ? p.matches :
+                   (p instanceof Array) ? <span class="reserved">function</span> (c) {
+                       <span class="reserved">for</span> (var i = 0;i &lt; p.length;i++) {
+                           <span class="reserved">if</span> (c == p[i]) { <span class="reserved">return</span> true; }
+                       }
+                       <span class="reserved">return</span> false;
+                   } :
+                   (tp == <span class="literal">'object'</span>) ? <span class="reserved">function</span> (c) {
+                       <span class="reserved">for</span> (var prop in p) {
+                           <span class="reserved">if</span> (c == p[prop]) { <span class="reserved">return</span> true; }
+                       }
+                       <span class="reserved">return</span> false;
+                   } : <span class="reserved">function</span> (c) { <span class="reserved">return</span> p === c; };    
+    <span class="reserved">return</span> <span class="reserved">this</span>; 
+}
+
+<span class="comment">// UTILITY FUNCTIONS }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ ERROR HANDLING
+ *******************************/</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * A general exception for lenses.
+ *
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@param</span> {Lens} lens The lens in which the error occurred
+ * <span class="attrib">@param</span> {String} msg A description of the error
+ */</span>
+<span class="reserved">function</span> LensException(lens, msg) {
+    <span class="reserved">this</span>.lens = lens;
+    <span class="reserved">this</span>.msg = msg;
+    <span class="reserved">this</span>.name = <span class="literal">"LensException"</span>;
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+LensException.<span class="reserved">prototype</span> = new Error();
+ 
+<span class="comment">/**
+ * One possible behavior on error: throw.
+ */</span>
+<span class="reserved">function</span> throw_on_error(source, msg) {
+    throw new LensException(source, msg);
+}
+
+<span class="comment">/**
+ * One possible behavior on error: alert.
+ */</span>
+<span class="reserved">function</span> alert_on_error(source, msg) {
+    alert([<span class="literal">'error in '</span>, source, <span class="literal">': '</span>, msg].join(<span class="literal">''</span>));
+}
+
+<span class="comment">/**
+ * One possible behavior on error: start a debugger with the debugger keyword.
+ */</span>
+<span class="reserved">function</span> debugger_on_error(source, msg) {
+    <span class="comment">//debugger;</span>
+}
+
+<span class="comment">/**
+ * One possible behavior on error: log the error to the Firebug console.
+ */</span>
+<span class="reserved">function</span> log_on_error(source, msg) {
+    console.log(<span class="literal">'Error (%o): %o'</span>, source, msg);
+}
+
+<span class="comment">/**
+ * Called on error.  Configurable behavior; the default is to throw
+ * an exception.
+ */</span>
+var error = throw_on_error;
+
+<span class="comment">/**
+ * Sets the current error handler.  Possible values include {<span class="attrib">@link</span> 
+ * #throw_on_error}, {<span class="attrib">@link</span> #alert_on_error}, {<span class="attrib">@link</span> #debugger_on_error}, and
+ * {<span class="attrib">@link</span> #log_on_error}.  Handlers will be passed a source identifier and an
+ * error message.
+ *
+ * <span class="attrib">@param</span> {function} handler An error handler: function (source, msg) { ... }
+ */</span>
+<span class="reserved">function</span> set_error_handler(handler) {
+    error = handler;
+}
+
+<span class="comment">/*******************************
+ * {{{ CONTRACTS
+ *******************************/</span>
+
+<span class="comment">// Make contracts available outside of the contracts object</span>
+<span class="reserved">for</span> (var id in contracts) {
+    eval([<span class="literal">'var '</span>, id, <span class="literal">' = contracts.'</span>, id, <span class="literal">';'</span>].join(<span class="literal">''</span>));
+}
+
+<span class="comment">/**
+ * A contract for a lens object.
+ *
+ * <span class="attrib">@param</span> {Contract} get_c The contract for the get operation
+ * <span class="attrib">@param</span> {Contract} putback_c The contract for the putback operation
+ * <span class="attrib">@return</span> {Contract} A contract 'lens_c' that enforces get_c and putback_c 
+ */</span>
+<span class="reserved">function</span> lens_c(get_c, putback_c) {
+    <span class="reserved">return</span> flat(<span class="reserved">function</span> (o) {
+        <span class="reserved">return</span> is_lens(o) &amp;&amp; get_c(o.get) &amp;&amp; putback_c(o.putback);
+    }, <span class="literal">'lens_c'</span>);
+}
+
+<span class="comment">/**
+ * A contract for a {<span class="attrib">@link</span> Lens}-derived lens constructor, that enforces
+ * a calling convention, as well as get and putback contracts on the generated
+ * lens.  Zero or more argument contracts are given, followed by a get contract
+ * and a putback contract.
+ *
+ * <span class="attrib">@return</span> {Contract} A contract for a lens constructor
+ */</span>
+<span class="reserved">function</span> lens_constructor(<span class="comment">/* arg1, arg2, ..., get_c, putback_c */</span>) {
+    var args = clone(arguments, true);
+    var putback_c = args.length &gt; 0 ? args.pop() : cAny();
+    var get_c = args.length &gt; 0 ? args.pop() : cAny;
+    args.push(lens_c(get_c, putback_c));
+    
+    <span class="reserved">return</span> func.apply({}, args);
+}
+
+<span class="comment">// CONTRACTS }}}</span>
+
+<span class="comment">// ERROR HANDLING }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ LENSES
+ *******************************/</span>
+
+<span class="comment">/**
+ * Returns true if a given object is a lens.  It tests this by 'duck typing' --
+ * any object with get and putback properties that are functions is considered
+ * a lens.
+ * <span class="attrib">@param</span> o Any object
+ * <span class="attrib">@return</span> {boolean} True if o is a lens
+ */</span>
+<span class="reserved">function</span> is_lens(o) {
+    <span class="reserved">return</span> o instanceof Lens || 
+           (typeof o == <span class="literal">'object'</span> &amp;&amp; 
+           <span class="literal">'get'</span> in o &amp;&amp; typeof o.get == <span class="literal">'function'</span> &amp;&amp;
+           <span class="literal">'putback'</span> in o &amp;&amp; typeof o.putback == <span class="literal">'function'</span>);
+}
+ 
+<span class="comment">/*******************************
+ * {{{ LENS REGISTRATION
+ *******************************/</span>
+
+<span class="comment">/**
+ * The lens registry. 
+ */</span>
+var __lenses = {};
+
+<span class="comment">/**
+ * Converts a lens constructor into a lens function.
+ *
+ * <span class="attrib">@param</span> {Lens} lens The lens constructor
+ * <span class="attrib">@param</span> {String} name The lens' name
+ * <span class="attrib">@return</span> {function} A lens-creating function -- it behaves like the
+ *     constructor in every way, except that 'new' is not necessary 
+ */</span>
+<span class="reserved">function</span> make_lens_function(lens, name) {
+    <span class="reserved">return</span> <span class="reserved">function</span> (<span class="comment">/* args */</span>) {
+        <span class="comment">// get the prototype set correctly</span>
+        var o = new Lens();
+        
+        <span class="comment">// set the lens' name</span>
+        o.name = name;
+        
+        <span class="comment">// simulate a call to new on the given lens</span>
+        <span class="reserved">return</span> lens.apply(o, arguments);
+    };
+}
+
+<span class="comment">/**
+ * &lt;p&gt;Updates the {<span class="attrib">@link</span> Lens} prototype to have a method with the given name
+ * that calls the lens function (see {<span class="attrib">@link</span> #make_lens_function}) fun as the
+ * second argument to an LSeq, e.g. if the lens foo is added to the prototype,
+ * then any lens may call &lt;tt&gt;l.foo(...)&lt;/tt&gt; with meaning 
+ * &lt;tt&gt;seq(l, foo(...))&lt;/tt&gt;.  Naturally, this behavior is not done for seq 
+ * itself, by setting the third parameter to true.&lt;/p&gt;
+ * &lt;p&gt;This function should not be called directly, as {<span class="attrib">@link</span> #$L} will call it
+ * for you.&lt;/p&gt;
+ *
+ * <span class="attrib">@param</span> {String} name The name of the lens
+ * <span class="attrib">@param</span> {function} fun The lens function, from {<span class="attrib">@link</span> #make_lens_function}
+ * <span class="attrib">@param</span> {boolean} no_seq By default false, set to true to remove the implicit
+ *     LSeq; instead, the lens (e.g. l in l.foo(...)) will be the first argument
+ *     to fun, followed by ...
+ */</span>
+<span class="reserved">function</span> update_lens_prototype(name, fun, no_seq) {
+    no_seq = no_seq || false;
+    
+    <span class="reserved">if</span> (!no_seq) {
+        Lens.<span class="reserved">prototype</span>[name] = <span class="reserved">function</span> () {
+            <span class="reserved">return</span> new LSeq(<span class="reserved">this</span>, fun.apply({}, arguments));
+        };
+    } <span class="reserved">else</span> {
+        Lens.<span class="reserved">prototype</span>[name] = <span class="reserved">function</span> () {
+            var args = clone(arguments, true);
+            <span class="reserved">return</span> fun.apply({}, [<span class="reserved">this</span>].concat(args));
+        };
+    }
+}
+
+<span class="comment">/**
+ * Registers a lens.  This stores the result of {<span class="attrib">@link</span> #make_lens_function} in
+ * a registry, and calls {<span class="attrib">@link</span> #update_lens_prototype} appropriately.
+ * 
+ * <span class="attrib">@param</span> {Lens} lens The lens
+ * <span class="attrib">@param</span> {String} lens_name The name of the lens
+ * <span class="attrib">@param</span> {Contract} contract An optional contract to apply to the lens
+ * <span class="attrib">@param</span> {boolean} By default false, setting it to true will change the
+ *     behavior of dot sequencing to treat the lens like LSeq, e.g. not insert
+ *     an implicit call to LSeq; see {<span class="attrib">@link</span> #update_lens_prototype} for more.
+ */</span>
+<span class="reserved">function</span> $L(lens, name, contract, no_seq) {
+    <span class="reserved">if</span> (contract !== undefined) {
+        lens = contracts.guard(contract, lens, name, <span class="literal">'user code'</span>);
+    }
+    
+    var fun = make_lens_function(lens, name);
+    __lenses[name] = { <span class="literal">'lens'</span>: lens, <span class="literal">'fun'</span>: fun };
+    lens.<span class="reserved">prototype</span> = new Lens();
+    update_lens_prototype(name, fun, no_seq);
+}
+
+<span class="comment">// LENS REGISTRATION }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ BASIC LENSES
+ *******************************/</span> 
+ 
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Lenses work over two domains, A ("abstract") and C ("concrete").  The types
+ * of the get and putback functions are:&lt;/p&gt;
+ * &lt;pre&gt;
+ *     get :: C -&gt; A
+ *     putback :: A x C -&gt; C
+ * &lt;/pre&gt;
+ * &lt;p&gt;Thus these are much better termed "project" and "merge".  In the case of
+ * the lens library, C is taken to be a JavaScript model (e.g. the domain of 
+ * values in JavaScript) and A is taken to be the DOM.  Thus, in Flapjax terms,
+ * get is "insertDom" and putback is "extract".  Don't be daunted by the use of
+ * 'abstract tree' and 'concrete tree' in the documentation -- it's an artifact
+ * of the theoretical research on bidirectional computation.&lt;/p&gt;
+ * &lt;p&gt;Lenses are themselves implemented as objects with get and putback methods;
+ * the resulting lens driver requires nothing else, but won't interfere with
+ * other fields or methods.  Thus it is not required to have the prototype of a
+ * lens constructor point to Lens, but this library follows that pattern.&lt;/p&gt;
+ *
+ * <span class="attrib">@constructor</span>
+ */</span>
+<span class="reserved">function</span> Lens() { 
+    <span class="reserved">this</span>.name = undefined;
+    <span class="reserved">this</span>.error = <span class="reserved">function</span> (msg) { error(<span class="reserved">this</span>.name, msg); }; 
+}
+ 
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * The identity lens.
+ *
+ * <span class="attrib">@extends</span> Lens 
+ */</span>
+<span class="reserved">function</span> LId() {
+<span class="comment">//    this.name = 'id_lens';</span>
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) { <span class="reserved">return</span> c; };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) { <span class="reserved">return</span> a; };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>; 	
+}
+$L(LId, <span class="literal">'id_lens'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * The error lens; triggers an error on either get or putback.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} source The source of the error
+ * <span class="attrib">@param</span> {String} msg The error message itself; 'GET: ' and 'PUTBACK: ' will
+ *     be prepended appropriately
+ */</span>
+<span class="reserved">function</span> LError(source, msg) {
+<span class="comment">//    this.name = 'error_lens';</span>
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> () { error(source, <span class="literal">'GET: '</span> + msg); };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> () { error(source, <span class="literal">'PUTBACK: '</span> + msg); };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LError, <span class="literal">'error_lens'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * The sequencing lens; runs a lens l followed by k.  It will also take more
+ * than two lenses, chaining them as LSeq(l, LSeq(k, LSeq(j, ...))).
+ * 
+ * <span class="attrib">@extends</span> Lens 
+ * <span class="attrib">@param</span> {Lens} l The first lens to run
+ * <span class="attrib">@param</span> {Lens} k The second lens to run
+ */</span>
+<span class="reserved">function</span> LSeq(l, k <span class="comment">/* ... */</span>) {
+    <span class="reserved">if</span> (arguments.length &gt; 2) {
+        <span class="comment">// copy arguments array</span>
+        var args = clone(arguments, true);
+        <span class="comment">// call recursively on all but one</span>
+        k = LSeq.apply(new Lens(), args.slice(1)); 
+    }
+    
+    <span class="reserved">this</span>.name = <span class="literal">'seq'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        <span class="reserved">return</span> k.get(l.get(c));
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="reserved">return</span> l.putback(k.putback(a, 
+ 	                               l.get(c)), 
+ 	                     c);
+ 	};
+ 	
+ 	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LSeq, <span class="literal">'seq'</span>, undefined, true); <span class="comment">// undefined -&gt; no contract; true -&gt; no_seq</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * The constant lens.  Replaces the concrete value with a given value; if
+ * undefined is putback, a default value will be given.
+ * 
+ * <span class="attrib">@extends</span> Lens 
+ * <span class="attrib">@param</span> v The value to substitute on get (in A)
+ * <span class="attrib">@param</span> d The default value to return on putback (in C)
+ * <span class="attrib">@param</span> {boolean} strict Set if putback should require that the abstract tree
+ *     be equal to v.  It is set by default; unsetting it can violate the
+ *     putget law.
+ */</span>
+<span class="reserved">function</span> LConst(v, d, strict) {
+    <span class="reserved">this</span>.name = <span class="literal">'constant'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) { <span class="reserved">return</span> v; };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="reserved">if</span> (strict !== false &amp;&amp; !equal(a, v)) {
+            <span class="reserved">this</span>.error([<span class="literal">"HTML putback argument "</span>, a, 
+                        <span class="literal">" was edited away from "</span>, v].join(<span class="literal">''</span>)); 
+        }
+        <span class="reserved">else</span> <span class="reserved">if</span> (c === undefined) { <span class="reserved">return</span> d; }
+        <span class="reserved">else</span> { <span class="reserved">return</span> c; }
+    };
+
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LConst, <span class="literal">'constant'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Wraps an invertible operator.
+ * 
+ * <span class="attrib">@extends</span> Lens 
+ * <span class="attrib">@param</span> {function} op The operator
+ * <span class="attrib">@param</span> {function} inv The inverse of op
+ * <span class="attrib">@param</span> d The default value to return on putback (in C)
+ */</span>
+<span class="reserved">function</span> LOp(op, inv, d) {
+    <span class="reserved">this</span>.name = <span class="literal">'op'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) { <span class="reserved">return</span> op(c); };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) { <span class="reserved">return</span> a === undefined ? d : inv(a); };
+
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LOp, <span class="literal">'op'</span>);
+
+<span class="comment">// BASIC LENSES }}}</span>
+
+<span class="comment">/******************************* 
+ * {{{ ARITHMETIC LENSES
+ *******************************/</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * A refinement of the {<span class="attrib">@link</span> LOp} lens -- for binary arithmetic operators.
+ *
+ * <span class="attrib">@extends</span> Lens 
+ * <span class="attrib">@param</span> {function} op The operator
+ * <span class="attrib">@param</span> {function} inv The inverse of op
+ * <span class="attrib">@param</span> v The second value to pass to op on get and putback
+ * <span class="attrib">@param</span> d The default value to return on putback (in C)
+ */</span>
+<span class="reserved">function</span> LArith(op, inv, v, d) { 
+    LOp.call(<span class="reserved">this</span>,
+       <span class="reserved">function</span> (c) { <span class="reserved">return</span> op(c, v); },
+       <span class="reserved">function</span> (a) { <span class="reserved">return</span> inv(a, v); },
+       d);
+    <span class="reserved">this</span>.name = <span class="literal">'arith'</span>;
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LArith, <span class="literal">'arith'</span>);
+
+<span class="comment">/**
+ * Generates and registers arithmetic lenses.
+ *
+ * <span class="attrib">@param</span> {String} name The lens to create
+ * <span class="attrib">@param</span> {function} op The operator
+ * <span class="attrib">@param</span> {function} inv Its inverse
+ * <span class="attrib">@param</span> {function} guard An optional guard over v and d, 
+ *     which can throw an error if v and d are somehow invalid 
+ *     for op and inv, e.g. would cause a divide-by-zero.  Takes
+ *     v, and d.  For an example, see {<span class="attrib">@link</span> #nonzero_v}.
+ */</span>
+<span class="reserved">function</span> make_arith_lens(name, op, inv, guard) {
+    var f = <span class="reserved">function</span> (v, d) {
+        <span class="reserved">this</span>.name = name; <span class="comment">// set it for the guard</span>
+        <span class="reserved">if</span> (guard) { guard.call(<span class="reserved">this</span>, v, d); }
+        
+        LArith.call(<span class="reserved">this</span>, op, inv, v, d);
+        <span class="reserved">this</span>.name = name; <span class="comment">// reset it from when LArith overwrote it</span>
+
+        <span class="reserved">return</span> <span class="reserved">this</span>;
+    };
+    $L(f, name);
+    <span class="reserved">return</span> f;
+}
+
+<span class="comment">// TODO for some reason jsdoc is unhappy with this style, so none of these</span>
+<span class="comment">//      lenses get any documentation</span>
+
+<span class="comment">/**
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {int} v Added to the concrete tree in get, subtracted from
+ *     the abstract tree on putback
+ * <span class="attrib">@param</span> d The value putback if the abstract tree is undefined
+ */</span>
+LPlus = make_arith_lens(<span class="literal">'plus'</span>, 
+                        <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a + b; },
+                        <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a - b; });
+                        
+<span class="comment">/**
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {int} v Subtracted from the concrete tree in get, added to
+ *     the abstract tree on putback
+ * <span class="attrib">@param</span> d The value putback if the abstract tree is undefined
+ */</span>
+LMinus = make_arith_lens(<span class="literal">'minus'</span>, 
+                         <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a - b; },
+                         <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a + b; });
+
+<span class="comment">/**
+ * The guard used in LTimes and LDivide to prevent v==0 from occuring.
+ */</span>
+<span class="reserved">function</span> nonzero_v(v, d) {
+    <span class="reserved">if</span> (v === 0) {
+        <span class="reserved">this</span>.error(<span class="literal">'cannot use 0 as v (first argument), since it has no inverse'</span>);
+    }
+}
+
+<span class="comment">/**
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {int} v Multiplied with the concrete tree in get, divides from
+ *     the abstract tree on putback
+ * <span class="attrib">@param</span> d The value putback if the abstract tree is undefined
+ */</span>                         
+LTimes = make_arith_lens(<span class="literal">'times'</span>,
+                         <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a * b; },
+                         <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a / b; },
+                         nonzero_v);
+
+<span class="comment">/**
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {int} v Divided from the concrete tree in get, multiplies with
+ *     the abstract tree on putback
+ * <span class="attrib">@param</span> d The value putback if the abstract tree is undefined
+ */</span>
+LDivide = make_arith_lens(<span class="literal">'divide'</span>,
+                          <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a / b; },
+                          <span class="reserved">function</span> (a, b) { <span class="reserved">return</span> a * b; },
+                          nonzero_v);
+
+<span class="comment">// ARITHMETIC LENSES }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ OBJECT LENSES
+ *******************************/</span>
+                          
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;A primitive lens for working with objects; it will 'hoist' a property
+ * of a single property object, e.g.:&lt;/p&gt;
+ * &lt;code&gt;
+ * &lt;br /&gt; &amp;gt; h = new LHoist('foo')
+ * &lt;br /&gt; &amp;gt; h.get({foo : 5})
+ * &lt;br /&gt; 5
+ * &lt;br /&gt; &amp;gt; h.putback(5, _) // _ is anything
+ * &lt;br /&gt; { 'foo': 5 }
+ * &lt;/code&gt;
+ * &lt;p&gt;By Pierce and Foster's definition, hoist should only accept objects with a
+ * single property.  For convenience, more objects with more than one property
+ * will be accepted by hoist; however, missing values will not be returned on 
+ * putback.  If missing values should be restored on putback, use {<span class="attrib">@link</span> LFocus}.&lt;/p&gt;
+ * &lt;p&gt;Hoist will also (non-standardly) accept objects on get without the desired 
+ * property; undefined will be returned.&lt;/p&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} prop The property of the concrete tree to select for.  It 
+ *     must have only one property.  For a more permissive form of hoisting,
+ *     see {<span class="attrib">@link</span> LFocus}.
+ * <span class="attrib">@param</span> {boolean} check_prop Whether or not to check that the property prop
+ *     is really present and the only property.  If it is not, an error will be
+ *     signalled.  This is false by default.
+ * <span class="attrib">@see</span> LHoistNonunique
+ */</span>
+<span class="reserved">function</span> LHoist(prop, check_prop) {
+    check_prop = check_prop || false;
+
+    <span class="reserved">this</span>.name = <span class="literal">'hoist'</span>;
+    
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        <span class="reserved">if</span> (c === undefined) { <span class="reserved">return</span> undefined; }
+        <span class="reserved">if</span> (typeof c != <span class="literal">'object'</span>) { <span class="reserved">this</span>.error(<span class="literal">'expected object in get, got '</span> + c); }
+        <span class="reserved">if</span> (check_prop) {        
+            <span class="reserved">if</span> (!(prop in c)) {
+                <span class="reserved">this</span>.error([<span class="literal">'property '</span>, prop, <span class="literal">' not found in '</span> + c].join(<span class="literal">''</span>)); 
+            }
+            
+            <span class="reserved">for</span> (var p in c) {
+                <span class="reserved">if</span> (p != prop) {
+                    <span class="reserved">this</span>.error([<span class="literal">'expected object with only property '</span>, prop,
+                                <span class="literal">' but also found '</span>, p, <span class="literal">' in '</span>, c].join(<span class="literal">''</span>));
+                }
+            }
+        }
+         
+        <span class="reserved">return</span> c[prop];
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        var o = {};
+        o[prop] = a;
+        <span class="reserved">return</span> o;
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LHoist, <span class="literal">'hoist'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;The dual of {<span class="attrib">@link</span> LHoist}, it pushes the concrete argument into an object
+ * under a specific property in the get direction, e.g.:&lt;/p&gt;
+ * &lt;code&gt;
+ * &lt;br /&gt; &amp;gt; p = new LPlunge('foo')
+ * &lt;br /&gt; &amp;gt; p.get(5)
+ * &lt;br /&gt; { foo: 5 }
+ * &lt;br /&gt; &amp;gt; p.putback({ foo: 5 }, _) // _ is anything
+ * &lt;br /&gt; 5
+ * &lt;/code&gt;
+ * &lt;p&gt;Strictness issues are as in {<span class="attrib">@link</span> LHoist}.&lt;/p&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} prop The property under which to plunge.
+ * <span class="attrib">@param</span> {boolean} check_prop Set to true to require that the tree on putback
+ *     have one and only one property -- prop.  The default is false, and so
+ *     checking is more lax, but missing properties will not be reconstructed at
+ *     the next get.
+ */</span>
+<span class="reserved">function</span> LPlunge(prop, check_prop) {
+    check_prop = check_prop || false;    
+    
+    <span class="reserved">this</span>.name = <span class="literal">'plunge'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        var o = {};
+        o[prop] = c;
+        <span class="reserved">return</span> o;
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="comment">//if (a == undefined) { return undefined; } // ??? should we allow this?</span>
+        <span class="reserved">if</span> (typeof a != <span class="literal">'object'</span>) { <span class="reserved">this</span>.error(<span class="literal">'expected object in putback, got '</span> + a); }
+        <span class="reserved">if</span> (check_prop) {        
+            <span class="reserved">if</span> (!(prop in a)) {
+                <span class="reserved">this</span>.error([<span class="literal">'property '</span>, prop, <span class="literal">' not found in '</span> + a].join(<span class="literal">''</span>)); 
+            }
+            
+            <span class="reserved">for</span> (var p in a) {
+                <span class="reserved">if</span> (p != prop) {
+                    <span class="reserved">this</span>.error([<span class="literal">'expected object with only property '</span>, prop,
+                                <span class="literal">' but also found '</span>, p, <span class="literal">' in '</span>, a].join(<span class="literal">''</span>));
+                }
+            }
+        }
+        
+        <span class="reserved">return</span> a[prop];
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LPlunge, <span class="literal">'plunge'</span>);
+
+<span class="comment">/**
+ * Splits an object in two: one whose properties all match a predicate, and the
+ * rest which fail.
+ *
+ * <span class="attrib">@param</span> {Object} o The object to split
+ * <span class="attrib">@param</span> {function} pred The predicate over property names
+ * <span class="attrib">@return</span> {Object} An object o where o.passed has passing properties and
+ *     o.failed has failing properties.
+ */</span>
+<span class="reserved">function</span> split_object(o, pred) {
+	<span class="reserved">if</span> (o === undefined) { <span class="reserved">return</span> { <span class="literal">'passed'</span>: undefined, <span class="literal">'failed'</span>: undefined }; }
+
+	var passed = {};
+	var failed = {};
+	
+	<span class="comment">// split c into matching and non-matching parts</span>
+	<span class="reserved">for</span> (var prop in o) {
+		(pred.matches(prop) ? passed : failed)[prop] = o[prop];
+	}
+
+	<span class="reserved">return</span> { <span class="literal">'passed'</span>: passed, <span class="literal">'failed'</span>: failed };
+}
+
+
+<span class="comment">/**
+ * Merges two objects.  If their properties aren't disjoint, than the procedure
+ * error is called, if it was provided.
+ *
+ * <span class="attrib">@param</span> {Object} o1 The first object
+ * <span class="attrib">@param</span> {Object} o2 The second object
+ * <span class="attrib">@param</span> {function} error Optional.  Called if a property in o2 is also in o1
+ * <span class="attrib">@return</span> {Object} The union of o1 and o2
+ */</span>
+<span class="reserved">function</span> merge_objects(o1, o2, error) {
+	<span class="reserved">if</span> (o1 === undefined) { <span class="reserved">return</span> o2; }
+	<span class="reserved">if</span> (o2 === undefined) { <span class="reserved">return</span> o1; }
+
+	var merged = {};
+	
+	<span class="reserved">for</span> (var prop in o1) {
+		merged[prop] = o1[prop];
+	}	
+	
+	<span class="reserved">for</span> (prop in o2) {
+		<span class="reserved">if</span> (prop in merged &amp;&amp; error) { error(<span class="literal">'merge_objects'</span>, prop); }
+		merged[prop] = o2[prop];
+	}
+	
+	<span class="reserved">return</span> merged;
+}
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Splits a concrete tree, passing part through one lens and part through
+ * another.  Those parts which pass predicates pred_c and pred_a will go
+ * through pass_lens; whatever remains will be passed through fail_lens.&lt;/p&gt;
+ * &lt;p&gt; If either of pred_{a,c} are not actually predicates, they will be made
+ * into predicates by means of the {<span class="attrib">@link</span> Predicate} constructor.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {Predicate} pred_c A predicate over concrete-tree properties; those
+ *     passing properties will be taken as a single object and passed through
+ *     pass_lens in the get direction; in the putback direction, it will be used
+ *     as the putback for pass_lens.
+ * <span class="attrib">@param</span> {Predicate} pred_a A predicate over abstract-tree properties; those
+ *     passing properties will be taken as a single object during putback, and
+ *     will be passed (along with pred_c-passing properties) back through
+ *     pass_lens's putback.
+ * <span class="attrib">@param</span> {Lens} pass_lens Used for passing properties
+ * <span class="attrib">@param</span> {Lens} fail_lens Used for failing properties
+ */</span>
+<span class="reserved">function</span> LXfork(pred_c, pred_a, pass_lens, fail_lens) {
+    pred_c = new Predicate(pred_c);
+    pred_a = new Predicate(pred_a);
+    	
+	<span class="reserved">this</span>.name = <span class="literal">'xfork'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="comment">// split the object into branches whose properties pass and fail pred_c</span>
+		var split = split_object(c, pred_c);
+		
+		<span class="comment">// apply the lenses to the branches appropriately</span>
+		var got_passed = pass_lens.get(split.passed);
+		var got_failed = fail_lens.get(split.failed);
+
+		<span class="comment">// and merge</span>
+		var lens = <span class="reserved">this</span>; <span class="comment">// saved because you can't close on this</span>
+		<span class="reserved">return</span> merge_objects(got_passed, got_failed,
+		                     <span class="reserved">function</span> (prop) {
+		                         lens.error(<span class="literal">'property '</span> + prop + 
+		                                    <span class="literal">' was in both branches during get'</span>);
+		                     });
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		<span class="comment">// split a and c on their respective predicates</span>
+		var split_a = split_object(a, pred_a);
+		var split_c = split_object(c, pred_c);
+		
+		<span class="comment">// putback passing and failing objects separately</span>
+		var put_passed = pass_lens.putback(split_a.passed, split_c.passed);
+		var put_failed = fail_lens.putback(split_a.failed, split_c.failed);
+		
+		<span class="comment">// and merge</span>
+		var lens = <span class="reserved">this</span>;
+		<span class="reserved">return</span> merge_objects(put_passed, put_failed,
+		                     <span class="reserved">function</span> (prop) {
+		                         lens.error(<span class="literal">'property '</span> + prop +
+		                                    <span class="literal">' was in both branches during putback'</span>);
+		                     });
+	};
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LXfork, <span class="literal">'xfork'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * A simplified {<span class="attrib">@link</span> LXfork}.  The concrete tree is split based on a predicate
+ * over properties; the object composed of passing properties is passed to
+ * pass_lens, and whatever remains is passed to fail_lens.  On putback, the
+ * same predicate is used on both the abstract and the concrete trees.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {function} pred The predicate on properties
+ * <span class="attrib">@param</span> {Lens} pass_lens The lens through which the object composed of 
+ *     passing properties will be passed
+ * <span class="attrib">@param</span> {Lens} fail_lens The lens through which the failing-property
+ *     object will be passed
+ */</span>
+<span class="reserved">function</span> LFork(pred, pass_lens, fail_lens) {
+	LXfork.call(<span class="reserved">this</span>, pred, pred, pass_lens, fail_lens);
+	<span class="reserved">this</span>.name = <span class="literal">'fork'</span>;
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LFork, <span class="literal">'fork'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * In the get direction, projects the concrete tree down to only those
+ * properties matching pred.  In the putback direction, they are restored (if
+ * they are present in the concrete tree).
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {function} pred A predicate matching the desired properties
+ * <span class="attrib">@param</span> d The default value to putback if nothing is found in the concrete
+ *     tree
+ */</span>
+<span class="reserved">function</span> LFilter(pred, d) {
+	LFork.call(<span class="reserved">this</span>, pred, new LId(), new LConst({}, d));
+	<span class="reserved">this</span>.name = <span class="literal">'filter'</span>;
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LFilter, <span class="literal">'filter'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Removes a given property in the get direction, replacing it from the
+ * concrete tree during putback.  If the concrete tree has that property
+ * undefined, then that property will get value d.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} prop The property to prune
+ * <span class="attrib">@param</span> d The default value for the property, if it should be undefined
+ */</span>
+<span class="reserved">function</span> LPrune(prop, d) {
+    <span class="comment">// BUG each lens shares a single default putback -- need to open up fork</span>
+    <span class="comment">//     to get a new o made each time</span>
+    var o = { };
+    o[prop] = d;
+    
+	LFork.call(<span class="reserved">this</span>, <span class="reserved">function</span> (p) { <span class="reserved">return</span> p === prop; },
+	           new LConst({}, o), new LId());
+	<span class="reserved">this</span>.name = <span class="literal">'prune'</span>;
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LPrune, <span class="literal">'prune'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Adds a given property with a given value.  It exists only in the abstract
+ * tree, and so is effectively read-only.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} prop The property to add
+ * <span class="attrib">@param</span> v The value of the property to add
+ */</span>
+<span class="reserved">function</span> LAdd(prop, v) {
+	LXfork.call(<span class="reserved">this</span>, 
+				<span class="reserved">function</span> (pc) { <span class="reserved">return</span> false; },
+				<span class="reserved">function</span> (pa) { <span class="reserved">return</span> pa == prop; },
+				new LSeq(new LConst(v, {}),
+						 new LPlunge(prop)),
+				new LId());
+	<span class="reserved">this</span>.name = <span class="literal">'add'</span>;
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LAdd, <span class="literal">'add'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Focuses concrete tree on a single property, projecting away all other
+ * properties of the object.  If, on putback, the property comes back undefined,
+ * then a default value will be substituted.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} prop The property on which to focus
+ * <span class="attrib">@param</span> d The default value, if the abstract tree is undefined
+ */</span>
+<span class="reserved">function</span> LFocus(prop, d) {
+    LSeq.call(<span class="reserved">this</span>,
+              new LFilter(<span class="reserved">function</span> (p) { <span class="reserved">return</span> p == prop; }, d),
+              new LHoist(prop));
+    <span class="reserved">this</span>.name = <span class="literal">'focus'</span>;
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;         
+}
+$L(LFocus, <span class="literal">'focus'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Hoists (see {<span class="attrib">@link</span> LHoist}) a property from among others, merging its
+ * sub-properties into the root tree.  On putback, a supplied predicate
+ * identifies properties which belong to the grandchild, so that those
+ * properties can be putback appropriately.&lt;/p&gt;
+ * &lt;p&gt;Note that the property must be object-valued; anything else won't be
+ * able to merge with the rest of the root tree.&lt;/p&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} prop The property to hoist
+ * <span class="attrib">@param</span> {function} pred_grandchild A predicate that matches exactly those
+ *     properties which belong to the object under prop
+ * <span class="attrib">@see</span> LHoist
+ */</span>
+<span class="reserved">function</span> LHoistNonunique(prop, pred_grandchild) {
+    LXfork.call(<span class="reserved">this</span>,
+                <span class="reserved">function</span> (cp) { <span class="reserved">return</span> cp == prop; },
+                pred_grandchild,
+                new LHoist(prop),
+                new LId());
+    <span class="reserved">this</span>.name = <span class="literal">'hoist_nonunique'</span>;
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LHoistNonunique, <span class="literal">'hoist_nonunique'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Renames a property.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} from The property (in C) to rename
+ * <span class="attrib">@param</span> {String} to The desired property name (in A)
+ * <span class="attrib">@see</span> LRenameIfPresent
+ */</span>
+<span class="reserved">function</span> LRename(from, to) {
+    LXfork.call(<span class="reserved">this</span>,
+                <span class="reserved">function</span> (cp) { <span class="reserved">return</span> cp == from; },
+                <span class="reserved">function</span> (ap) { <span class="reserved">return</span> ap == to; },
+                new LSeq(new LHoist(from),
+                         new LPlunge(to)),
+                new LId());
+    <span class="reserved">this</span>.name = <span class="literal">'rename'</span>;
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LRename, <span class="literal">'rename'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Maps a lens over the properties of an object.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {Lens} lens The lens to map over
+ */</span>
+<span class="reserved">function</span> LMap(lens) {
+    <span class="reserved">this</span>.name = <span class="literal">'map'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        <span class="comment">// c = c || {}; // ??? should we allow undefined here?</span>
+        var o = {};
+        <span class="reserved">for</span> (var prop in c) {
+            o[prop] = lens.get(c[prop]);
+        }
+        <span class="reserved">return</span> o;
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        var o = {};
+
+        <span class="comment">// handle undefined values        </span>
+        a = a || {};
+        c = c || {};
+
+        <span class="comment">// putback values in a</span>
+        <span class="reserved">for</span> (var prop in a) {
+            o[prop ] = lens.putback(a[prop], c[prop]);
+        }
+        
+        <span class="reserved">return</span> o;
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LMap, <span class="literal">'map'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Maps different lenses over different properties; it is a generalization of
+ * {<span class="attrib">@link</span> LMap}.&lt;/p&gt;
+ * &lt;p&gt;It has a slightly strange calling convention, to wit:&lt;/p&gt;
+ * &lt;code&gt;
+ * &lt;br /&gt;&amp;gt; wmap = new LWmap([prop1, prop2, prop3], lens1, prop4, lens2)
+ * &lt;/code&gt;
+ * &lt;p&gt;This will run lens1 over prop1, prop2, and prop3's values and lens2 on
+ * prop4.  Any other properties are mapped through the id lens.  There is an
+ * optional final argument, which may be set to false in order to have the
+ * presence of other properties constitute an error, e.g.:&lt;/p&gt;
+ * &lt;code&gt;
+ * &lt;br /&gt;&amp;gt; wmap_strict = new LWmap(p1, l1, [p2, p3], l2, false)
+ * &lt;br /&gt;&amp;gt; wmap_strict.get({ p4: _ }) // _ is any value
+ * &lt;br /&gt;error!
+ * &lt;/code&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ */</span>
+<span class="reserved">function</span> LWmap(<span class="comment">/* props1, lens1, props2, lens2, ..., propsn, lensn, default_to_id */</span>) {
+    var last_arg = arguments[arguments.length - 1];
+    var last_arg_is_lens = is_lens(last_arg);
+    var real_args_length = last_arg_is_lens ? arguments.length : arguments.length - 1; 
+
+    <span class="reserved">this</span>.name = <span class="literal">'wmap'</span>;
+    
+    <span class="comment">// construct the mapping of props to lenses</span>
+    var mapping = {};
+    <span class="reserved">for</span> (var i = 0;i &lt; real_args_length;i += 2) {
+        var props = arguments[i];
+        var lens = arguments[i + 1];
+        
+        <span class="reserved">if</span> (props instanceof Array) {
+            <span class="reserved">for</span> (var j = 0;j &lt; props.length;j++) {
+                mapping[props[j]] = lens;
+            }
+        } <span class="reserved">else</span> <span class="reserved">if</span> (typeof props == <span class="literal">'string'</span>) {
+            mapping[props] = lens;
+        } <span class="reserved">else</span> {
+            <span class="reserved">this</span>.error(<span class="literal">"don't know how to handle non-string property "</span> + 
+                       props);                                
+        }
+    }    
+    
+    var default_to_id = last_arg_is_lens ? true : last_arg;
+    var id_lens = default_to_id ? new LId() : undefined;    
+    
+    lens = <span class="reserved">this</span>;
+    <span class="reserved">function</span> lookup(prop) {
+        <span class="reserved">return</span> (prop in mapping) ? mapping[prop] :
+               default_to_id ? id_lens :
+               lens.error(<span class="literal">'property '</span> + prop + <span class="literal">' has no mapping'</span>);
+    }    
+    
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        var o = {};
+        
+        <span class="reserved">for</span> (var prop in c) {
+            o[prop] = lookup(prop).get(c[prop]);
+        }
+        
+        <span class="reserved">return</span> o;
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        var o = {};
+        a = a || {};
+        c = c || {};
+        
+        <span class="reserved">for</span> (var prop in a) {
+            o[prop] = lookup(prop).putback(a[prop], c[prop]);
+        }
+        
+        <span class="reserved">return</span> o;
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LWmap, <span class="literal">'wmap'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Copies a concrete-tree property to a new, read-only property in the
+ * abstract tree.  (The old property, orig, remains in the abstract tree.)
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} orig The property to copy
+ * <span class="attrib">@param</span> {String} copy The new property to copy into
+ * <span class="attrib">@see</span> LMerge
+ */</span>
+<span class="reserved">function</span> LCopy(orig, copy) {
+    <span class="reserved">this</span>.name = <span class="literal">'copy'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        <span class="comment">// ??? allow undefined?    </span>
+    
+        <span class="reserved">if</span> (copy in c) {
+            <span class="reserved">this</span>.error([<span class="literal">'couldn\'</span>t copy <span class="literal">', orig, '</span> to <span class="literal">', copy, '</span> since <span class="literal">', copy,
+                        '</span> already exists in <span class="literal">', c].join('</span><span class="literal">'));
+        }
+
+        // actually copy -- no sharing!
+        var o = clone(c);
+        // the if avoids creating objects like { copy: undefined } from {}
+        if (o !== undefined &amp;&amp; orig in o) { o[copy] = o[orig]; }
+        
+        return o;
+    };
+    this.putback = function (a, c) {
+        a = a || {};
+        
+        var o = clone(a);
+        if (o !== undefined &amp;&amp; copy in o) { delete o[copy]; }
+        
+        return o; 
+    };
+    
+    return this;
+}
+$L(LCopy, '</span>copy<span class="literal">');
+
+/**
+ * @class
+ * Merges two concrete-tree properties into a single abstract-tree property.
+ * Preference is given to the first property listed, as: if the two properties
+ * are equal in c during putback, then the putback value of n, the second
+ * property, is equal to a.m, the first property in the abstract tree.  If,
+ * on the other hand, m and n are different in c, than c.n is used.
+ *
+ * @extends Lens
+ * @param {String} m The first, preferred, property to merge (from C)
+ * @param {String} n The second property to merge (from C)
+ * @see LCopy
+ */
+function LMerge(m, n) {
+    this.name = '</span>merge<span class="literal">';
+    this.get = function (c) {
+        c = c || {};
+        
+        var o = clone(c);        
+        if (o !== undefined &amp;&amp; n in c) { delete o[n]; }
+        
+        return o;
+    };
+    this.putback = function (a, c) {
+        a = a || {};
+        c = c || {};
+
+        var o = clone(a);
+        // we use ifs to prevent setting if a[m] or c[n] don'</span>t exist
+        <span class="reserved">if</span> (equal(c[m], c[n])) {
+            <span class="reserved">if</span> (m in a) { o[n] = a[m]; }
+        } <span class="reserved">else</span> {
+            <span class="reserved">if</span> (n in c) { o[n] = c[n]; }
+        }
+        
+        <span class="reserved">return</span> o;         
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LMerge, <span class="literal">'merge'</span>);
+
+<span class="comment">// OBJECT LENSES }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ CONDITIONAL LENSES
+ *******************************/</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Applies one of two lenses based on a predicate on the concrete tree. The
+ * lens to apply on putback is selected by running the predicate on the
+ * concrete tree again.  Thus is lens is unoblivious, viz. dependent on the
+ * concrete tree during putback.&lt;/p&gt;
+ * &lt;p&gt;LCcond is typically applied for simple type dispatch; for more complex,
+ * structure-dependent conditionals, {<span class="attrib">@link</span> LAcond} or {<span class="attrib">@link</span> LCond} may be
+ * more appropriate.&lt;/p&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {Predicate} p A predicate on the concrete tree (a function, list, 
+ *     etc.)
+ * <span class="attrib">@param</span> {Lens} pass_lens The lens to run if p matches c
+ * <span class="attrib">@param</span> {Lens} fail_lens The lens to run if p does not match c
+ * <span class="attrib">@see</span> LAcond
+ * <span class="attrib">@see</span> LCond
+ */</span>
+<span class="reserved">function</span> LCcond(p, pass_lens, fail_lens) {
+	p = new Predicate(p);
+	
+	<span class="reserved">this</span>.name = <span class="literal">'ccond'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="reserved">return</span> (p.matches(c) ? pass_lens : fail_lens).get(c);
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		<span class="reserved">return</span> (p.matches(c) ? pass_lens : fail_lens).putback(a, c);
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LCcond, <span class="literal">'ccond'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Applies one of two lenses based on predicates on the concrete and abstract
+ * trees.  LAcond behaves like {<span class="attrib">@link</span> LCcond}, only a separate predicate pa 
+ * determines which lens to use during putback, making this lens (slightly)
+ * more oblivious.&lt;/p&gt;
+ * &lt;p&gt;The lens is not oblivious because different lenses may be used for get 
+ * and putback; if this is the case, then the undefined is given instead of c.
+ * &lt;/p&gt;
+ * &lt;p&gt;LAcond is typically used to dispatch subtypes to appropriate lenses.  For
+ *  an example, see {<span class="attrib">@link</span> LRenameIfPresent}, which is essentially:&lt;/p&gt;
+ * &lt;code&gt;acond (function (c) { return has_prop(c, from); },
+ *              function (a) { return has_prop(a, to); },
+ *              new LRename(from, to),
+ *              new LId())
+ * &lt;/code&gt;
+ * &lt;p&gt;For simply dispatching, {<span class="attrib">@link</span> LCcond} may be sufficient.&lt;/p&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {Predicate} pc A predicate on the concrete tree
+ * <span class="attrib">@param</span> {Predicate} pa A predicate on the abstract tree
+ * <span class="attrib">@param</span> {Predicate} pass_lens Used for get when pc matches the concrete tree;
+ *     used for putback when pa matches a
+ * <span class="attrib">@param</span> {Predicate} fail_lens Used for get when pc does not match the 
+ *    concrete tree; used for putback when a does not match pa
+ * <span class="attrib">@see</span> LCcond
+ * <span class="attrib">@see</span> LCond
+ */</span>
+<span class="reserved">function</span> LAcond(pc, pa, pass_lens, fail_lens) {
+	pc = new Predicate(pc);
+	pa = new Predicate(pa);
+	
+	<span class="reserved">this</span>.name = <span class="literal">'acond'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="reserved">return</span> (pc.matches(c) ? pass_lens : fail_lens).get(c);	
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var matches_c = pc.matches(c);
+		<span class="reserved">return</span> (pa.matches(a) ?
+					pass_lens.putback(a, (matches_c ? c : undefined)) :
+					fail_lens.putback(a, (matches_c ? undefined : c)));
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LAcond, <span class="literal">'acond'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Renames a property in the concrete tree to a different property in the 
+ * abstract tree -- but only if the property is present.  This is a sample
+ * use of {<span class="attrib">@link</span> LAcond}.  Note that {<span class="attrib">@link</span> LCcond} is insufficient to define
+ * this lens, since the rename lens should be used for putback only if the 
+ * new, renamed field is present in the abstract tree -- LCcond can only look
+ * at the concrete tree.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} from The source property in the concrete tree
+ * <span class="attrib">@param</span> {String} to The target property in the abstract tree
+ */</span>
+<span class="reserved">function</span> LRenameIfPresent(from, to) {
+	LAcond.call(<span class="reserved">this</span>,
+	            <span class="reserved">function</span> (c) { <span class="reserved">return</span> has_prop(c, from); },
+	            <span class="reserved">function</span> (a) { <span class="reserved">return</span> has_prop(a, to); },
+	            new LRename(from, to),
+	            new LId());
+	<span class="reserved">this</span>.name = <span class="literal">'rename_if_present'</span>;
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LRenameIfPresent, <span class="literal">'rename_if_present'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;The generalized conditional.  It combines elements of ccond and acond to
+ * form a lens that offers complete control over dispatch, while maintaining
+ * the lens laws.&lt;/p&gt;
+ * &lt;p&gt;It is necessary that for all possible inputs, either pa1 or pa2 is true.
+ * It is perfectly acceptable for them both to be true, but at least one must
+ * match.  In particular, pa1 should match on the image of pass_lens on inputs
+ * matching pc; pa2 should match on the image of fail_lens on inputs which do
+ * not match pc.&lt;/p&gt;
+ * &lt;p&gt;The conversion function, pass_to_fail and fail_to_pass, generalize the
+ * behavior of {<span class="attrib">@link</span> LCcond} and {<span class="attrib">@link</span> LAcond}, as they allow values other
+ * than undefined to be passed along if different lenses are used for get and
+ * putback.&lt;/p&gt;
+ * &lt;p&gt;Note that LCcond(pc, pass_lens, fail_lens) = LCond(pc, ftrue, ftrue, 
+ * fundef, fundef, pass_lens, fail_lens), where ftrue always returns true and
+ * fundef always returns undefined.  Likewise, LAcond(pc, pa, pass_lens, 
+ * fail_lens) = LCond(pc, pa, !pa, fundef, fundef, pass_lens, fail_lens), where
+ * !pa returns the opposite of pa.&lt;/p&gt;
+ * 
+ * <span class="attrib">@param</span> {Predicate} pc The constant predicate; matches on get go through the
+ *     pass_lens, failures go through the fail_lens
+ * <span class="attrib">@param</span> {Predicate} pa1 The pass_lens predicate.  If pa1 matches and pa2
+ *     doesn't, then the pass_lens will always be used.  If pa1 passes on
+ *     putback but pc didn't match on get, then pass_to_fail(c) will be used as
+ *     the concrete putback argument instead of c.
+ * <span class="attrib">@param</span> {Predicate} pa2 The fail_lens predicate.  If pa2 matches and pa2
+ *     doesn't, then the fail_lens will always be used.  If pa2 matches but pc
+ *     didn't match during get, then fail_to_pass(c) will be used instead of c
+ *     as the concrete putback argument.
+ * <span class="attrib">@param</span> {function} pass_to_fail Called with c when c went through pass_lens
+ *     during get but is going through fail_lens on putback.  Its result is 
+ *     used instead of c.
+ * <span class="attrib">@param</span> {function} fail_to_pass Called with c when c went through fail_lens
+ *     during get put is going through pass_lens on putback.  Its result is
+ *     used instead of c.
+ * <span class="attrib">@param</span> {Lens} pass_lens Used on get if pc matches; used on putback if pa1
+ *     matches, or all three predicates -- pc, pa1, and pa2 -- all matched.
+ * <span class="attrib">@param</span> {Lens} fail_lens Used on get if pc doesn't match; used on putback if
+ *     pa2 matches, or if pa1 and pa2 match and pc doesn't.
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@see</span> LCcond
+ * <span class="attrib">@see</span> LAcond
+ */</span>
+<span class="reserved">function</span> LCond(pc, pa1, pa2, pass_to_fail, fail_to_pass, pass_lens, fail_lens) {
+	pc = new Predicate(pc);
+	pa1 = new Predicate(pa1);
+	pa2 = new Predicate(pa2);
+	
+	<span class="reserved">this</span>.name = <span class="literal">'cond'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="reserved">return</span> (pc.matches(c) ? pass_lens : fail_lens).get(c);
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var matches_a1 = pa1.matches(a);
+		var matches_a2 = pa2.matches(a);
+		var matches_c = pc.matches(c);
+		
+		<span class="reserved">if</span> (matches_a1 &amp;&amp; matches_a2) {
+			<span class="reserved">return</span> (matches_c ? pass_lens : fail_lens).putback(a, c);
+		} <span class="reserved">else</span> <span class="reserved">if</span> (matches_a1) {
+			<span class="reserved">return</span> pass_lens.putback(a, 
+			                         matches_c ? c : pass_to_fail(c));
+		} <span class="reserved">else</span> <span class="reserved">if</span> (matches_a2) {
+			<span class="reserved">return</span> fail_lens.putback(a,
+			                         matches_c ? fail_to_pass(c) : c);
+		} <span class="reserved">else</span> {
+			<span class="reserved">this</span>.error(<span class="literal">'neither predicate a1 nor a2 matched'</span>);
+		}
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LCond, <span class="literal">'cond'</span>);
+
+<span class="comment">//}}}</span>
+
+<span class="comment">/*******************************
+ * {{{ LIST/ARRAY LENSES
+ *******************************/</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Gets the first element of a list.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> d The default rest-of-the-list to putback if c is undefined
+ * <span class="attrib">@see</span> LTail
+ * <span class="attrib">@see</span> LIndex
+ */</span>
+<span class="reserved">function</span> LHead(d) {
+	<span class="reserved">this</span>.name = <span class="literal">'head'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="reserved">return</span> c[0];
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) { 
+		var arr = clone(c || d);
+		
+		<span class="reserved">if</span> (arr.length !== 0 || a !== undefined) {
+			arr[0] = a;
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LHead, <span class="literal">'head'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Gets the last element of a list.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> d The default rest-of-the-list to putback if c is undefined
+ * <span class="attrib">@see</span> LHead
+ * <span class="attrib">@see</span> LIndex
+ */</span>
+<span class="reserved">function</span> LTail(d) {
+	<span class="reserved">this</span>.name = <span class="literal">'tail'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="reserved">return</span> c.length === 0 ? undefined : c[c.length - 1];
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var arr = clone(c || d);
+
+		<span class="comment">// if the array is empty, but a isn't undefined, save it; otherwise, </span>
+		<span class="comment">// set the last index to a regardless</span>
+		<span class="reserved">if</span> (arr.length === 0) {
+			<span class="reserved">if</span> (a !== undefined) { arr[0] = a; }
+		} <span class="reserved">else</span> {
+			arr[arr.length - 1] = a;
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LTail, <span class="literal">'tail'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Gets a specific index out of a list.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {int} idx The index to extract
+ * <span class="attrib">@param</span> d The default value to substitute for the rest of the list
+ * <span class="attrib">@see</span> LHead
+ * <span class="attrib">@see</span> LTail
+ */</span>
+<span class="reserved">function</span> LIndex(idx, d) {
+	<span class="reserved">this</span>.name = <span class="literal">'index'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		<span class="comment">// allow for undefined c</span>
+		c = c || [];
+		<span class="reserved">return</span> c[idx];
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		<span class="comment">// we separate the clones in case c is a value, but of the wrong type</span>
+		<span class="comment">// -- just being permissive</span>
+		var arr = clone(c || d);
+
+		<span class="comment">// we'll also only set the index if we'll actually do something...</span>
+		<span class="comment">// overwriting a value with undefined is enough, but we'll avoid adding</span>
+		<span class="comment">// sparse undefineds</span>
+		<span class="reserved">if</span> (a !== undefined || idx in arr) { arr[idx] = a; }
+
+		<span class="reserved">return</span> arr;
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LIndex, <span class="literal">'index'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Gets the length of a list.  On putback, it configurably adds and deletes
+ * elements from the list on putback.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {'beginning', 'end'} take_from Where to take elements from that would
+ *     make the list too long.  The default is 'end'.
+ * <span class="attrib">@param</span> {'beginning', 'end'} add_to Where to add additional elements for
+ *     compensatory lengthening; default is 'end'.  If take_from is specified
+ *     but no value is given for add_to, then it defaults to take_from's value.
+ * <span class="attrib">@param</span> d The value to use during lengthening instead of undefined.
+ */</span>
+<span class="reserved">function</span> LLength(take_from, add_to, d) {
+	take_from = take_from || <span class="literal">'end'</span>;
+	add_to = add_to || take_from;
+	
+	<span class="reserved">this</span>.name = <span class="literal">'length'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) { <span class="reserved">return</span> c.length; };
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		<span class="reserved">if</span> (c.length == a) { <span class="reserved">return</span> c; }
+
+		var arr = clone(c);		
+		<span class="comment">// how many extra/missing elements?</span>
+		var diff = Math.abs(c.length - a);		
+		
+		<span class="reserved">if</span> (c.length &gt; a) {
+			var start = 0;
+			var finish = 0;
+			
+			<span class="comment">// pick where to take from</span>
+			<span class="reserved">if</span> (take_from == <span class="literal">'beginning'</span>) {
+				finish = diff;
+			} <span class="reserved">else</span> { <span class="comment">// take_from == 'end'</span>
+				start = a;
+				finish = c.length;			
+			}
+			
+			<span class="comment">// cut out appropriately</span>
+			arr.splice(start, finish);
+			<span class="reserved">return</span> arr;
+		} <span class="reserved">else</span> {
+			<span class="comment">// build the new list</span>
+			var new_items = [];
+			<span class="reserved">for</span> (var i = 0;i &lt; diff;i++) {
+				new_items.push(clone(d)); <span class="comment">// we clone to avoid sharing</span>
+			}
+			
+			<span class="comment">// then concatenate the arrays</span>
+			<span class="reserved">return</span> (add_to == <span class="literal">'beginning'</span>) ?
+				new_items.concat(arr) :
+				arr.concat(new_items);
+		}
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LLength, <span class="literal">'list_length'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Turns an object into a list, given an order on the properties.  Every 
+ * property of the object must appear, or its value will be dropped on putback.
+ * Additionally, the list putback may have its values changed, but its length
+ * must stay the same.
+ *
+ * <span class="attrib">@extends</span> Lens
+ */</span>
+<span class="reserved">function</span> LOrder(<span class="comment">/* prop1, prop2, ..., propn */</span>) {
+    var order = clone(arguments, true); <span class="comment">// true -&gt; copy as array</span>
+    
+    <span class="reserved">this</span>.name = <span class="literal">'order'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+<span class="comment">//        if (c === undefined) { return undefined; }</span>
+        
+        var o = [];
+        var seen = {};
+        
+        <span class="reserved">for</span> (var i = 0;i &lt; order.length;i++) {
+            var prop = order[i];
+            
+<span class="comment">//            if (!(prop in c)) { this.error('get: missing property ' + prop + </span>
+<span class="comment">//                                           ' in order'); }</span>
+            
+            o.push(prop in c ? c[prop] : undefined);
+        }
+        
+        <span class="reserved">return</span> o;
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+<span class="comment">//        if (a === undefined) { return undefined; }</span>
+        
+        var o = {};
+        
+        <span class="reserved">if</span> (a.length != order.length) {
+            <span class="reserved">this</span>.error(<span class="literal">'putback: different lengths'</span>);
+        }
+        
+        <span class="reserved">for</span> (var i = 0;i &lt; order.length;i++) {
+            var prop = order[i];
+            
+            <span class="reserved">if</span> (i in a &amp;&amp; a[i] !== undefined) {
+                o[prop] = a[i];
+            }
+        }
+        
+        <span class="reserved">return</span> o;
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LOrder, <span class="literal">'order'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Maps a function over a list, as {<span class="attrib">@link</span> LMap} over an object.  The two are in
+ * fact identical, but the names may clarify typing.
+ *
+ * <span class="attrib">@param</span> {Lens} lens The lens to apply to each index
+ */</span>
+<span class="reserved">function</span> LListMap(lens) {
+	LMap.call(<span class="reserved">this</span>, lens);
+	<span class="reserved">this</span>.name = <span class="literal">'list_map'</span>;
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LListMap, <span class="literal">'list_map'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Rotates a list: on get, it puts the first element on the end.  On putback,
+ * it puts the last element on the front.  This lens is defined only for
+ * completeness' sake -- it is described in &lt;i&gt;Combinator for Bi-Directional
+ * Tree Transformations&lt;/i&gt; and used to define {<span class="attrib">@link</span> LReverse}; we simply copy
+ * the list and reverse it, so LRotate is unnecessary.
+ *
+ * <span class="attrib">@extends</span> Lens
+ */</span>
+<span class="reserved">function</span> LRotate() {
+	<span class="reserved">this</span>.name = <span class="literal">'rotate'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		var arr = clone(c);
+		
+		<span class="reserved">if</span> (arr.length &gt; 0) {
+			<span class="comment">// take the first element...</span>
+			var head = arr.shift();
+		
+			<span class="comment">// ...and put it on the end</span>
+			arr.push(head);
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var arr = clone(a);
+		
+		<span class="reserved">if</span> (arr.length &gt; 0) { 
+			<span class="comment">// take the last element, if it's there...</span>
+			var tail = arr.pop();
+			
+			<span class="comment">// ...and put it on the front</span>
+			arr.splice(0, 0, tail);
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LRotate, <span class="literal">'rotate'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Reverses a list.
+ *
+ * <span class="attrib">@extends</span> Lens
+ */</span>
+<span class="reserved">function</span> LReverse() {
+	<span class="reserved">this</span>.name = <span class="literal">'reverse'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		var arr = clone(c);
+		
+		arr.reverse();
+		
+		<span class="reserved">return</span> arr;
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var arr = clone(a);
+		
+		arr.reverse();
+		
+		<span class="reserved">return</span> arr;
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LReverse, <span class="literal">'reverse'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;Groups a list into sublists of size n, e.g. for n=2:&lt;/p&gt;
+ * &lt;code&gt;[1, 2, 3, 4] =&gt; [[1, 2], [3, 4]]&lt;br /&gt;
+ * [1, 2, 3, 4, 5] =&gt; [[1, 2], [3, 4], [5]]&lt;/code&gt;
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {int} n The size of groups to form
+ * <span class="attrib">@see</span> LConcat
+ */</span>
+<span class="reserved">function</span> LGroup(n) {
+	<span class="reserved">this</span>.name = <span class="literal">'group'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		var arr = [];
+			
+		<span class="reserved">for</span> (var i = 0, j = 0;i &lt; c.length;i += n) {
+			<span class="comment">// grab n items if we can, but settle for the rest of the list</span>
+			var group = c.slice(i, Math.min(i + n, c.length));
+
+			<span class="comment">// then push the group on</span>
+			<span class="reserved">if</span> (group.length !== 0) { arr.push(group); }
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var arr = [];
+		
+		<span class="reserved">for</span> (var i = 0;i &lt; a.length;i++) {
+			<span class="comment">// put everything back together</span>
+			arr = arr.concat(a[i]);
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LGroup, <span class="literal">'group'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Concatenates sublists, separating them by a spacer.  This must be provided;
+ * if an indistinguishable spacer is given, then everything will be putback
+ * into the first list.  The argument is given as a list of lists, each of 
+ * which will be concatenated into a single list, with spacer separating them.
+ * This lens is somewhat the dual of {<span class="attrib">@link</span> LGroup}.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> spacer A distinguishable spacer, which separates the two lists
+ */</span>
+<span class="reserved">function</span> LConcat(spacer) {
+	<span class="reserved">this</span>.name = <span class="literal">'concat'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) { 
+		var arr = [];
+		<span class="reserved">for</span> (var i = 0;i &lt; c.length;i++) {
+			arr = arr.concat(c[i]);
+
+			<span class="comment">// put on the spacer if we're not done			</span>
+			<span class="reserved">if</span> (i != c.length - 1) {
+				arr.push(clone(spacer)); <span class="comment">// clone to avoid sharing</span>
+			}
+		}
+
+		
+		<span class="reserved">return</span> arr;
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		var arr = [];
+		
+		var sublist = [];
+		<span class="reserved">for</span> (var i = 0;i &lt; a.length;i++) {
+			var elem = a[i];
+			<span class="reserved">if</span> (!equal(elem, spacer)) {
+				<span class="comment">// if it's not a spacer, then it's part of a sublist</span>
+				sublist.push(elem);
+			} <span class="reserved">else</span> {
+				<span class="comment">// if it was a spacer, we need to save the old sublist and</span>
+				<span class="comment">// start a new one</span>
+				arr.push(sublist);
+				sublist = [];
+			}
+		}
+		<span class="reserved">if</span> (sublist.length !== 0) { arr.push(sublist); }
+		
+		<span class="reserved">return</span> arr;
+	};
+		
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LConcat, <span class="literal">'concat'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Filters a list, removing items that fail to matche a predicate.  Two 
+ * predicates must be given in order for putback to work correctly: edits to
+ * selected items should propagate appropriately.  This propagation is done on
+ * a first-come, first-served basis -- the first item of the abstract tree 
+ * replaces first item that matches pkeep in the concrete tree.  If there are
+ * more items in the abstract tree than items that match pkeep, then the extra
+ * items are added at the end.  If there are fewer items in a than those that
+ * match pkeep in c, then the last items in c are deleted.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {Predicate} pkeep A predicate that matches the list-items to keep
+ * <span class="attrib">@param</span> {Predicate} plose A predicate that matches the list-items to filter
+ */</span>
+<span class="reserved">function</span> LListFilter(pkeep, plose) {
+	pkeep = new Predicate(pkeep);
+	plose = new Predicate(plose);
+	
+	<span class="reserved">this</span>.name = <span class="literal">'filter'</span>;
+	<span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+		var arr = [];
+		
+		<span class="reserved">for</span> (var i = 0;i &lt; c.length;i++) {
+			<span class="comment">// skip plose matches</span>
+			<span class="reserved">if</span> (!plose.matches(c[i])) {
+				arr.push(c[i]);
+			}
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	<span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+		<span class="comment">// arr starts out just like c</span>
+		var arr = clone(c);
+		
+		var a_i, c_i;
+		
+		<span class="reserved">for</span> (a_i = 0, c_i = 0;c_i &lt; c.length;c_i++) {
+			<span class="comment">// we update with the value from a if pkeep matches and there are</span>
+			<span class="comment">// still value left</span>
+			<span class="reserved">if</span> (pkeep.matches(arr[c_i]) &amp;&amp; a_i &lt; a.length) {
+				arr[c_i] = a[a_i];
+				a_i++; 
+			}
+		}
+		
+		<span class="comment">// if there are more values in a than those that matched pkeep in c,</span>
+		<span class="comment">// then we'll stick on the extras here</span>
+		<span class="reserved">if</span> (a_i &lt; a.length) {
+			arr = arr.concat(a.slice(a_i, a.length));
+		}
+		
+		<span class="reserved">return</span> arr;
+	};
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LListFilter, <span class="literal">'list_filter'</span>);
+
+<span class="comment">// LIST/ARRAY LENSES }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ COMPOSITE LENSES
+ *******************************/</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;A simple lens for laying properties out in the DOM while also inserting
+ * constant, structural data.&lt;/p&gt;
+ * &lt;p&gt;Composes {<span class="attrib">@link</span> LWmap}, chains of {<span class="attrib">@link</span> LAdd}, and {<span class="attrib">@link</span> LOrder}.
+ * It takes arguments &lt;tt&gt;prop1, act1, prop2, act2, ..., [default_to_id]&lt;/tt&gt;,
+ * where &lt;tt&gt;propi&lt;/tt&gt; is a valid JavaScript property name and &lt;tt&gt;acti&lt;/tt&gt; is
+ * either a lens or a DOM-displayable value.&lt;/p&gt;
+ * &lt;p&gt;The call to {<span class="attrib">@link</span> LOrder} comes from the order of the properties; the
+ * last lens in the composition is &lt;tt&gt;new LOrder(prop1, prop2, ...)&lt;/tt&gt;.&lt;/p&gt;
+ * &lt;p&gt;The call to {<span class="attrib">@link</span> LWmap} comes from the properties and lens actions; it
+ * is the first call of the composition, &lt;tt&gt;new LWmap(propl1, actl1, ..., 
+ * default_to_id)&lt;/tt&gt;, where &lt;tt&gt;propl/actli&lt;/tt&gt; are the properties and 
+ * actions where the action is a lens, and default_to_id is the final argument
+ * (which defaults to false).&lt;/p&gt;
+ * &lt;p&gt;The calls to {<span class="attrib">@link</span> LAdd} come from the remaining properties; each
+ * property/action pair is called &lt;tt&gt;new LAdd(propni, actni)&lt;/tt&gt; and 
+ * {<span class="attrib">@link</span> LSeq}ed together.&lt;/p&gt;
+ * &lt;p&gt;TODO it should be possible to give 'false' or 'undefined' as the property
+ * for non-lens actions, but that means generating non-clashing names.&lt;/p&gt;
+ * <span class="attrib">@extends</span> Lens
+ */</span>
+<span class="reserved">function</span> LLayout(<span class="comment">/* props1, act1, props2, act2, ..., default_to_id */</span>) {
+    <span class="comment">// by default, default_to_id is false; here we check for it</span>
+    var has_default_arg = arguments.length % 2 === 1; 
+    var default_to_id = has_default_arg &amp;&amp; arguments[arguments.length - 1];
+    <span class="comment">// we precalculate the length of arguments, ignoring default_to_id if it was</span>
+    <span class="comment">// provided</span>
+    var args_len = arguments.length - (has_default_arg ? 1 : 0);
+    
+    <span class="comment">// stores the order given -- passes on to LOrder</span>
+    var order = [];
+    <span class="comment">// stores the lenses given -- passes on to LWmap</span>
+    var lenses = [];
+    <span class="comment">// stores the non-lenses given -- passes on to LAdd</span>
+    var adds = undefined;
+    
+    <span class="reserved">for</span> (var i = 0;i &lt; args_len;) {
+        <span class="comment">// propi, acti</span>
+        var prop = arguments[i++];
+        var action = arguments[i++];
+        
+        <span class="comment">// record the order property's position</span>
+        order.push(prop);
+        
+        <span class="reserved">if</span> (is_lens(action)) {
+            <span class="comment">// we have a lens, so it's an argument for wmap</span>
+            <span class="comment">// we'll call LWmap.apply(..., lenses), so we want it to be lined up</span>
+            <span class="comment">// in the LWmap calling order: propi, lensi</span>
+            lenses.push(prop);
+            lenses.push(action);
+        } <span class="reserved">else</span> {
+            <span class="comment">// we have a non-lens, so we'll add the constant to the tree</span>
+            var add = new LAdd(prop, action);
+            
+            <span class="reserved">if</span> (adds === undefined) {
+                <span class="comment">// if we haven't seen any adds, remember this as our one add</span>
+                adds = add;
+            } <span class="reserved">else</span> {
+                <span class="comment">// otherwise, tack it on as the next one</span>
+                adds = new LSeq(adds, add);
+            }
+        }
+    }
+    
+    <span class="comment">// wmap take default_to_id as a parameter</span>
+    lenses.push(default_to_id);
+    var wmp = lenses.length === 0 ? new LId() : LWmap.apply(new Lens(), lenses);
+    var ord = LOrder.apply(new Lens(), order);
+    
+    <span class="reserved">if</span> (adds) {
+        <span class="comment">// run wmap, then add the constants, and then order into a list</span>
+        LSeq.call(<span class="reserved">this</span>, wmp, adds, ord);
+    } <span class="reserved">else</span> {
+        <span class="comment">// no adds, so just call wmap and order</span>
+        LSeq.call(<span class="reserved">this</span>, wmp, ord);
+    }
+    
+    <span class="reserved">this</span>.name = <span class="literal">'layout'</span>;
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LLayout, <span class="literal">'layout'</span>);
+
+<span class="comment">// COMPOSITE LENSES }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ DOM LENSES
+ *******************************/</span>
+
+<span class="comment">/**
+ * Turns an object into a displayable DOM element.  If the object is already
+ * a DOM node, nothing is done.  Otherwise, a new text node is made out of the
+ * given value.
+ *
+ * <span class="attrib">@param</span> o The object to put into the dom
+ * <span class="attrib">@return</span> {DOM:element} A DOM-ified version of the object
+ */</span>
+<span class="reserved">function</span> domify(o) {
+    <span class="reserved">if</span> (dom_obj(o)) {
+        <span class="reserved">return</span> o;
+    }
+
+    <span class="reserved">return</span> document.createTextNode(o);
+}
+
+<span class="comment">/**
+ * Turns objects into span elements with ids.
+ *
+ * <span class="attrib">@param</span> o The object
+ * <span class="attrib">@param</span> id The id to use
+ */</span>
+<span class="reserved">function</span> nodify(o, id) {
+    <span class="reserved">if</span> (dom_obj(o)) {
+        <span class="reserved">if</span> (o.nodeType != Node.TEXT_NODE) {
+            o = o.nodeValue;
+        } <span class="reserved">else</span> { 
+            <span class="reserved">return</span> o;
+        }
+    }
+    
+    <span class="reserved">return</span> make_dom_node(<span class="literal">'span'</span>, { <span class="literal">'id'</span>: id }, [domify(o)]);
+}
+
+<span class="comment">/**
+ * Turns a DOM element into a JavaScript object -- as best it can.  This 
+ * amounts to just turning text nodes into strings; beyond this, nothing
+ * is really done.
+ *
+ * <span class="attrib">@param</span> {DOM:node} e A DOM node
+ * <span class="attrib">@return</span> A JavaScript object version of e
+ */</span>
+<span class="reserved">function</span> jsify(e, orig) {
+    <span class="comment">// extract the text if we can...</span>
+    <span class="reserved">if</span> (typeof e == <span class="literal">'object'</span> &amp;&amp; <span class="literal">'nodeType'</span> in e &amp;&amp; 
+        e.nodeType == Node.TEXT_NODE) {
+        <span class="reserved">return</span> e.nodeValue;
+    }
+    
+    <span class="comment">// type coerce, if we can...</span>
+    <span class="reserved">if</span> (!isNaN(Number(e)) ) {
+        <span class="reserved">return</span> Number(e);
+    }
+    
+    <span class="comment">// ...but just leave it as a node, otherwise</span>
+    <span class="reserved">return</span> e;
+}
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Creates DOM text nodes on get.  For other nodes, see {<span class="attrib">@link</span> LTag}.
+ *
+ * <span class="attrib">@extends</span> Lens
+ */</span>
+<span class="reserved">function</span> LTextTag() {
+    <span class="reserved">this</span>.name = <span class="literal">'text_tag'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        <span class="reserved">return</span> document.createTextNode(c);
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="reserved">return</span> a.nodeValue;
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LTextTag, <span class="literal">'text_tag'</span>);
+
+<span class="comment">/**
+ * Creates a DOM node.
+ *
+ * <span class="attrib">@param</span> {String} name The element name to create
+ * <span class="attrib">@param</span> attribs An object mapping attribute names to values
+ * <span class="attrib">@param</span> {Array} children The list of child nodes
+ */</span>
+<span class="reserved">function</span> make_dom_node(name, attribs, children) {
+    <span class="comment">// create the node</span>
+    var node = document.createElement(name);
+        
+    <span class="comment">// copy in attributes</span>
+    <span class="reserved">for</span> (var attrib in attribs) {
+        <span class="comment">// TODO why is this broken?</span>
+<span class="comment">//        if (attrib == 'value') { // special case for inconsistent DOM</span>
+<span class="comment">//            node.value = attribs[attrib];</span>
+<span class="comment">//        } else {</span>
+            node.setAttribute(attrib, attribs[attrib]);
+<span class="comment">//        }</span>
+    }
+        
+    <span class="comment">// copy in children</span>
+    <span class="reserved">for</span> (var i = 0;i &lt; children.length;i++) {
+        node.appendChild(domify(children[i])); <span class="comment">// ??? clone first?</span>
+    }
+
+    <span class="reserved">return</span> node;
+}
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * A DOM-element constructing lens for static DOM elements, such as br and hr.
+ * In general, {<span class="attrib">@link</span> LTag} should be used -- it will actually work with values
+ * on get and putback.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} name The name of the element
+ * <span class="attrib">@param</span> d The default value to putback, if undefined was given
+ * <span class="attrib">@param</span> attribs The optional object describing the attributes of the element
+ * <span class="attrib">@param</span> children The optional list of children of the object
+ * <span class="attrib">@param</span> {boolean} strict A false-by-default setting which, when enabled, will
+ *     cause errors to be signalled on putback if the generated DOM node was
+ *     changed.
+ */</span>
+<span class="reserved">function</span> LConstTag(name, d, attribs, children, strict) {
+    attribs = attribs || {};
+    children = children || [];
+    
+    <span class="reserved">function</span> dom_node() {
+        <span class="reserved">return</span> make_dom_node(name, attribs, children);
+    }
+    
+    <span class="reserved">this</span>.name = <span class="literal">'constant_tag'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        <span class="reserved">return</span> dom_node();
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="reserved">if</span> (strict !== false &amp;&amp; !equal(a, dom_node())) {
+            <span class="reserved">this</span>.error(<span class="literal">"HTML putback argument "</span> + a +
+                        <span class="literal">" was edited away from the generated DOM node."</span>);
+        }
+        <span class="reserved">else</span> <span class="reserved">if</span> (c === undefined) { <span class="reserved">return</span> d; }
+        <span class="reserved">else</span> { <span class="reserved">return</span> c; }
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LConstTag, <span class="literal">'constant_tag'</span>);
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;A generalized DOM element maker for element tags; for text nodes, see
+ * {<span class="attrib">@link</span> LTextTag}.  LTag is rarely used directly, but instead forms the basis
+ * of the DOM code.&lt;/p&gt;
+ * &lt;p&gt;The placement option is somewhat complicated.  It can be either a string
+ * or an object.  If it is the string 'child' means that the concrete tree 
+ * should be written as a child of the given node.  If it is any other string,
+ * then that string is taken as the name of the attribute into which the 
+ * concrete tree is to be written.  If placement isn't a string, it is taken to
+ * be a 'placement mapping'.  A placement mapping's properties are like plain
+ * string placements -- either 'child' or something else.  The value of these
+ * properties are the properties of the concrete tree.  An example will make 
+ * this clearer.&lt;/p&gt;
+ * &lt;code&gt; pm = { href: 'link', title: 'title', child: 'title' } &lt;/code&gt;
+ * &lt;p&gt;The above mapping will take a concrete tree with at least the properties
+ * title and link, and create a node wherein the child node is c.text, the href
+ * attribute c.href, and the title attribute is c.title.  On putback, the last
+ * item in a mapping is what is written; in the example above, if the title
+ * attribute is different from the child node, the child node is taken during
+ * putback.  This is similar to the behavior of {<span class="attrib">@link</span> LCopy}.&lt;/p&gt;
+ * &lt;p&gt;LTag is oblivious if placement is not a placement mapping.  If placement
+ * is a placement mapping, then an implicit focus  
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {String} name The name of the tag
+ * <span class="attrib">@param</span> {String} placement Either 'child', an attribute name, or a placement
+ *     mapping -- this is where the concrete tree is written and whence the
+ *     abstract tree is read; it defaults to 'child'.
+ * <span class="attrib">@param</span> {Object} attribs A property list of default attributes.  It defaults
+ *     to {}.
+ * <span class="attrib">@param</span> {Array} children A list of default children; defaults to [].
+ * <span class="attrib">@param</span> {boolean} implicit_focus When true, turns on an implicit focus lens
+ *     on properties not mentioned in the property mapping.  This value 
+ *     defaults to true, but has no effect if placement isn't a property
+ *     mapping.
+ */</span>
+<span class="reserved">function</span> LTag(name, placement, attribs, children, implicit_focus) {
+    placement = placement || <span class="literal">'child'</span>;
+    attribs = attribs || {};
+    children = children || [];
+    implicit_focus = implicit_focus || true;
+    
+    var inverse_placement = {};
+    <span class="reserved">if</span> (implicit_focus &amp;&amp; typeof placement == <span class="literal">'object'</span>) {
+        <span class="reserved">for</span> (var target in placement) {
+            inverse_placement[placement[target]] = target;
+        }
+    }    
+    
+    <span class="reserved">this</span>.name = <span class="literal">'tag'</span>;
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        var node_children = clone(children);
+        var node_attribs = clone(attribs);
+        
+        <span class="reserved">if</span> (placement == <span class="literal">'child'</span>) {
+            <span class="reserved">if</span> (c instanceof Array) {
+                <span class="reserved">for</span> (var i = 0;i &lt; c.length;i++) {
+                    node_children.push(domify(c[i]));
+                }
+            } <span class="reserved">else</span> {
+                node_children.push(domify(c));
+            }
+        } <span class="reserved">else</span> <span class="reserved">if</span> (typeof placement == <span class="literal">'object'</span>) {
+            <span class="reserved">for</span> (var target in placement) {
+                var source = placement[target];
+                <span class="reserved">if</span> (target == <span class="literal">'child'</span>) {
+                    node_children.push(c[source]);
+                } <span class="reserved">else</span> { <span class="comment">// we need to write an attribute named 'target'</span>
+                    node_attribs[target] = c[source];
+                }
+            }
+        } <span class="reserved">else</span> <span class="reserved">if</span> (placement == <span class="literal">'value'</span>) { <span class="comment">// placement is an attribute name</span>
+            node_attribs[placement] = c;
+        }
+        
+        <span class="reserved">return</span> make_dom_node(name, node_attribs, node_children);
+    };
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="reserved">if</span> (placement == <span class="literal">'child'</span>) {
+            <span class="reserved">if</span> (a.childNodes.length &gt; children.length + 1) {
+                var a_children = a.childNodes;
+                
+                var arr = [];
+                <span class="reserved">for</span> (var i = children.length;i &lt; a_children.length;i++) {
+                    arr.push(jsify(a_children[i], c[i - children.length]));
+                }
+                
+                <span class="reserved">return</span> arr;
+            } <span class="reserved">else</span> {
+                <span class="reserved">return</span> jsify(a.lastChild, c);
+            }
+        } <span class="reserved">else</span> <span class="reserved">if</span> (typeof placement == <span class="literal">'object'</span>) {
+            var o = {};
+            
+            <span class="reserved">for</span> (var source in placement) {
+                target = placement[source];
+                
+                <span class="reserved">if</span> (source == <span class="literal">'child'</span>) {
+                    <span class="reserved">if</span> (a.childNodes.length !== 0) {
+                        o[target] = jsify(a.lastChild, c[target]);
+                    }
+                } <span class="reserved">else</span> <span class="reserved">if</span> (source == <span class="literal">'value'</span>) {
+                     <span class="reserved">if</span> (a.value !== undefined) { 
+                            o[target] = jsify(a.value, c[target]);
+                     }
+                } <span class="reserved">else</span> { <span class="comment">// source is an attribute name</span>
+                    <span class="reserved">if</span> (a.hasAttribute(source)) {
+                        o[target] = jsify(a.getAttribute(source), c[target]);
+                    }
+                } 
+            }             
+            
+            <span class="reserved">if</span> (implicit_focus) {
+                <span class="reserved">for</span> (var prop in c) {
+                    <span class="reserved">if</span> (!(prop in inverse_placement)) {
+                        o[prop] = c[prop];
+                    }
+                }
+            }
+            
+            <span class="reserved">return</span> o;
+        } <span class="reserved">else</span> <span class="reserved">if</span> (placement == <span class="literal">'value'</span>) {
+            <span class="reserved">return</span> jsify(a.value, c);
+        } <span class="reserved">else</span> { <span class="comment">// placement is an attribute name</span>
+            <span class="reserved">return</span> jsify(a.getAttribute(placement), c);
+        }
+    };    
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LTag, <span class="literal">'tag'</span>);
+
+<span class="comment">/**
+ * &lt;p&gt;Makes an {<span class="attrib">@link</span> LTag}-derived lens.  Similar in spirit to
+ * {<span class="attrib">@link</span> #make_arith_lens}.  Given the name, it creates the {<span class="attrib">@link</span> Lens}
+ * constructor LNameTag and the lens function (a la {<span class="attrib">@link</span> #make_lens_function})
+ * name_tag.&lt;/p&gt;
+ * &lt;p&gt;The generated lenses take one of three calling conventions. Using LDivTag
+ * as an example, a DIV lens can be created in the standard {<span class="attrib">@link</span> LTag} way: 
+ * &lt;tt&gt;new LDivTag({ id: 'foo' }, ['First child'])&lt;/tt&gt;.  It may also be called
+ * with an implicit {<span class="attrib">@link</span> LLayout}: &lt;tt&gt;new LDivTag({ id: 'foo' }, 'lbl1',
+ *'Foo: ', 'foo', new LPlus(5, 0), 'lbl2', 'Bar: ', 'bar', new LId())&lt;/tt&gt;,
+ * where the arguments to {<span class="attrib">@link</span> LLayout} are all of those after the attribute
+ * object.  The third calling convention uses an implicit {<span class="attrib">@link</span> LSeq}, like so:
+ * &lt;tt&gt;new LInputTag({ id: 'num' }, plus(5, 0))&lt;/tt&gt;, where the value after the
+ * attribute object is a lens.&lt;/p&gt;
+ * &lt;p&gt;Lenses with a placement of 'const' will use {<span class="attrib">@link</span> LConstTag}, which
+ * is a DOM-aware {<span class="attrib">@link</span> LConst}.&lt;/p&gt;
+ *
+ * <span class="attrib">@param</span> {String} name The lens to create
+ * <span class="attrib">@param</span> {String} placement The default value for placement in
+ *     {<span class="attrib">@link</span> LTag}; should be either 'child', 'const', or an attribute name
+ */</span>
+<span class="reserved">function</span> make_tag_lens(name, placement) {
+    var tag_name = name + <span class="literal">"_tag"</span>;
+    var f;
+    
+    <span class="reserved">if</span> (placement == <span class="literal">'const'</span>) {
+        f = <span class="reserved">function</span> (d, attribs, children, strict) {
+            LConstTag.call(<span class="reserved">this</span>, name, d, attribs, children, strict);
+            <span class="reserved">this</span>.name = tag_name;
+            
+            <span class="reserved">return</span> <span class="reserved">this</span>;
+        };
+    } <span class="reserved">else</span> {
+        f = <span class="reserved">function</span> (attribs, children) {
+            <span class="comment">// figure out which calling convention we're in...</span>
+            var seq_mode = is_lens(children);
+            var layout_mode = children !== undefined &amp;&amp; 
+                              !(children instanceof Array);
+                              
+            <span class="reserved">if</span> (seq_mode) {
+                <span class="comment">// LSeq calling convention</span>
+                LSeq.call(<span class="reserved">this</span>, children, new LTag(name, placement, attribs));
+            } <span class="reserved">else</span> <span class="reserved">if</span> (layout_mode) {
+                <span class="comment">// LLayout calling convention</span>
+                var layout = clone(arguments, true).slice(1);
+                LSeq.call(<span class="reserved">this</span>,
+                          LLayout.apply(new Lens(), layout),
+                          new LTag(name, placement, attribs));
+            } <span class="reserved">else</span> {
+                <span class="comment">// LTag calling convention</span>
+                LTag.call(<span class="reserved">this</span>, name, placement, attribs, children);
+            }
+            <span class="reserved">this</span>.name = tag_name;
+                    
+            <span class="reserved">return</span> <span class="reserved">this</span>;
+        };
+    }
+    $L(f, tag_name);
+    
+    <span class="comment">// publish</span>
+    var class_name = [<span class="literal">"L"</span>, name[0].toUpperCase(), name.slice(1), <span class="literal">"Tag"</span>].
+        join(<span class="literal">''</span>);
+    eval(class_name + <span class="literal">" = f"</span>);
+    
+    <span class="reserved">return</span> f;
+} 
+
+<span class="comment">/**
+ * Basis for the generation of tag lenses.  Tags under 'child' have the lens'
+ * input sent to the last child node; 'const' lenses don't expect input; and
+ * 'value' lenses put their input in the value attribute.
+ */</span>
+var tag_schema = { <span class="literal">'child'</span>: [<span class="literal">"a"</span>, <span class="literal">"canvas"</span>, <span class="literal">"div"</span>, <span class="literal">"fieldset"</span>, <span class="literal">"form"</span>, <span class="literal">"h1"</span>,
+                             <span class="literal">"h2"</span>, <span class="literal">"h3"</span>, <span class="literal">"label"</span>, <span class="literal">"legend"</span>, <span class="literal">"li"</span>, <span class="literal">"ol"</span>,
+                             <span class="literal">"optgroup"</span>, <span class="literal">"p"</span>, <span class="literal">"pre"</span>, <span class="literal">"select"</span>, <span class="literal">"span"</span>, <span class="literal">"strong"</span>,
+                             <span class="literal">"table"</span>, <span class="literal">"tbody"</span>, <span class="literal">"td"</span>, <span class="literal">"textarea"</span>, <span class="literal">"tfoot"</span>, <span class="literal">"th"</span>,
+                             <span class="literal">"thead"</span>, <span class="literal">"tr"</span>, <span class="literal">"tt"</span>, <span class="literal">"ul"</span>],
+                   <span class="literal">'const'</span>: [<span class="literal">"br"</span>, <span class="literal">"hr"</span>],
+                   <span class="literal">'value'</span>: [<span class="literal">"button"</span>, <span class="literal">"input"</span>]
+};
+
+<span class="reserved">for</span> (type in tag_schema) {
+    tags = tag_schema[type];
+    <span class="reserved">for</span> (var i = 0;i &lt; tags.length;i++) {
+        make_tag_lens(tags[i], type);
+    }
+}
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * If given a primitive value on get, it will create an option with the 
+ * concrete tree as both the value and the text.  If given an object o,
+ * then o.value will be set as the value and o.text will be set as the text.
+ * Whether an object or value is putback depends on what was given --
+ * LOptionTag uses {<span class="attrib">@link</span> LCcond}.
+ *
+ * <span class="attrib">@extends</span> Lens
+ * <span class="attrib">@param</span> {Object} attribs A property list of default attributes.  It defaults
+ *     to {}.
+ * <span class="attrib">@param</span> {Array} children A list of default children; defaults to [].
+ */</span>
+<span class="reserved">function</span> LOptionTag(attribs, children) {
+    var tag = new LTag(<span class="literal">'option'</span>, { value: <span class="literal">'value'</span>, child: <span class="literal">'text'</span> },
+                       attribs, children);
+    LCcond.call(<span class="reserved">this</span>, <span class="reserved">function</span> (c) { <span class="reserved">return</span> typeof c == <span class="literal">'object'</span>; },
+                tag,
+                new LSeq(new LSeq(new LPlunge(<span class="literal">'text'</span>), 
+                                  new LCopy(<span class="literal">'text'</span>, <span class="literal">'value'</span>)),
+                         tag));
+    <span class="reserved">this</span>.name = <span class="literal">'option_tag'</span>;
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+$L(LOptionTag, <span class="literal">'option_tag'</span>);
+
+<span class="comment">// DOM LENSES }}}</span>
+
+<span class="comment">// LENSES }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ DOM FUNCTIONS
+ *******************************/</span>
+
+<span class="comment">/**
+ * Gets a DOM object in a portable/intelligent way.  If the named object 
+ * couldn't be found, then {<span class="attrib">@link</span> #error} is called.
+ *
+ * <span class="attrib">@param</span> {String} name The name of the DOM object; if name is already a DOM 
+ *     object, then it is simply returned
+ * <span class="attrib">@param</span> {boolean} strict Set to true to cause an error for failed lookups; the
+ *     default is false
+ * <span class="attrib">@return</span> {DOM:element} The DOM element found 
+ */</span>
+<span class="reserved">function</span> get_dom_object(name, strict) {
+    strict = strict || false;
+    <span class="reserved">if</span> (typeof name == <span class="literal">'object'</span>) { 
+        <span class="reserved">return</span> name; 
+    }
+    
+    var o = document.getElementById ? document.getElementById(name) :
+            document.all ? document.all[name] :
+            document.layers ? document.layers[name] :
+            strict ? error(<span class="literal">'get_dom_object'</span>, <span class="literal">'cannot access object '</span> + name) : 
+                     undefined;
+    
+    <span class="reserved">if</span> (!o) { 
+        <span class="reserved">return</span> strict ? error(<span class="literal">'get_dom_object'</span>,
+                              <span class="literal">'could not find object '</span> + name) : 
+                        undefined; 
+    }
+        
+    <span class="reserved">return</span> o;
+}
+
+<span class="comment">/**
+ * Adds an event handler to a DOM node without replacing any existing handlers.
+ * The user's handler will be called after all previous handlers, and its
+ * return value will be propagated.  Credit must be given to
+ * http://www.quirksmode.com for valuable browser information.
+ *
+ * <span class="attrib">@param</span> {DOM:element} obj The DOM node
+ * <span class="attrib">@param</span> {String} event The event name (e.g. 'click') or moniker
+ *     (e.g., 'onclick')
+ * <span class="attrib">@param</span> {function} handler The handler to call; it will be passed the event
+ *     object, and the 'this' object will be the DOM node on which the event
+ *     occurred
+ * <span class="attrib">@return</span> {function} The function that is actually registered on the event is
+ *     returned; it performs some cross-browser maintenance before calling
+ *     the given handler
+ */</span>
+<span class="reserved">function</span> add_event_handler(obj, event, handler) {
+    <span class="comment">// munge the event name into the registration name</span>
+    event = (event.slice(0, 2) == <span class="literal">'on'</span>) ? event : <span class="literal">'on'</span> + event;
+    
+    <span class="comment">// save the old handler</span>
+    var old = obj[event];
+    obj[event] = <span class="reserved">function</span> (e) {
+        <span class="comment">// handle cross-browser event funniness -- IE stores it in window.event</span>
+        <span class="reserved">if</span> (!e) { e = window.event; }
+        
+        <span class="comment">// call the old event handler</span>
+        <span class="reserved">if</span> (old) { old.call(obj, e); }
+        
+        <span class="comment">// and then have the new handler decide what happens</span>
+        <span class="reserved">return</span> handler.call(obj, e);
+    };
+    
+    <span class="reserved">return</span> obj[event];
+}
+
+<span class="comment">/**
+ * A list of type values for input for which events should be caught.
+ */</span>
+var input_nodes = [<span class="literal">'text'</span>, <span class="literal">'password'</span>, <span class="literal">'checkbox'</span>, <span class="literal">'radio'</span>, <span class="literal">'file'</span>];
+
+<span class="comment">/**
+ * A predicate for DOM objects which are editable, and which events must be
+ * caught for.  This is, in particular, input elements matching {<span class="attrib">@link</span> 
+ * #input_nodes}, the textarea element, and the select element.
+ *
+ * <span class="attrib">@param</span> o Any object
+ * <span class="attrib">@return</span> {boolean} True if o has a meaningful onchange event (while some
+ *     browsers have mixed onchange implementations, this includes checkboxes
+ *     and radio buttons)
+ */</span>
+<span class="reserved">function</span> is_editable(o) {
+    <span class="reserved">if</span> (!dom_obj(o)) { <span class="reserved">return</span> false; }
+    
+    var node_name = o.nodeName.toLowerCase();
+    <span class="reserved">if</span> (node_name == <span class="literal">'textarea'</span> ||
+        node_name == <span class="literal">'select'</span>) { <span class="reserved">return</span> true; }
+    <span class="reserved">else</span> <span class="reserved">if</span> (node_name == <span class="literal">'input'</span>) {
+        <span class="comment">// default to type='text'</span>
+        <span class="reserved">if</span> (!o.hasAttribute(<span class="literal">'type'</span>)) { <span class="reserved">return</span> true; }
+        
+        <span class="comment">// otherwise, see if it's the right kind</span>
+        var node_type = o.getAttribute(<span class="literal">'type'</span>);
+        <span class="reserved">for</span> (var type in input_nodes) {
+            <span class="reserved">if</span> (input_nodes[type] == node_type) { <span class="reserved">return</span> true; }
+        }
+    }
+
+    <span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ * Recursively attaches events to a DOM object.
+ *
+ * <span class="attrib">@param</span> {DOM:element} obj The DOM object
+ * <span class="attrib">@param</span> {function} handler The event handler -- it will be passed the cross-
+ *     browser event object
+ */</span>
+<span class="reserved">function</span> attach_handler(obj, handler) {
+    <span class="reserved">if</span> (!is_editable(obj)) {
+        <span class="reserved">if</span> (obj.childNodes) {
+            var children = obj.childNodes;
+            <span class="reserved">for</span> (var i = 0;i &lt; children.length;i++) {
+                attach_handler(children[i], handler);
+            }
+        }
+        <span class="reserved">return</span>;
+    }
+    
+    add_event_handler(obj, <span class="literal">'reset'</span>, handler);
+    add_event_handler(obj, <span class="literal">'change'</span>, handler);
+    
+    var node_name = obj.nodeName.toLowerCase();
+    <span class="comment">// these guys work funny in some browsers...</span>
+    <span class="reserved">if</span> (obj.hasAttribute(<span class="literal">'type'</span>)) {
+        var type = obj.getAttribute(<span class="literal">'type'</span>);
+        <span class="reserved">if</span> (type == <span class="literal">'radio'</span> || type == <span class="literal">'checkbox'</span>) {
+            add_event_handler(obj, <span class="literal">'click'</span>, handler);
+        } <span class="reserved">else</span> <span class="reserved">if</span> (type == <span class="literal">'text'</span>) {
+            add_event_handler(obj, <span class="literal">'keypress'</span>, handler);
+        }
+    } <span class="reserved">else</span> <span class="reserved">if</span> (node_name == <span class="literal">'input'</span> || node_name == <span class="literal">'textarea'</span>) {
+        add_event_handler(obj, <span class="literal">'keypress'</span>, handler);
+    }
+}
+
+<span class="comment">/**
+ * The registry of lens {<span class="attrib">@link</span> Binding}s.
+ */</span>
+var __bound_ids = {};
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * &lt;p&gt;A binding of a lens.  It records pertinent information, to allow for 
+ * reflection on bindings.  Salient fields include:&lt;/p&gt;
+ * &lt;table&gt;
+ * &lt;tr&gt;&lt;td&gt;lens&lt;/td&gt;&lt;td&gt;The lens (without any DOM wrapping)&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;id&lt;/td&gt;&lt;td&gt;The DOM id bound to&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;last_model&lt;/td&gt;&lt;td&gt;The last model (concrete tree, in C) seen&lt;/td&gt;&lt;/tr&gt;
+ * &lt;tr&gt;&lt;td&gt;poll_id&lt;/td&gt;&lt;td&gt;The interval id from window.setInterval controlling 
+ *     polling (not necessarily set)&lt;/td&gt;&lt;/tr&gt;
+ * &lt;/table&gt;
+ * &lt;p&gt;It also has get and putback methods, like a {<span class="attrib">@link</span> Lens}, but Binding is
+ * not a traditional lens -- it will store and manage its own C and A values.
+ * &lt;/p&gt;
+ *
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@param</span> {Lens} lens The lens to bind
+ * <span class="attrib">@param</span> {String} id The DOM id to bind to
+ * <span class="attrib">@param</span> {function} dom_update_callback A function to call when updates to the
+ *     DOM cause a new model to be generated
+ */</span>
+<span class="reserved">function</span> Binding(lens, dom_id, dom_update_callback) {
+    <span class="reserved">this</span>.lens = lens;
+    <span class="reserved">this</span>.id = dom_id;
+    
+    var last_model = undefined;
+    
+    var dom_read = <span class="reserved">function</span> () {
+        <span class="reserved">return</span> get_dom_object(dom_id);
+    };
+    
+    <span class="reserved">this</span>.putback = <span class="reserved">function</span> (a, c) {
+        <span class="reserved">if</span> (c !== undefined) { last_model = c; }
+        var new_model = jsify(lens.putback(dom_read(), last_model));
+        <span class="reserved">if</span> (!equal(new_model, last_model)) {
+            last_model = new_model;
+            <span class="reserved">if</span> (dom_update_callback) { dom_update_callback(new_model); }
+        }
+    };
+    
+    <span class="reserved">this</span>.get = <span class="reserved">function</span> (c) {
+        var old_dom = dom_read();
+                
+        <span class="comment">// make sure it has a parent -- if not, the update will fail</span>
+        <span class="reserved">if</span> (!has_prop(old_dom, <span class="literal">'parentNode'</span>)) {
+            error(<span class="literal">'bind_lens'</span>, <span class="literal">'model_update_callback: DOM object has no parent'</span>);
+        }
+        
+        <span class="comment">// perform the lens' get operation</span>
+        last_model = c;
+        var new_dom = lens.get(c);
+        
+        <span class="comment">// make sure the lens has appropriate output -- it musn't fail on </span>
+        <span class="comment">// putback.  the error behavior for the last two tests may be too strict</span>
+        <span class="reserved">if</span> (!dom_obj(new_dom)) {
+            <span class="comment">// if the lens didn't produce a DOM object, just make a span...</span>
+            lens = new LSeq(lens, new LSpanTag({ <span class="literal">'id'</span>: dom_id }));
+            new_dom = lens.get(c);
+        } <span class="reserved">else</span> <span class="reserved">if</span> (!(<span class="literal">'hasAttribute'</span> in new_dom) || 
+                   !new_dom.hasAttribute(<span class="literal">'id'</span>)) {
+            <span class="comment">// if the lens didn't produce a DOM object with an id, error</span>
+            error(<span class="literal">'bind_lens'</span>, <span class="literal">'model_update_callback: lens produced DOM object '</span> +
+                  <span class="literal">'without id'</span>);
+        } <span class="reserved">else</span> <span class="reserved">if</span> (new_dom.getAttribute(<span class="literal">'id'</span>) !== dom_id) {
+            <span class="comment">// if the lens produced a DOM object with the wrong id, error</span>
+            error([<span class="literal">'bind_lens'</span>, <span class="literal">'model_update_callback: lens produced DOM object '</span>,
+                   <span class="literal">'with id '</span>, new_dom.getAttribute(dom_id), <span class="literal">' instead of '</span>,
+                   dom_id].join(<span class="literal">''</span>));
+        }
+        
+        <span class="comment">// use events to putback on DOM updates</span>
+        <span class="comment">// the timeout is done so that new values actually show up when read out</span>
+        <span class="comment">// it's a stupid hack</span>
+        var pb = <span class="reserved">this</span>.putback;
+        attach_handler(new_dom, <span class="reserved">function</span> () { 
+            window.setTimeout(pb, 5);
+            <span class="comment">// bubble, don't capture</span>
+            <span class="reserved">return</span> true; 
+        });
+        
+        <span class="comment">// update!</span>
+        old_dom.parentNode.replaceChild(new_dom, old_dom);
+        
+        <span class="reserved">return</span>;
+    };
+    
+    <span class="reserved">return</span> <span class="reserved">this</span>;
+}
+
+<span class="comment">/**
+ * &lt;p&gt;Binds a lens to a given id in the document.  It returns a callback that
+ * notifies the lens binding of new model values; it takes an optional callback
+ * to notify the caller of new model values due to DOM changes.&lt;/p&gt;
+ *
+ * <span class="attrib">@param</span> {Lens} lens The lens
+ * <span class="attrib">@param</span> {String} dom_id The id to bind to
+ * <span class="attrib">@param</span> {function} dom_update_callback The callback to call when the DOM 
+ *     changes to create a new model value; it will be called with the new value
+ * <span class="attrib">@param</span> {int} polling An optional argument setting the frequency in
+ *     milliseconds to check for new DOM structure; the default is 5000
+ * <span class="attrib">@return</span> {function} A callback to provide the binding with new values
+ * <span class="attrib">@see</span> #unbind_lens
+ */</span>
+<span class="reserved">function</span> bind_lens(lens, dom_id, dom_update_callback, polling) {
+    polling = polling || 10000; <span class="comment">// default timeout, in ms</span>
+    var last_model = undefined;
+    
+    <span class="reserved">if</span> (dom_id in __bound_ids) {
+        error(<span class="literal">'bind_lens'</span>, dom_id + <span class="literal">' is already bound'</span>); 
+    }
+    
+    <span class="comment">// create the binding</span>
+    var binding = new Binding(lens, dom_id, dom_update_callback, polling);
+    __bound_ids[dom_id] = binding;
+    
+    <span class="comment">// call dom_update every polling ms</span>
+    <span class="comment">// we save the return value, which is the interval ID.  this way we can turn</span>
+    <span class="comment">// it off, later in unbind_lens</span>
+    binding.poll_id = window.setInterval(<span class="reserved">function</span> () { 
+        <span class="reserved">return</span> binding.putback();
+    }, polling); 
+    
+    <span class="comment">// eta expand to preserve 'this'</span>
+    <span class="reserved">return</span> <span class="reserved">function</span> (c) { <span class="reserved">return</span> binding.get(c); };
+}
+
+<span class="comment">/**
+ * Unbinds a lens bound to the DOM id dom_id.  If none is bound, an error is
+ * signalled.
+ *
+ * <span class="attrib">@param</span> {String} dom_id The DOM id to unbind
+ * <span class="attrib">@return</span> {Lens} The lens that was bound
+ * <span class="attrib">@see</span> #bind_lens
+ */</span>
+<span class="reserved">function</span> unbind_lens(dom_id) {
+    <span class="reserved">if</span> (!(dom_id in __bound_ids)) {
+        error(<span class="literal">'unbind_lens'</span>, dom_id + <span class="literal">' is not bound'</span>);
+    }
+    
+    binding = __bound_ids[dom_id];
+    window.clearInterval(binding.poll_id); <span class="comment">// TODO clear DOM onchange callbacks</span>
+    
+    delete __bound_ids[dom_id];
+    
+    <span class="reserved">return</span> binding.lens;
+}
+
+<span class="comment">// DOM FUNCTIONS }}}</span>
+
+<span class="comment">/*******************************
+ * {{{ EXPORTS
+ *******************************/</span>
+
+var exports = { <span class="literal">'bind_lens'</span>: bind_lens, 
+                <span class="literal">'unbind_lens'</span>: unbind_lens 
+};
+
+<span class="comment">// Collate export information from the lens registry</span>
+<span class="reserved">for</span> (var name in __lenses) {
+    exports[name] = __lenses[name].fun;
+}
+
+<span class="comment">// Export identifiers to the global scope (note lack of 'var')</span>
+<span class="reserved">if</span> (provideGlobal) {
+    <span class="reserved">for</span> (name in exports) {
+        eval([name, <span class="literal">' = exports.'</span>, name, <span class="literal">';'</span>].join(<span class="literal">''</span>));
+    }
+}
+
+<span class="comment">//return exports;</span>
+<span class="comment">//</span>
+
+<span class="comment">// EXPORTS }}}</span>
+
+<span class="comment">//}</span>
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Wed Feb 14 15:36:01 2007</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Flapjax and lenses</title>
+<script type="text/javascript" src="flapjax.js"></script>
+<script type="text/javascript" src="lens.js"></script>
+<link rel="stylesheet" media="screen" href="testbed.css"></link>
+<script type="text/javascript">
+var fx;
+function loader() {
+fx = flapjaxInit();
+initLenses(fx);
+
+var m = model_b(5);
+var lens = input_tag({ id: 'inp' });
+bind_lens_to(m, lens, 'inp');
+
+insertDomB(m, 'model');
+}
+</script>
+</head>
+<body onload="loader();">
+<span id="inp"></span>
+<span id="model"></span>
+</body>
+</html>

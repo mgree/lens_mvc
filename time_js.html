@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>time_display lens (plain JavaScript version)</title>
+<script type="text/javascript" src="lens.js"></script>
+<link rel="stylesheet" media="screen" href="testbed.css"></link>
+<script type="text/javascript">
+function loader() {
+initLenses(); // used only for DOM functions
+
+function time_id(id, type) {
+    return id + '_' + type;
+}
+
+function make_time_display(time, id, callback, text, sep) {
+    text = text || ''; // no text, by default
+    sep = sep || ':'; // default separator
+
+    function time_v(outer_id, id, v) {
+        var node = make_dom_node('input', { 'id': outer_id + '_' + id, 
+                                            'class': 'time_' + id, 'size': 2,
+                                            'value': v }, []);
+        // manage callbacks...
+        add_event_handler(node, 'change', callback);
+        add_event_handler(node, 'keypress', callback);
+        
+        return node;
+    }
+
+    return make_dom_node('span', { 'id': id },
+                         [text, 
+                          // deal with values immediately and directly;
+                          // acting, not declaring
+                          time_v(id, 'hours', time.h), sep,
+                          time_v(id, 'minutes', time.m), sep,
+                          time_v(id, 'seconds', time.s)]);
+}
+
+function extract_time_display(id) {
+    // this function was completely implied by our earlier function
+    // PLUS it doesn't compose, so we can't use this (easily) to create a single
+    // "two time" component -- and if we did, we'd have to write a second
+    // dom_update function
+    return { 'h': get_dom_object(time_id(id, 'hours')).value,
+             'm': get_dom_object(time_id(id, 'minutes')).value,
+             's': get_dom_object(time_id(id, 'seconds')).value };
+}
+
+// we'll need to keep a list of them, so everything stays synchronized.  in
+// Flapjax, this would be automatic
+var model_updaters = [];
+
+// the data model
+var model = { 'start': { h: 12, m: 29, s: 52 },
+               'stop': { h: 1, m: 45, s: 14 } };
+// we have to track much more information -- id and which, so we know what to
+// extract
+var dom_update = function (idx, id, which) {
+    which = which || id;
+    
+    var callback = function () {
+        var v = clone(model);
+        v[which] = extract_time_display(id);
+
+        show_model(v);
+        if (!equal(model, v)) {
+            model = v;
+
+            for (var i = 0;i < model_updaters.length;i++) {
+                if (idx != i) { model_updaters[i](model); }
+            }
+        }
+    };
+    
+    return function () { window.setTimeout(callback, 5); return true; };
+}
+
+// Now all that's left is to add everything to the DOM.  We can wrap it up in
+// a few simple functions, but there's a lot of opportunity for error/typos.
+
+function make_time1(model) {
+    var time1 = get_dom_object('time1');
+    
+    // manually deal with DOM creation/deletion
+    while (time1.hasChildNodes()) {
+        time1.removeChild(time1.firstChild);
+    }
+    
+    time1.appendChild(make_time_display(model.start, 'start',
+                                        dom_update(0, 'start'),
+                                        'Start time: '));
+    time1.appendChild(make_time_display(model.stop, 'stop',
+                                        dom_update(0, 'stop'),
+                                        'Stop time: '));
+}
+make_time1(model);
+model_updaters.push(make_time1);
+
+function make_time2(model) {
+    // manually deal with DOM creation/deletion
+    var start2 = get_dom_object('start2');
+    start2.parentNode.replaceChild(make_time_display(model.start, 'start2',
+                                                     dom_update(1, 'start2', 'start'),
+                                                     'Start time: '), start2);
+    var stop2 = get_dom_object('stop2');
+    stop2.parentNode.replaceChild(make_time_display(model.stop, 'stop2',
+                                                    dom_update(1, 'stop2', 'stop'),
+                                                    'Stop time: '), stop2);
+}
+make_time2(model);
+model_updaters.push(make_time2);
+
+// a way to show the model
+var model_span = get_dom_object('model');
+function show_model(m) {
+    function format_time(t) {
+        return ['{ h: ', t.h, ', m: ', t.m, ', s: ', t.s, ' }'].join('');
+    }
+
+    var s = ['MODEL VALUE -- { start: ', format_time(m.start),
+             ', stop: ', format_time(m.stop), ' }'].join('');
+    var text = document.createTextNode(s);
+    model_span.replaceChild(text, model_span.firstChild);
+    
+}
+
+show_model(model);
+};
+</script>
+</head>
+<body onload="loader();">
+<span id="time1"></span><br />
+<span id="time2"><span id="start2"></span><span id="stop2"></span></span><br />
+<span id="model"><span /></span>
+</body>
+</html>

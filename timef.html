@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>time_display lens with Flapjax</title>
+<script type="text/javascript" src="lens.js"></script>
+<script type="text/javascript" src="flapjax.js"></script>
+<link rel="stylesheet" media="screen" href="testbed.css"></link>
+<script type="text/javascript">
+function loader() {
+fx = flapjaxInit(false);
+initLenses(fx);
+
+function time_display(text, sep) {
+    text = text || ''; // no text, by default
+    sep = sep || ':'; // default separator
+
+    // an abstraction for an input field
+    function time_v(id) {
+        return input_tag({ 'class': 'time_' + id, 'size': 2 });
+    }
+
+    // wrap the list as the child of a span element with id="$id" while
+    // laying out the arguments in this order, mapping h, m, and s to time_v
+    // inputs with appropriate ids
+    return span_tag({},
+                    'text', text,
+                    'h', time_v('hours'),
+                    'sep1', sep,
+                    'm', time_v('minutes'),
+                    'sep2', sep,
+                    's', time_v('seconds'));
+}
+
+// a single lens for both start and stop, with a single call to bind_lens
+var lens1 = span_tag({ 'id': 'time1' },
+                     'start', time_display('Start time: '),
+                     'stop', time_display('Stop time: '));
+
+// two separate lenses, one handling start and one handling stop; they'll
+// have to be bound separately
+var lens2_start = focus('start').
+                  // this wouldn't need a seq if we called
+                  // update_lens_prototype('time_display', time_display)
+                  seq(time_display('Start time: '));
+var lens2_stop = focus('stop').
+                 seq(time_display('Stop time: '));
+
+// the data model
+var model = model_b({ 'start': { h: 12, m: 29, s: 52 },
+                       'stop': { h: 1, m: 45, s: 14 } }); 
+// standard start up
+set_error_handler(throw_on_error);
+
+lens1.bind_to_b(model, 'time1');
+lens2_start.bind_to_b(model, 'start2');
+lens2_stop.bind_to_b(model, 'stop2');
+
+// a way to show the model
+var model_span = get_dom_object('model');
+function show_model(m) {
+    function format_time(t) {
+        return ['{ h: ', t.h, ', m: ', t.m, ', s: ', t.s, ' }'].join('');
+    }
+
+    var s = ['MODEL VALUE -- { start: ', format_time(m.start),
+             ', stop: ', format_time(m.stop), ' }'].join('');
+    return s;
+}
+
+fx.insertDomB(model.lift_b(show_model), 'model');
+}
+</script>
+</head>
+<body onload="loader();">
+<span id="time1"></span><br />
+<span id="time2"><span id="start2"></span><span id="stop2"></span></span><br />
+<span id="model"><span /></span>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Editable table-of-contents</title>
+<script type="text/javascript" src="lens.js"></script>
+<script type="text/javascript">
+function loader() {
+initLenses();
+
+set_error_handler(throw_on_error);
+
+function edit_header(def) {
+    return function (add_bef, add_aft, del) {
+        var add_bef_btn = make_dom_node('a', { href: '#' }, ['^']);
+        var add_aft_btn = make_dom_node('a', { href: '#' }, ['v']);
+        var del_btn = make_dom_node('a', { href: '#'}, ['x']);
+        
+        add_event_handler(add_bef_btn, 'click', function (e) {
+           add_bef(def);
+           return false;
+        });
+        
+        add_event_handler(add_aft_btn, 'click', function (e) {
+           add_aft(def);
+           return false;
+        });
+    
+        add_event_handler(del_btn, 'click', function (e) {
+            del();
+            return false;
+        });
+
+        return prune('txt').li_tag({}, 
+            'header', input_tag({}),
+            'bef', add_bef_btn,
+            'sp1', ' ',
+            'aft', add_aft_btn,
+            'sp2', ' ',
+            'del', del_btn);
+    };
+}   
+
+function full_edit(def) {
+    return function (add_bef, add_aft, del) {
+        var add_bef_btn = make_dom_node('a', { href: '#' }, ['^']);
+        var add_aft_btn = make_dom_node('a', { href: '#' }, ['v']);
+        var del_btn = make_dom_node('a', { href: '#'}, ['x']);
+        
+        add_event_handler(add_bef_btn, 'click', function (e) {
+           add_bef(def);
+           return false;
+        });
+        
+        add_event_handler(add_aft_btn, 'click', function (e) {
+           add_aft(def);
+           return false;
+        });
+    
+        add_event_handler(del_btn, 'click', function (e) {
+            del();
+            return false;
+        });
+        
+        return div_tag({}, 
+            'header', input_tag({}),
+                       'bef', add_bef_btn,
+                       'sp1', ' ',
+                       'aft', add_aft_btn,
+                       'sp2', ' ',
+                       'del', del_btn,
+                       'txt', div_tag({'class':'para'},
+                                      textarea_tag({rows: 5, cols: 80})),
+                       'br', make_dom_node('br', {}, []));
+    };
+}
+
+toc_lens = ol_tag({ id: 'toc' },
+                  list_map(edit_header({ header: 'New Section', 
+                                         txt: ['You forgot to enter text!'] })));
+content_lens = div_tag({ id: 'content' }, 
+                       list_map(full_edit({ header: 'New Section', 
+                                            txt: [''] })));
+                                              
+var model = [{ header: "Intro",
+               txt: "Hello, this is some text!" },
+             { header: "Conclusion",
+               txt: "My, that was enlightening." }];
+
+var model_updaters = [];
+var dom_update = function (idx) {
+    return function (v) {
+        show_model(v);
+        if (!equal(model, v)) {
+            model = v;
+
+            for (var i = 0;i < model_updaters.length;i++) {
+                if (idx != i) { model_updaters[i](model); }
+            }
+        }
+    };  
+}
+
+var model_update = bind_lens(toc_lens, 'toc', dom_update(0));
+model_updaters.push(model_update);
+model_update(model);
+
+model_update = bind_lens(content_lens, 'content', dom_update(1));
+model_updaters.push(model_update);
+model_update(model);
+
+
+var model_span = get_dom_object('model');
+function show_model(m) {
+    function render_sec(s) { 
+        return ['{ header: "', s.header, '", txt: "', s.txt,
+                '" }'].join('');  
+    }
+    
+    var s = 'MODEL VALUE -- [ ';
+    var renders = [];
+    for (var i = 0;i < m.length;i++) {
+        renders.push(render_sec(m[i]));
+    }
+    
+    s += renders.join(', ') + ' ]';
+    var text = document.createTextNode(s);
+    
+    while (model_span.hasChildNodes()) {
+        model_span.removeChild(model_span.firstChild);
+    }
+    
+    model_span.appendChild(text);
+}
+
+show_model(model);
+}
+</script>
+</head>
+<body onload="loader()">
+<div><ol id="toc"></ol>
+</div>
+<br />
+<div id="content"></div>
+<br /><br />
+<span id="model"></span>
+</body>
+</html>

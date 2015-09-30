@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>lens.js testbed</title>
+<script type="text/javascript" src="contracts.js"></script>
+<script type="text/javascript" src="lens.js"></script>
+<script type="text/javascript" src="test.js"></script>
+<script type="text/javascript">
+var runTests = function () { init()(); };
+function init() {
+    var exports = initLenses(initContracts);
+    runTests = initTests();
+    return runTests;
+}
+</script>
+<link rel="stylesheet" media="screen" href="testbed.css"></link>
+</head>
+<body>
+<h1 id="header">lens.js testbed</h1>    
+<div>
+<input type="button" onclick="init();" value="Init tests"></input>
+<input type="button" onclick="runTests();" value="Run tests"></input>
+</div>
+<div id="tests"/>
+</body>
+</html>

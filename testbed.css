@@ -1,0 +1,49 @@
+h1#header {
+	text-align: center;
+}
+
+div#tests {
+	display: table;
+	border-collapse: collapse;
+	margin-top: 1em;	
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+div.test {
+	display: table-row;
+}
+
+div.test * {
+	display: table-cell;
+	border: 1px dashed blue;
+	padding: 1em;
+}
+
+div.test span.test_info {
+	width: 100%;
+	border-right: none; 
+	background-color: #ccf;
+}
+
+div.test span.test_time {
+    border-left: none;
+    border-right: none;
+    background-color: #ccf;
+    white-space: nowrap;
+}
+
+div.test span.test_failures {
+	border-left: none;
+	background-color: #ccf;
+	white-space: nowrap;
+}
+
+div.test span.test_result {
+	text-align: center;
+}
+
+div#test_totals span {
+	background-color: #aaf;
+	font-weight: bold;
+}

@@ -1,0 +1,1691 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+ Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="test.js Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>test.js</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		<p>Tests the lens bidirectional program combinators for JavaScript and
+ Flapjax.</p> 
+ <p>It adds a number of testing methods to the Lens prototype and updates the
+ lens implementations' prototypes to include these new testing methods.  (It
+ only updates registered lenses, so be careful!)</p>
+ <p>Tests may then be created with $T(test_name, thunk1, thunk2, ...) and run
+ with runTests.</p>
+ 
+ <BR/><BR/><B>Version: </B>1<BR/><BR/><B>Author:</B> Michael Greenberg
+ <BR/>
+	
+</p>
+
+<hr>
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+	<a name="method_summary"><!-- --></a>
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+			<td colspan=2>
+				<font size="+2">
+					<b>Method Summary</b>
+				</font>
+			</td>
+		</tr>
+	
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!addTestResult">addTestResult</a></b>(test, success, index)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Writes the result of running a test to the DOM.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!createTestInfo">createTestInfo</a></b>(test, count_id, time_id, failures_id, prose)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Creates the structure for storing test results.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!incrementTestCount">incrementTestCount</a></b>(countSpan, success)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Updates a test count.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!recordTestTime">recordTestTime</a></b>(test, ms)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Writes the time taken running a series of tests to the DOM.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!runTests">runTests</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Runs all tests in __tests.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Object</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!scrub">scrub</a></b>(s)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;thunk</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!throws_e">throws_e</a></b>(&lt;function&gt; f, &lt;function&gt; e_pred)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Tests that running f throws a value that satisfies e_pred.
+		      </td>
+		   </tr>
+		
+	
+	</table>
+    <p>
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">/**
+ * <span class="attrib">@fileoverview</span>
+ * 
+ * &lt;p&gt;Tests the lens bidirectional program combinators for JavaScript and
+ * Flapjax.&lt;/p&gt; 
+ * &lt;p&gt;It adds a number of testing methods to the Lens prototype and updates the
+ * lens implementations' prototypes to include these new testing methods.  (It
+ * only updates registered lenses, so be careful!)&lt;/p&gt;
+ * &lt;p&gt;Tests may then be created with $T(test_name, thunk1, thunk2, ...) and run
+ * with runTests.&lt;/p&gt;
+ * 
+ * <span class="attrib">@author</span> Michael Greenberg
+ * <span class="attrib">@version</span> 1
+ */</span>
+
+<span class="comment">/******************************
+ * {{{ TEST FRAMEWORK
+ ******************************/</span>
+
+<span class="comment">/**
+ * The storage of all tests to run.
+ */</span>
+var __tests = {};
+
+<span class="comment">/**
+ * Cached div in which the totals are held.
+ */</span>
+var totalDiv;
+
+<span class="reserved">function</span> scrub(s) {
+    <span class="reserved">return</span> s.replace(/(\s|\(|\)|,)/g, <span class="literal">'_'</span>);
+}
+
+<span class="comment">/**
+ * Creates the structure for storing test results.
+ */</span>
+<span class="reserved">function</span> createTestInfo(test, count_id, time_id, failures_id, prose) {
+    var container = document.createElement(<span class="literal">'div'</span>);
+    container.setAttribute(<span class="literal">'id'</span>, scrub(<span class="literal">'test_'</span> + test));
+    container.setAttribute(<span class="literal">'class'</span>, <span class="literal">'test'</span>);
+        
+    var info = document.createElement(<span class="literal">'span'</span>);
+    info.setAttribute(<span class="literal">'id'</span>, scrub(<span class="literal">'test_'</span> + test + <span class="literal">'_info'</span>));
+    info.setAttribute(<span class="literal">'class'</span>, <span class="literal">'test_info'</span>);        
+    info.appendChild(document.createTextNode(
+        prose || (<span class="literal">'Testing '</span> + test)));
+    
+    var time = document.createElement(<span class="literal">'span'</span>);
+    time.setAttribute(<span class="literal">'id'</span>, time_id);
+    time.setAttribute(<span class="literal">'class'</span>, <span class="literal">'test_time'</span>);    
+        
+    var fails = document.createElement(<span class="literal">'span'</span>);
+    fails.setAttribute(<span class="literal">'id'</span>, failures_id);
+    fails.setAttribute(<span class="literal">'class'</span>, <span class="literal">'test_failures'</span>);
+    
+    span = document.createElement(<span class="literal">'span'</span>);
+    span.setAttribute(<span class="literal">'id'</span>, count_id);
+    span.setAttribute(<span class="literal">'class'</span>, <span class="literal">'test_result'</span>);
+    span.setAttribute(<span class="literal">'style'</span>, <span class="literal">"background-color: #0f0"</span>);
+            
+    span.appendChild(document.createTextNode(<span class="literal">'0'</span>));
+    span.appendChild(document.createTextNode(<span class="literal">'/'</span>));
+    span.appendChild(document.createTextNode(<span class="literal">'0'</span>));
+    
+    container.appendChild(info);
+    container.appendChild(time);
+    container.appendChild(fails);
+    container.appendChild(span);
+        
+    document.getElementById(<span class="literal">'tests'</span>).appendChild(container);
+    <span class="reserved">return</span> span;
+}
+
+<span class="comment">/**
+ * Updates a test count.
+ */</span>
+<span class="reserved">function</span> incrementTestCount(countSpan, success) {
+    var succNode = countSpan.childNodes[0];
+    var totalNode = countSpan.childNodes[2];
+
+    var succ = parseInt(succNode.data, 10) + (success ? 1 : 0);
+    var total = parseInt(totalNode.data, 10) + 1;
+   
+    succNode.data = succ.toString();
+    totalNode.data = total.toString();
+
+    <span class="reserved">if</span> (succ &lt; total) { countSpan.setAttribute(<span class="literal">'style'</span>, 
+                                               <span class="literal">"background-color: #f00"</span>); }
+}
+
+<span class="comment">/**
+ * Writes the result of running a test to the DOM.
+ */</span>
+<span class="reserved">function</span> addTestResult(test, success, index) {
+    totalDiv = totalDiv || createTestInfo(<span class="literal">'totals'</span>, 
+                                          <span class="literal">'test_tally'</span>,
+                                          <span class="literal">'test_total_time'</span>, 
+                                          <span class="literal">'test_fail_tally'</span>, 
+                                          <span class="literal">'Totalled results'</span>);
+    
+    var count_id = scrub(<span class="literal">'test_'</span> + test + <span class="literal">'_count'</span>);
+    var time_id = scrub(<span class="literal">'test_'</span> + test + <span class="literal">'_time'</span>);
+    var failures_id = scrub(<span class="literal">'test_'</span> + test + <span class="literal">'_failures'</span>);
+    var span = document.getElementById(count_id) || 
+        createTestInfo(test, count_id, time_id, failures_id);
+    
+    incrementTestCount(span, success);
+    incrementTestCount(totalDiv, success);
+    <span class="reserved">if</span> (!success) {
+        var fails = document.getElementById(failures_id);
+        fails.appendChild(document.createTextNode((index + 1).toString() + 
+                                                  <span class="literal">' '</span>));
+    }
+}
+
+<span class="comment">/**
+ * Writes the time taken running a series of tests to the DOM.
+ */</span>
+<span class="reserved">function</span> recordTestTime(test, ms) {
+    var time_id = scrub(<span class="literal">'test_'</span> + test + <span class="literal">'_time'</span>);
+    var span = document.getElementById(time_id);
+    <span class="reserved">while</span> (span.hasChildNodes()) { span.removeChild(span.firstChild); }
+    
+    var time = document.createTextNode(ms.toString() + <span class="literal">' ms'</span>);
+    span.appendChild(time);
+}
+
+<span class="comment">/**
+ * Runs all tests in __tests.
+ */</span>
+<span class="reserved">function</span> runTests() {
+    var total_start = new Date().getTime();
+    <span class="reserved">for</span> (var test_name in __tests) {
+        var tests = __tests[test_name];           
+
+        var start = new Date().getTime();    
+        <span class="reserved">for</span> (var i = 0;i &lt; tests.length;i++) {
+            var success = false;
+            try { success = tests[i](); }
+            catch (e) {
+                <span class="reserved">if</span> (console !== undefined) { 
+                    console.error(<span class="literal">'%o'</span>, e);
+                } <span class="reserved">else</span> { 
+                    throw e; 
+                }
+            }
+            addTestResult(test_name, success, i);
+        }
+        var finish = new Date().getTime(); 
+        var time = finish - start;
+        recordTestTime(test_name, time);        
+    }
+    var total_finish = new Date().getTime();
+    var total_time = total_finish - total_start;
+    recordTestTime(<span class="literal">'total'</span>, total_time);
+}
+
+<span class="comment">/**
+ * Adds a set of tests for a given name, e.g.
+ * 
+ * $T(foo, function () { ... }, function () { ... }, ...)
+ * 
+ * <span class="attrib">@param</span> {String} test_name The name of the test
+ * <span class="attrib">@param</span> {thunk} arguments Tests to add
+ */</span>
+<span class="reserved">function</span> $T(test_name) {
+    var tests = __tests[test_name] || [];
+    
+    <span class="reserved">for</span> (var i = 1;i &lt; arguments.length;i++) {
+        tests.push(arguments[i]);
+    }
+    
+    __tests[test_name] = tests;
+}
+
+<span class="comment">// TEST FRAMEWORK }}}</span>
+
+<span class="comment">/******************************
+ * {{{ LENS TEST FUNCTIONS
+ ******************************/</span>
+ 
+<span class="comment">/**
+ * Tests the getput law:
+ * 
+ * For all c in C and a in A, put(get(c), a) = c
+ * 
+ * <span class="attrib">@param</span> cval The value to put through the lens
+ * <span class="attrib">@return</span> {thunk} A test for the getput law on the lens with the given value
+ */</span>
+Lens.<span class="reserved">prototype</span>.getput = <span class="reserved">function</span> (cval) {
+    var lens = <span class="reserved">this</span>;
+    <span class="reserved">return</span> <span class="reserved">function</span> () {
+      var got = lens.get(cval);
+      var put = lens.putback(got, cval);
+      <span class="reserved">return</span> equal(cval, put);
+    };
+};
+
+<span class="comment">/**
+ * Tests the putget law:
+ * 
+ * For all c in C and a in A, get(putback(a, c)) = a
+ * 
+ * <span class="attrib">@param</span> aval The value in A to put through the lens
+ * <span class="attrib">@param</span> cval The value in C to put through the lens
+ * <span class="attrib">@return</span> {thunk} A test for the putget law on the lens with the given value
+ */</span>
+Lens.<span class="reserved">prototype</span>.putget = <span class="reserved">function</span> (aval, cval) {
+    var lens = <span class="reserved">this</span>;
+    <span class="reserved">return</span> <span class="reserved">function</span> () {
+        var put = lens.putback(aval, cval);
+        var got = lens.get(put);
+        <span class="reserved">return</span> equal(aval, got);
+    };
+};
+
+<span class="comment">/**
+ * Tests the putput pseudo-law, which is not true of all lenses:
+ * 
+ * For all c in C and a1, a2 in A, putback(a2, putback(a1, c)) = putback(a2, c)
+ * 
+ * <span class="attrib">@param</span> aval1 The first value in A to put through the lens
+ * <span class="attrib">@param</span> aval2 The second value in A
+ * <span class="attrib">@param</span> cval The value in C
+ * <span class="attrib">@return</span> {thunk} A test for the putput law on the lens with the given value
+ */</span>
+Lens.<span class="reserved">prototype</span>.putput = <span class="reserved">function</span> (aval1, aval2, cval) {
+    var lens = <span class="reserved">this</span>;
+    <span class="reserved">return</span> <span class="reserved">function</span>() {
+        var put1 = lens.putback(aval1, cval);
+        var put2 = lens.putback(aval2, put1);
+        var skipPut = lens.putback(aval2, cval);
+        <span class="reserved">return</span> equal(put2, skipPut);
+    };
+};
+
+<span class="comment">/**
+ * Tests that the get of a lens is equal to some value.
+ * 
+ * <span class="attrib">@param</span> cval The value in C to put through
+ * <span class="attrib">@param</span> val The expected value of lens.get(cval) (in A)
+ * <span class="attrib">@return</span> {thunk} A test for lens.get(cval) == val
+ */</span>
+Lens.<span class="reserved">prototype</span>.get_is = <span class="reserved">function</span> (cval, val) {
+    var lens = <span class="reserved">this</span>;
+    <span class="reserved">return</span> <span class="reserved">function</span> () { 
+        var got = lens.get(cval);
+        <span class="reserved">return</span> equal(got, val);
+    };
+};
+
+<span class="comment">/**
+ * Tests that the putback of a lens is equal to some value.
+ * 
+ * <span class="attrib">@param</span> aval The value in A to put through
+ * <span class="attrib">@param</span> cval The value in C
+ * <span class="attrib">@param</span> val The expected value of lens.putback(aval, cval) (in C)
+ * <span class="attrib">@return</span> {thunk} A test for lens.putback(aval, cval) == val
+ */</span>
+Lens.<span class="reserved">prototype</span>.putback_is = <span class="reserved">function</span> (aval, cval, val) {
+    var lens = <span class="reserved">this</span>;
+
+    <span class="reserved">return</span> <span class="reserved">function</span> () {
+        var put = lens.putback(aval, cval);
+        <span class="reserved">return</span> equal(put, val);
+    };
+};
+
+<span class="comment">/**
+ * Tests that running f throws a value that satisfies e_pred.
+ *
+ * <span class="attrib">@param</span> {function} f The function to run
+ * <span class="attrib">@param</span> {function} e_pred A predicate matching the desired exception
+ * <span class="attrib">@return</span> {thunk} A test for whether f throws what is desired
+ */</span>
+<span class="reserved">function</span> throws_e(f, e_pred) {
+    <span class="reserved">return</span> <span class="reserved">function</span> () {
+        try { f(); } 
+        catch (e) { <span class="reserved">return</span> e_pred(e); }
+        <span class="reserved">return</span> false;
+    };
+}
+
+<span class="comment">/**
+ * Tests that get of a lens throws a specific error.
+ *
+ * <span class="attrib">@param</span> cval The value to get (in C)
+ * <span class="attrib">@param</span> e_pred {function} A predicate matching the desired exception
+ * <span class="attrib">@return</span> {thunk} A test for lens.get(cval) throws an e_pred
+ */</span> 
+Lens.<span class="reserved">prototype</span>.get_throws = <span class="reserved">function</span> (cval, e_pred) {
+    var lens = <span class="reserved">this</span>;
+    <span class="reserved">return</span> throws_e(<span class="reserved">function</span> () { lens.get(cval); }, e_pred);    
+};
+
+<span class="comment">/**
+ * Tests that putback of a lens throws a specific error.
+ *
+ * <span class="attrib">@param</span> aval The abstract tree to putback (in A)
+ * <span class="attrib">@param</span> cval The concrete tree to putback (in C)
+ * <span class="attrib">@param</span> {function} e_pred A predicate matching the desired exception
+ * <span class="attrib">@return</span> {thunk} A test for lens.putback(aval, cval) throws an e_pred
+ */</span>
+Lens.<span class="reserved">prototype</span>.putback_throws = <span class="reserved">function</span> (aval, cval, e_pred) {
+    var lens = <span class="reserved">this</span>;
+    <span class="reserved">return</span> throws_e(<span class="reserved">function</span> () { lens.putback(aval, cval); }, e_pred); 
+};
+
+<span class="comment">// LENS TEST FUNCTIONS }}}</span>
+
+<span class="comment">/******************************
+ * {{{ TESTS
+ ******************************/</span>
+
+<span class="comment">// {{{ BASIC LENSES</span>
+
+<span class="comment">/* Tests for LId */</span>
+(<span class="reserved">function</span> () {
+    var id = id_lens();
+    
+    $T(<span class="literal">'the id_lens lens'</span>,
+        id.getput(5),
+        id.getput(undefined),
+        id.getput({ <span class="literal">'this-is-a'</span>: <span class="literal">'tree'</span> }),
+        id.getput([<span class="literal">'this'</span>, <span class="literal">'is'</span>, <span class="literal">'a'</span>, <span class="literal">'list'</span>]),
+        id.putget(5, 5),
+        id.putget(undefined, 5),
+        id.putget([<span class="literal">'a'</span>, <span class="literal">'b'</span>, <span class="literal">'c'</span>], undefined),
+        id.putput(1, 2, 3),
+        id.get_is(5, 5),
+        id.putback_is(5, undefined, 5)
+        );
+})();
+
+<span class="comment">/* Tests for LError */</span>
+(<span class="reserved">function</span> () {
+    var err = error_lens(<span class="literal">'test'</span>, <span class="literal">'this was a test'</span>);
+    var err_exception = <span class="reserved">function</span> (dir) {
+                            <span class="reserved">return</span> <span class="reserved">function</span> (e) {
+                                <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp;
+                                       e.lens == <span class="literal">'test'</span> &amp;&amp;
+                                       e.msg == dir + <span class="literal">': this was a test'</span>; 
+                            };
+                        };
+                                                
+    $T(<span class="literal">'the error_lens lens'</span>,
+       err.get_throws(undefined, err_exception(<span class="literal">'GET'</span>)),
+       err.putback_throws(undefined, undefined, err_exception(<span class="literal">'PUTBACK'</span>)),
+       err.get_throws({}, err_exception(<span class="literal">'GET'</span>)),
+       err.putback_throws({}, {}, err_exception(<span class="literal">'PUTBACK'</span>)),
+       err.get_throws(5, err_exception(<span class="literal">'GET'</span>)),
+       err.putback_throws(10, 10, err_exception(<span class="literal">'PUTBACK'</span>)));
+})();
+
+<span class="comment">/* Tests for LConst */</span>
+(<span class="reserved">function</span> () {
+    var v = 5;
+    var d = 10;
+    var c = constant(v, d);
+    
+    $T(<span class="literal">'the constant lens'</span>,
+       c.getput(7),
+       c.getput(10),
+       c.getput(undefined),
+       c.putget(v, 7),
+       c.putget(v, 10), 
+       c.putget(v, 5),
+       c.putget(v, undefined),
+       c.get_is(7, v),
+       c.get_is(undefined, v),
+       c.putback_is(v, undefined, d),
+       c.putback_is(v, 5, 5),
+       c.putback_is(v, 7, 7),
+       c.putback_throws(v+1, 7, <span class="reserved">function</span> (e) {
+           <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp;
+                  e.lens == c.name;
+       }));
+})();
+
+<span class="comment">// BASIC LENSES }}}</span>
+
+<span class="comment">// {{{ ARITHMETIC LENSES</span>
+
+<span class="comment">/* Tests for LPlus */</span>
+(<span class="reserved">function</span> () {
+    var p = plus(1, 0);
+    
+    $T(<span class="literal">'the plus lens'</span>,
+       p.getput(0),
+       p.getput(1),
+       p.putget(5, 0),
+       p.putget(0, 0),
+       p.get_is(0, 1),
+       p.get_is(-10, -9),
+       p.putback_is(undefined, undefined, 0),
+       p.putback_is(15, undefined, 14));
+})();
+
+<span class="comment">/* Tests for LMinus */</span>
+(<span class="reserved">function</span> () {
+    var m = minus(1, 0);
+    
+    $T(<span class="literal">'the minus lens'</span>,
+       m.getput(0),
+       m.getput(1),
+       m.putget(5, 0),
+       m.putget(0, 0),
+       m.get_is(0, -1),
+       m.get_is(-10, -11),
+       m.putback_is(undefined, undefined, 0),
+       m.putback_is(15, undefined, 16));
+})();
+
+<span class="comment">/* Tests for LTimes */</span>
+(<span class="reserved">function</span> () {
+    var t = times(5, 1);
+    
+    $T(<span class="literal">'the times lens'</span>,
+       throws_e(<span class="reserved">function</span> () { var bad_times = times(0, undefined); },
+                <span class="reserved">function</span> (e) { <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp;
+                                      e.lens == t.name; }),
+       t.getput(0),
+       t.getput(1),
+       t.putget(5, 0),
+       t.putget(15, 3),
+       t.get_is(0, 0),
+       t.get_is(-10, -50),
+       t.putback_is(undefined, undefined, 1),
+       t.putback_is(15, undefined, 3));
+})();
+
+<span class="comment">/* Tests for LDivide */</span>
+(<span class="reserved">function</span> () {
+    var d = divide(5, 1);
+    
+    $T(<span class="literal">'the divide lens'</span>,
+       throws_e(<span class="reserved">function</span> () { var bad_divide = divide(0, undefined); },
+                <span class="reserved">function</span> (e) { <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp;
+                                      e.lens == d.name; }),
+       d.getput(0),
+       d.getput(20),
+       d.putget(5, 0),
+       d.putget(-15, 0),
+       d.get_is(0, 0),
+       d.get_is(-10, -2),
+       d.putback_is(undefined, undefined, 1),
+       d.putback_is(15, undefined, 75));
+})();
+
+<span class="comment">// ARITHMETIC LENSES }}}</span>
+
+<span class="comment">// {{{ OBJECT LENSES</span>
+
+<span class="comment">/* Tests for LHoist and LPlunge */</span>
+(<span class="reserved">function</span> () {
+    var h = hoist(<span class="literal">'foo'</span>);
+    var strict_h = hoist(<span class="literal">'foo'</span>, true);
+
+    var p = plunge(<span class="literal">'foo'</span>);
+    var strict_p = plunge(<span class="literal">'foo'</span>, true);    
+    
+    var o = { foo: 5 };
+    
+    <span class="reserved">function</span> is_hoist_exception(e) {
+        <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp; e.lens == h.name;
+    }    
+    
+    <span class="reserved">function</span> is_plunge_exception(e) {
+        <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp; e.lens == p.name;
+    }    
+    
+    $T(<span class="literal">'the hoist lens'</span>,
+       h.getput(o),
+       h.putget(5, o),
+       h.putget(undefined, o),
+       h.putget(o, undefined),
+       h.get_is(o, 5),
+       h.putback_is(5, o, { foo: 5 }),
+       h.get_is({}, undefined),
+       h.get_throws(5, is_hoist_exception));
+       
+    <span class="comment">// run through each strict test       </span>
+    var strict_errors = { empty: {},
+                          no_foo: { bar: 6 },
+                          too_much: { foo: 5, bar: 6 } };   
+    <span class="reserved">for</span> (var ex in strict_errors) {
+         $T(<span class="literal">'the strict hoist lens'</span>,
+            strict_h.get_throws(strict_errors[ex], is_hoist_exception));                     
+    }
+    
+    $T(<span class="literal">'the plunge lens'</span>,
+       p.getput(undefined),
+       p.getput(5),
+       p.getput({ bar: 5 }),
+       p.putget(o, undefined),
+       p.putget(o, 5),
+       p.putget(o, 7),
+       p.get_is(undefined, { foo: undefined }),
+       p.get_is(5, { foo: 5 }),
+       p.putback_is({ foo: 5 }, 5),
+<span class="comment">//       p.putback_throws(undefined, undefined, is_plunge_exception),</span>
+       p.putback_throws(5, undefined, is_plunge_exception));
+       
+    <span class="reserved">for</span> (ex in strict_errors) {
+         $T(<span class="literal">'the strict plunge lens'</span>,
+            strict_p.putback_throws(strict_errors[ex], undefined, is_plunge_exception));                     
+    }
+})();
+
+<span class="comment">/* Test for LXfork */</span>
+(<span class="reserved">function</span> () {
+	var os = { <span class="literal">'undef'</span>: undefined, 
+	           <span class="literal">'empty'</span>: {}, 
+	           <span class="literal">'foo'</span>: { foo: 5 }, 
+	           <span class="literal">'foobar'</span>: { foo: 5, bar: 6 }
+	         };	
+
+	<span class="comment">// simple tests with an identity xfork</span>
+	var true_pred = <span class="reserved">function</span> () { <span class="reserved">return</span> true; };
+	var id = id_lens();
+	var xf = xfork(true_pred, true_pred, id, id);
+	<span class="reserved">for</span> (var ex in os) {
+		var o = os[ex];
+		$T(<span class="literal">'the xfork lens (identity)'</span>,
+		   xf.getput(o),
+		   xf.putget(o, undefined),
+		   xf.putget(undefined, o),
+		   xf.putget(o, o),
+		   xf.get_is(o, o),
+		   xf.putback_is(undefined, o, o),
+		   xf.putback_is(o, undefined, o),			
+		   xf.putback_is(o, o, o));
+	}
+	
+	<span class="comment">// simple predicates, identity lenses</span>
+	var foo_pred = <span class="reserved">function</span> (p) { <span class="reserved">return</span> p == <span class="literal">'foo'</span>; };
+	xf = xfork(foo_pred, foo_pred, id, id);
+	<span class="reserved">for</span> (ex in os) {
+		o = os[ex];
+		$T(<span class="literal">'the xfork lens (simple predicates, identity lenses)'</span>,
+		   xf.getput(o),
+		   xf.putget(o, undefined),
+		   xf.putget(undefined, o),
+		   xf.putget(o, o),
+		   xf.get_is(o, o),
+		   xf.putback_is(undefined, o, o),
+		   xf.putback_is(o, undefined, o),			
+		   xf.putback_is(o, o, o));
+	}
+	
+	<span class="comment">// simple predicates, complex sublenses</span>
+	xf = xfork(foo_pred, foo_pred, id, constant({}, {}));
+	<span class="reserved">for</span> (ex in os) {
+		o = os[ex];
+		$T(<span class="literal">'the xfork lens (simple predicates, complex lenses)'</span>,
+		   xf.getput(o),
+		   xf.putget(undefined, o, o));
+	}
+	$T(<span class="literal">'the xfork lens (simple predicates, complex lenses)'</span>,
+	   xf.get_is({}, {}),
+	   xf.get_is(os.foo, os.foo),
+	   xf.get_is(os.foobar, os.foo),
+	   xf.putback_is(os.foo, os.foo, os.foo),
+	   xf.putback_is(os.foo, os.foobar, os.foobar),
+	   xf.putback_is({ foo: 7 }, { foo: 5, bar: 6 }, { foo: 7, bar: 6 }));
+})();
+
+<span class="comment">/* Tests for LFork */</span>
+(<span class="reserved">function</span> () {
+	var f = fork(<span class="reserved">function</span> (p) { <span class="reserved">return</span> p == <span class="literal">'foo'</span>; },
+		  		 id_lens(), plunge(<span class="literal">'dongle'</span>));					 
+	var o = { foo: 5, bar: 6, baz: 7 };
+	var get = { foo: 5, dongle: { bar: 6, baz: 7 } };
+	
+	$T(<span class="literal">'the fork lens'</span>,
+	   f.getput(undefined),
+	   f.putget({ dongle: {} }, undefined),
+	   f.getput(o),
+	   f.putget(get, o),
+	   f.get_is(o, get),
+	   f.putback_is(get, o, o));
+})();
+
+<span class="comment">/* Tests for LFilter */</span>
+(<span class="reserved">function</span> () {
+	var f = filter(<span class="reserved">function</span> (p) { <span class="reserved">return</span> p == <span class="literal">'name'</span>; }, {});
+	var o = { name: <span class="literal">'Pat'</span>, phone: <span class="literal">'333-4444'</span> };
+	
+	$T(<span class="literal">'the filter lens'</span>,
+	   f.getput(undefined),
+	   f.getput({}),
+	   f.putget(undefined, undefined),
+	   f.putget(undefined, {}),
+	   f.putget({}, {}),
+	   f.getput({ foo: 5 }),
+	   f.get_is({ foo: 5 }, {}),
+	   f.putget({}, { foo: 5 }),
+	   f.putback_is({}, { foo: 5 }, { foo: 5 }),
+	   
+	   <span class="comment">// taken from Combinators for Bi-Directional Tree Transformations, p.17</span>
+	   f.getput(o),
+	   f.putget({ name: <span class="literal">'Pat'</span> }, o),
+	   f.putget({ name: <span class="literal">'Patty'</span> }, o),
+	   f.putback_is({ name: <span class="literal">'Patty'</span> }, o, { name: <span class="literal">'Patty'</span>, phone: <span class="literal">'333-4444'</span> }));
+})();
+
+<span class="comment">/* Tests for LPrune */</span>
+(<span class="reserved">function</span> () {
+	var p = prune(<span class="literal">'foo'</span>, 5);
+	
+	$T(<span class="literal">'the prune lens'</span>,
+	   p.getput(undefined),
+	   p.putget(undefined, undefined),
+	   p.putback_is({}, undefined, { foo : 5 }),
+	   p.getput({ bar : 6 }),
+	   p.getput({ foo : 5 }),
+	   p.getput({ foo : 6 }),
+	   p.putget({ bar : 5 }, { bar : 5, foo : 6 }),
+	   p.get_is({ foo : 6 }, {}),
+	   p.get_is({ bar : 5, foo : 6 }, { bar : 5 }),
+	   p.putback_is({ bar : 5 }, {}, { bar : 5 }),
+	   p.putback_is({ bar : 5 }, { foo : 6 }, { bar : 5, foo : 6 }));
+})();
+
+<span class="comment">/* Tests for LAdd */</span>
+(<span class="reserved">function</span> () {
+    <span class="comment">// taken from Combinators for Bi-Directional Tree Transformations, p.18</span>
+	var al = add(<span class="literal">'b'</span>, { <span class="literal">'x'</span>: {} });
+	var c = { <span class="literal">'a'</span>: {} };
+	var a = { <span class="literal">'a'</span>: {}, <span class="literal">'b'</span>: { <span class="literal">'x'</span>: {} } };
+	
+	$T(<span class="literal">'the add lens'</span>,
+	   al.getput(undefined),
+	   al.putget({ b: { x: {} } }, undefined),
+	   al.getput(c),
+	   al.putget(a, c),
+	   al.get_is({}, { b: { x: {} } }),
+	   al.get_is(c, a),
+	   al.putback_is({ c: {}, b: { x: {} } }, c, { c: {} }),
+	   al.putback_is({ c: 5, a: 10, b: { x: {} } }, c, { c: 5, a: 10 }));
+})();
+
+<span class="comment">/* Tests for LFocus */</span>
+(<span class="reserved">function</span> () {
+    var f = focus(<span class="literal">'foo'</span>, 5);
+    var foo = { <span class="literal">'foo'</span>: 7 };
+    var foobar = { <span class="literal">'foo'</span>: 7, <span class="literal">'bar'</span>: 12 };    
+    
+    $T(<span class="literal">'the focus lens'</span>,
+       f.getput(foo),
+       f.putget(0, foo),
+       f.putget(undefined, foo),
+       f.putget({ wrong: <span class="literal">'type'</span> }, foo),
+       f.get_is(foo, 7),
+       f.get_is(foobar, 7),
+       f.putback_is(7, foo, foo),
+       f.putback_is(12, foo, { foo: <span class="literal">'12'</span> }),
+       f.putback_is({ wrong: <span class="literal">'type'</span> }, foo, { foo: { wrong: <span class="literal">'type'</span> } }),
+       f.putback_is(7, foobar, foobar),
+       f.putback_is(0, foobar, { foo: 0, bar: 12 }),
+       f.getput({foo : 6, bar: 5, baz: { foo: 9 } }),
+       f.putget(11, {foo : 6, bar: 5, baz: { foo: 9 } }));
+})();
+
+<span class="comment">/* Tests for LHoistNonunique */</span>
+(<span class="reserved">function</span> () {
+    var hoist = hoist_nonunique(<span class="literal">'foo'</span>,
+                                <span class="reserved">function</span> (fp) {
+                                    <span class="reserved">return</span> fp == <span class="literal">'bar'</span>;
+                                });
+    $T(<span class="literal">'the hoist_nonunique lens'</span>,
+       hoist.getput(undefined),
+       hoist.putget(undefined, undefined),
+       hoist.getput({ foo: {} }),
+       hoist.putget({}, undefined),
+       hoist.putget({}, {}),
+       hoist.putget({}, { foo: {} }),
+       hoist.get_is({ foo: { bar: 5 } }, { bar : 5 }),
+       hoist.putback_is({ bar: 7 }, undefined, { foo: { bar: 7 } }),
+       hoist.putback_is({ baz: 6, bar: 7 }, undefined, { baz: 6, foo: { bar: 7 } }),
+       hoist.putback_is({ baz: 12 }, {}, { baz: 12, foo: {} })); 
+})();
+
+<span class="comment">/* Tests for LRename */</span>
+(<span class="reserved">function</span> () {
+    var ren = rename(<span class="literal">'foo'</span>, <span class="literal">'bar'</span>);
+    var foo = { <span class="literal">'foo'</span>: 5 };
+    var bar = { <span class="literal">'bar'</span>: 5 };
+    var foobaz = { <span class="literal">'foo'</span>: 5, <span class="literal">'baz'</span>: 6 };
+    var barbaz = { <span class="literal">'bar'</span>: 5, <span class="literal">'baz'</span>: 6 };
+
+    $T(<span class="literal">'the rename lens'</span>,
+       ren.getput(undefined),
+       ren.putget({ bar: undefined }, undefined),
+       ren.getput(foo),
+       ren.putget(bar, undefined),
+       ren.putget(bar, {}),
+       ren.putget(bar, foo),
+       ren.putget(bar, foobaz),
+       ren.putget(barbaz, undefined),
+       ren.putget(barbaz, {}),
+       ren.putget(barbaz, foo),
+       ren.putget(barbaz, foobaz),
+       ren.get_is(foo, bar),
+       ren.get_is(foobaz, barbaz),
+       ren.putback_is(bar, undefined, foo),
+       ren.putback_is(bar, {}, foo),
+       ren.putback_is(bar, foo, foo),
+       ren.putback_is(bar, foobaz, foo),
+       ren.putback_is(barbaz, undefined, foobaz),
+       ren.putback_is(barbaz, {}, foobaz),
+       ren.putback_is(barbaz, foo, foobaz),
+       ren.putback_is(barbaz, foobaz, foobaz));
+})();
+
+<span class="comment">/* Tests for LMap */</span>
+(<span class="reserved">function</span> () {
+    var m = map(plus(5, undefined));
+    var o = { foo: 5, bar: 6 };
+    
+    $T(<span class="literal">'the map lens'</span>,
+       m.getput({}),
+       m.putget({}, undefined),
+       m.putget({}, {}),
+       m.get_is({}, {}),
+       m.putback_is({}, undefined, {}),
+       m.putback_is({}, {}, {}),
+       m.getput(o),
+       m.putget(o, undefined),
+       m.putget(o, {}),
+       m.putget(o, o),
+       m.get_is(o, { foo: 10, bar: 11 }),
+       m.putback_is(o, o, { foo: 0, bar: 1 }),
+       m.putback_is({ foo: undefined }, {}, { foo: undefined }));
+       
+    var cs = { undef: undefined,
+               empty: {},
+               o: o };
+    <span class="reserved">for</span> (var ex in cs) {
+        $T(<span class="literal">'the map lens'</span>, m.putback_is({ foo: 10, bar: 11 }, cs[ex], o));
+    }   
+})();
+
+<span class="comment">/* Tests for LWmap */</span>
+(<span class="reserved">function</span> () {
+    var wm = wmap([<span class="literal">'foo'</span>, <span class="literal">'bar'</span>], plus(5, undefined));
+    var foobar = { foo: 5, bar: 6 };
+    var foobarbaz = { foo: 5, bar: 6, baz: 7 };    
+    
+    $T(<span class="literal">'the wmap lens (as map)'</span>,
+       wm.getput({}),
+       wm.get_is({}, {}),
+       wm.get_is(foobar, { foo: 10, bar: 11 }),
+       wm.getput(foobarbaz),
+       wm.get_is(foobarbaz, { foo: 10, bar: 11, baz: 7 }));
+    var cs = { undef: undefined,
+               empty: {},
+               foobar: foobar,
+               foobarbaz: foobarbaz };
+    <span class="reserved">for</span> (var ex in cs) {
+        var c = cs[ex];
+        $T(<span class="literal">'the wmap lens (as map)'</span>,
+           wm.putget({}, c),
+           wm.putback_is({}, c, {}),
+           wm.putget(foobar, c),
+           wm.putback_is(foobar, c, { foo: 0, bar: 1 }),
+           wm.putget(foobarbaz, c),
+           wm.putback_is(foobarbaz, c, { foo: 0, bar: 1, baz: 7}));
+    }
+    
+    wm = wmap(<span class="literal">'foo'</span>, plus(5, undefined), 
+              <span class="literal">'bar'</span>, minus(5, undefined));
+    $T(<span class="literal">'the wmap lens (different lenses)'</span>,
+       wm.getput({}),
+       wm.get_is({}, {}),
+       wm.getput(foobar),
+       wm.getput(foobarbaz),
+       wm.get_is(foobar, { foo: 10, bar: 1 }),
+       wm.get_is(foobarbaz, { foo: 10, bar: 1, baz: 7 }));
+     
+     <span class="reserved">for</span> (ex in cs) {
+        c = cs[ex];
+        $T(<span class="literal">'the wmap lens (different lenses)'</span>,
+           wm.putget({}, c),
+           wm.putback_is({}, c, {}),
+           wm.putget(foobar, c),
+           wm.putback_is(foobar, c, { foo: 0, bar: 11 }),
+           wm.putget(foobarbaz, c),
+           wm.putback_is(foobarbaz, c, { foo: 0, bar: 11, baz: 7}));
+    }
+    
+    <span class="reserved">function</span> wmap_exception(e) { <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp;
+                                        e.lens == <span class="literal">'wmap'</span>; }
+    wm = wmap(<span class="literal">'foo'</span>, plus(5, undefined),
+              <span class="literal">'bar'</span>, id_lens(),
+              false);
+    $T(<span class="literal">'the wmap lens (no default lens)'</span>,
+       wm.getput({}),
+       wm.get_is({}, {}),
+       wm.getput(foobar),
+       wm.get_is(foobar, { foo: 10, bar: 6 }),
+       wm.get_throws(foobarbaz, wmap_exception));
+     
+     <span class="reserved">for</span> (ex in cs) {
+        c = cs[ex];
+        $T(<span class="literal">'the wmap lens (no default lens)'</span>,
+           wm.putget({}, c),
+           wm.putback_is({}, c, {}),
+           wm.putget(foobar, c),
+           wm.putback_is(foobar, c, { foo: 0, bar: 6 }),
+           wm.putback_throws(foobarbaz, c, wmap_exception));
+    }
+})();
+
+<span class="comment">/* Tests for LCopy */</span>
+(<span class="reserved">function</span> () {
+    var cp = copy(<span class="literal">'foo'</span>, <span class="literal">'bar'</span>);
+    var foo = { foo: 5 };
+    var foobar = { foo: 5, bar: 5 };    
+    
+    $T(<span class="literal">'the copy lens'</span>,
+       cp.getput({}),
+       cp.putget({}, undefined),
+       cp.putget({}, {}),
+       cp.putget({}, foo),
+       cp.putget(foobar, undefined),
+       cp.putget(foobar, {}),
+       cp.putget(foobar, foo),
+       cp.getput(foo),
+       cp.get_is(foo, foobar),
+       cp.putback_is(foobar, undefined, foo));
+})();
+
+<span class="comment">/* Tests for LMerge */</span>
+(<span class="reserved">function</span> () {
+    var m = merge(<span class="literal">'foo'</span>, <span class="literal">'bar'</span>);
+    var foo = { foo: 5 };
+    var foobar = { foo: 5, bar: 5 };
+    
+    $T(<span class="literal">'the merge lens'</span>,
+       m.getput(undefined),
+       m.putget(undefined, undefined),
+       m.putget(undefined, {}),
+       m.putget(undefined, foo),
+       m.putget(undefined, foobar),
+       m.getput(foobar),
+       m.putget(foo, undefined),
+       m.putget(foo, {}),
+       m.putget(foo, foo),
+       m.putget(foo, foobar),
+       m.get_is(foobar, foo),
+       m.putback_is(foo, undefined, foobar),
+       m.putback_is(foo, {}, foobar),
+       m.putback_is(foo, foo, foobar),
+       m.putback_is(foo, { foo: 5, bar: 6 }, { foo: 5, bar: 6 }));
+})();
+
+<span class="comment">// OBJECT LENSES }}}</span>
+
+<span class="comment">// {{{ CONDITIONAL LENSES</span>
+
+<span class="comment">/* Tests for LCcond */</span>
+(<span class="reserved">function</span> () {
+	var add5 = plus(5, 0);
+	var c = ccond(<span class="reserved">function</span> (c) { <span class="reserved">return</span> typeof c == <span class="literal">'object'</span>; },
+	              focus(<span class="literal">'foo'</span>, 0).seq(add5),
+	              add5);
+	var foo = { foo: 0 };
+	
+	$T(<span class="literal">'the ccond lens'</span>,
+	   c.getput(0),
+	   c.putget(5, 0),
+	   c.get_is(0, 5),
+	   c.putback_is(6, 0, 1),
+	   c.getput(foo),
+	   c.putget(5, foo),
+	   c.get_is(foo, 5),
+	   c.putback_is(6, foo, { foo: 1 }));
+})();
+
+<span class="comment">/* Tests for LAcond/LRenameIfPresent */</span>
+(<span class="reserved">function</span> () {
+	var rename = rename_if_present(<span class="literal">'foo'</span>, <span class="literal">'bar'</span>);
+	var foo = { foo: 5 };
+	var bar = { bar: 5 };	
+	var baz = { baz: 5 };	
+	
+	$T(<span class="literal">'the acond lens (via the rename_if_present lens)'</span>,
+	   rename.getput(undefined),
+	   rename.putget(undefined, undefined),
+	   rename.getput({}),
+	   rename.putget({}, undefined),
+	   rename.putget({}, {}),
+	   rename.getput(foo),
+	   rename.get_is(foo, bar),
+	   rename.getput(baz),
+	   rename.get_is(baz, baz),
+	   rename.putget(bar, {}),
+	   rename.putget(bar, foo),
+	   rename.putget(bar, baz),
+	   rename.putback_is({ bar: 7 }, foo, { foo: 7 }),
+	   rename.putback_is({ bar: 3, baz: 5 }, baz, { foo: 3, baz: 5 }));	   
+})();
+
+<span class="comment">/* Tests for LCond */</span>
+(<span class="reserved">function</span> () {
+	var add5 = plus(5, 0);
+	var always_true = <span class="reserved">function</span> () { <span class="reserved">return</span> true; };
+	var always_undefined = <span class="reserved">function</span> () { <span class="reserved">return</span> undefined; };
+	var c = cond(<span class="reserved">function</span> (c) { <span class="reserved">return</span> typeof c == <span class="literal">'object'</span>; },
+	             always_true, always_true,
+	             always_undefined, always_undefined,
+	             focus(<span class="literal">'foo'</span>, 0).seq(add5),
+	             add5);
+	var foo = { foo: 0 };
+	
+	$T(<span class="literal">'the cond lens (as ccond)'</span>,
+	   c.getput(0),
+	   c.putget(5, 0),
+	   c.get_is(0, 5),
+	   c.putback_is(6, 0, 1),
+	   c.getput(foo),
+	   c.putget(5, foo),
+	   c.get_is(foo, 5),
+	   c.putback_is(6, foo, { foo: 1 }));
+
+	var has_bar = <span class="reserved">function</span> (a) { <span class="reserved">return</span> has_prop(a, <span class="literal">'bar'</span>); };
+	var no_bar = <span class="reserved">function</span> (a) { <span class="reserved">return</span> !has_prop(a, <span class="literal">'bar'</span>); };
+	c = cond(<span class="reserved">function</span> (c) { <span class="reserved">return</span> has_prop(c, <span class="literal">'foo'</span>); },
+	         has_bar, no_bar,
+	         always_undefined, always_undefined,
+	         rename(<span class="literal">'foo'</span>, <span class="literal">'bar'</span>),
+	         id_lens());
+	foo = { foo: 5 };
+	var bar = { bar: 5 };	
+	var baz = { baz: 5 };	
+	
+	$T(<span class="literal">'the cond lens (as acond/rename_if_present)'</span>,
+	   c.getput(undefined),
+	   c.putget(undefined, undefined),
+	   c.getput({}),
+	   c.putget({}, undefined),
+	   c.putget({}, {}),
+	   c.getput(foo),
+	   c.get_is(foo, bar),
+	   c.getput(baz),
+	   c.get_is(baz, baz),
+	   c.putget(bar, {}),
+	   c.putget(bar, foo),
+	   c.putget(bar, baz),
+	   c.putback_is({ bar: 7 }, foo, { foo: 7 }),
+	   c.putback_is({ bar: 3, baz: 5 }, baz, { foo: 3, baz: 5 }));
+})();
+
+<span class="comment">// OBJECT LENSES }}}</span>
+
+<span class="comment">// {{{ LIST LENSES</span>
+
+<span class="comment">/* Tests for LHead */</span>
+(<span class="reserved">function</span> () {
+	var hd = head([]);
+	var arr = [1, 2, 3, 4];
+	
+	$T(<span class="literal">'the head lens'</span>,
+	   hd.getput([]),
+	   hd.getput(arr),
+	   hd.putget(5, []),
+	   hd.putget(5, arr),
+	   hd.get_is([], undefined),
+	   hd.get_is(arr, 1),
+	   hd.putback_is(5, [], [5]),
+	   hd.putback_is(5, arr, [5, 2, 3, 4]));
+})();
+
+<span class="comment">/* Tests for LTail */</span>
+(<span class="reserved">function</span> () {
+	var tl = tail([]);
+	var arr = [1, 2, 3, 4];
+	
+	$T(<span class="literal">'the tail lens'</span>,
+	   tl.getput([]),
+	   tl.getput(arr),
+	   tl.putget(5, []),
+	   tl.putget(5, arr),
+	   tl.get_is([], undefined),
+	   tl.get_is(arr, 4),
+	   tl.putback_is(5, [], [5]),
+	   tl.putback_is(5, arr, [1, 2, 3, 5]));
+})();
+
+<span class="comment">/* Tests for LIndex */</span>
+(<span class="reserved">function</span> () {
+	var idx = index(2, [1, 2, 3, 4]);
+	
+	$T(<span class="literal">'the index lens'</span>,
+	   idx.getput(undefined),
+	   idx.getput([]),
+	   idx.getput([1]),
+	   idx.getput([<span class="literal">'foo'</span>, <span class="literal">'bar'</span>, <span class="literal">'baz'</span>]),
+	   idx.getput([1, 2, 3, 4, 5, 6]),
+	   idx.get_is([<span class="literal">'foo'</span>, <span class="literal">'bar'</span>, <span class="literal">'baz'</span>], <span class="literal">'baz'</span>),
+	   idx.putget(<span class="literal">'foo'</span>, undefined),
+	   idx.putget(<span class="literal">'foo'</span>, []),
+	   idx.putget(<span class="literal">'foo'</span>, [<span class="literal">'a'</span>]),
+	   idx.putget(<span class="literal">'foo'</span>, [1, 2, 3, 4, 5]),
+	   idx.putback_is(<span class="literal">'foo'</span>, [<span class="literal">'bar'</span>, <span class="literal">'baz'</span>, <span class="literal">'quux'</span>, <span class="literal">'zort'</span>], 
+	                    [<span class="literal">'bar'</span>, <span class="literal">'baz'</span>, <span class="literal">'foo'</span>, <span class="literal">'zort'</span>])); 
+})();
+
+<span class="comment">/* Tests for LLength */</span>
+(<span class="reserved">function</span> () {
+	var len = list_length();
+	var arr = [1, 2, 3];	
+	
+	$T(<span class="literal">'the length lens'</span>,
+	   len.getput([]),
+	   len.getput(arr),
+	   len.putget(0, arr),
+	   len.putget(1, arr),
+	   len.putget(2, arr),
+	   len.putget(3, arr),
+	   len.putget(4, arr),
+	   len.get_is([], 0),
+	   len.get_is(arr, 3),
+	   len.putback_is(0, arr, []),
+	   len.putback_is(1, arr, [1]),
+	   len.putback_is(2, arr, [1, 2]),
+	   len.putback_is(3, arr, arr),
+	   len.putback_is(4, arr, [1, 2, 3, undefined]));
+	   
+	len = list_length(<span class="literal">'beginning'</span>, <span class="literal">'end'</span>, 0);
+	$T(<span class="literal">'the length lens'</span>,
+	   len.getput([]),
+	   len.getput(arr),
+	   len.putget(0, arr),
+	   len.putget(1, arr),
+	   len.putget(2, arr),
+	   len.putget(3, arr),
+	   len.putget(4, arr),
+	   len.get_is([], 0),
+	   len.get_is(arr, 3),
+	   len.putback_is(0, arr, []),
+	   len.putback_is(1, arr, [3]),
+	   len.putback_is(2, arr, [2, 3]),
+	   len.putback_is(3, arr, arr),
+	   len.putback_is(4, arr, [1, 2, 3, 0]));
+})();
+
+<span class="comment">/* Tests for LOrder */</span>
+(<span class="reserved">function</span> () {
+    var ord = order(<span class="literal">'foo'</span>, <span class="literal">'bar'</span>, <span class="literal">'baz'</span>);
+    var o = { foo: 5, bar: 6, baz: 7 };
+    var arr = [5, 6, 7];
+    
+    var order_e = <span class="reserved">function</span> (e) {
+        <span class="reserved">return</span> e.name == <span class="literal">'LensException'</span> &amp;&amp;
+               e.lens == <span class="literal">'order'</span>;
+    };
+    
+    $T(<span class="literal">'the order lens'</span>,
+       ord.getput(o),
+       ord.get_is(o, arr),
+       ord.putget(arr, undefined, o),
+       ord.putget(arr, {}, o),
+       ord.putget(arr, o, o),
+       ord.putback_is(arr, o, o),
+       ord.putback_throws([], o, order_e),
+       ord.putback_throws([5, 6, 7, 8], o, order_e));
+})();
+
+<span class="comment">/* Tests for LListMap */</span>
+(<span class="reserved">function</span> () {
+    var map = list_map(plus(5, undefined));
+    var arr = [5, 6];
+    
+    $T(<span class="literal">'the list_map lens'</span>,
+       map.getput([]),
+       map.putget([], undefined),
+       map.putget([], []),
+       map.get_is([], []),
+       map.putback_is([], undefined, []),
+       map.putback_is([], [], []),
+       map.getput(arr),
+       map.putget(arr, undefined),
+       map.putget(arr, []),
+       map.putget(arr, arr),
+       map.get_is(arr, [10, 11]),
+       map.putback_is(arr, arr, [0, 1]),
+       map.putback_is([undefined], [], [undefined]),
+       map.putback_is([undefined, 7, 8], [], [undefined, 2, 3]));
+       
+    var cs = { undef: undefined,
+               empty: [],
+               o: arr };
+    <span class="reserved">for</span> (var ex in cs) {
+        $T(<span class="literal">'the list_map lens'</span>, map.putback_is([10, 11], cs[ex], arr));
+    }
+})();
+
+<span class="comment">/* Tests for LRotate */</span>
+(<span class="reserved">function</span> () {
+	var rot = rotate();
+	var arr = [1, 2, 3];	
+	
+	$T(<span class="literal">'the rotate lens'</span>,
+	   rot.getput([]),
+	   rot.getput(arr),
+	   rot.putget([], undefined),
+	   rot.putget([], []),
+	   rot.putget([], arr),
+	   rot.putget(arr, undefined),
+	   rot.putget(arr, []),
+	   rot.putget(arr, arr),
+	   rot.get_is([], []),
+	   rot.get_is(arr, [2, 3, 1]),
+	   rot.putback_is([], undefined, []),
+	   rot.putback_is(arr, [], [3, 1, 2]));
+})();
+
+<span class="comment">/* Tests for LReverse */</span>
+(<span class="reserved">function</span> () {
+	var rev = reverse();
+	var arr = [1, 2, 3];
+	
+	$T(<span class="literal">'the reverse lens'</span>,
+	   rev.getput([]),
+	   rev.getput(arr),
+	   rev.putget([], undefined),
+	   rev.putget([], []),
+	   rev.putget([], arr),
+	   rev.putget(arr, undefined),
+	   rev.putget(arr, []),
+	   rev.putget(arr, arr),
+	   rev.get_is(arr, [3, 2, 1]),
+	   rev.putback_is(arr, [], [3, 2, 1]),
+	   rev.putback_is([3, 2, 1], arr, arr));
+})();
+
+<span class="comment">/* Tests for LGroup */</span>
+(<span class="reserved">function</span> () {
+	var grp = group(2);
+	var arre = [1, 2, 3, 4]; <span class="comment">// even</span>
+	var arro = [1, 2, 3, 4, 5]; <span class="comment">// ood</span>
+	
+	$T(<span class="literal">'the group lens'</span>,
+	   grp.getput([]),
+	   grp.putget([], undefined),
+	   grp.putget([], []),
+	   grp.putget([], arre),
+	   grp.putget([], arro),
+	   grp.getput(arre),
+	   grp.getput(arro),
+	   grp.putget([[1, 2], [3, 4]], []),
+	   grp.putget([[1, 2], [3, 4], [5]], []),
+	   grp.get_is(arre, [[1, 2], [3, 4]]),
+	   grp.get_is(arro, [[1, 2], [3, 4], [5]]),
+	   grp.putback_is([[1, 2], [3, 4], [5]], [], arro),
+	   grp.putback_is([[1, 2], [3, 4]], [], arre),
+	   grp.putback_is([[1, 2, <span class="literal">'extra'</span>], [<span class="literal">'missing'</span>], [3, 4]], [],
+	                    [1, 2, <span class="literal">'extra'</span>, <span class="literal">'missing'</span>, 3, 4]));
+})();
+
+<span class="comment">/* Tests for LConcat */</span>
+(<span class="reserved">function</span> () {
+	var cat = concat(<span class="literal">' '</span>);
+    <span class="comment">// taken from Combinators for Bi-Directional Tree Transformations, p.34</span>
+	var l = [[<span class="literal">'C'</span>, <span class="literal">'h'</span>, <span class="literal">'r'</span>, <span class="literal">'i'</span>, <span class="literal">'s'</span>], [<span class="literal">'S'</span>, <span class="literal">'m'</span>, <span class="literal">'i'</span>, <span class="literal">'t'</span>, <span class="literal">'h'</span>]];
+	var c = [<span class="literal">'C'</span>, <span class="literal">'h'</span>, <span class="literal">'r'</span>, <span class="literal">'i'</span>, <span class="literal">'s'</span>, <span class="literal">' '</span>, <span class="literal">'S'</span>, <span class="literal">'m'</span>, <span class="literal">'i'</span>, <span class="literal">'t'</span>, <span class="literal">'h'</span>];
+	
+	$T(<span class="literal">'the concat lens'</span>,
+	   cat.getput([]),
+	   cat.getput([[1, 2, 3]]),
+	   cat.getput(l),
+	   cat.putget([], undefined),
+	   cat.putget([1, 2, 3], undefined),
+	   cat.putget([1, 2, 3], []),
+	   cat.putget(c, undefined),
+	   cat.putget(c, []),
+	   cat.putget(c, l),
+	   cat.get_is(l, c),
+	   cat.putback_is(c, undefined, l),
+	   cat.putback_is(c, [], l),
+	   cat.putback_is(c, l, l));
+})();
+
+<span class="comment">/* Tests for LListFilter */</span>
+(<span class="reserved">function</span> () {
+	var filter = list_filter(<span class="reserved">function</span> (c) { <span class="reserved">return</span> c[0] == <span class="literal">'d'</span>; },
+							 <span class="reserved">function</span> (c) { <span class="reserved">return</span> c[0] == <span class="literal">'e'</span>; });
+    <span class="comment">// taken from Combinators for Bi-Directional Tree Transformations, p.34</span>
+	var l = [<span class="literal">'e1'</span>, <span class="literal">'d1'</span>, <span class="literal">'e2'</span>];
+	
+	$T(<span class="literal">'the list_filter lens'</span>,
+	   filter.get_is(l, [<span class="literal">'d1'</span>]),
+	   filter.putback_is([<span class="literal">'d1'</span>], [], [<span class="literal">'d1'</span>]),
+	   filter.putback_is([<span class="literal">'d1'</span>], l, l),
+	   filter.putback_is([<span class="literal">'d2'</span>], l, [<span class="literal">'e1'</span>, <span class="literal">'d2'</span>, <span class="literal">'e2'</span>]),
+	   filter.getput([]),
+	   filter.putget([], []),
+	   filter.getput(l),
+	   filter.putget([<span class="literal">'d1'</span>], l),
+	   filter.putget([<span class="literal">'d1'</span>, <span class="literal">'d2'</span>, <span class="literal">'d3'</span>], l),
+	   filter.getput([<span class="literal">'e1'</span>, <span class="literal">'e2'</span>]));
+})();
+
+<span class="comment">// LIST LENSES }}}</span>
+
+<span class="comment">// {{{ COMPOSITE LENSES</span>
+
+<span class="comment">/* Tests for LLayout */</span>
+(<span class="reserved">function</span> () {
+    var l = layout(<span class="literal">'foo'</span>, plus(5, 0), 
+                   <span class="literal">'bar'</span>, <span class="literal">'baz'</span>, 
+                   <span class="literal">'quux'</span>, times(5, 0));
+    var fooquux = { foo : 5, quux : 3 };
+    var list = [10, <span class="literal">'baz'</span>, 15];
+    
+    $T(<span class="literal">'the layout lens'</span>,
+       l.get_is(fooquux, list),
+       l.putback_is(list, undefined, fooquux),
+       l.getput(fooquux),
+       l.putget(list, undefined),
+       l.putget(list, {}),
+       l.putget(list, fooquux));
+})();
+
+<span class="comment">// COMPOSITE LENSES }}}</span>
+
+<span class="comment">// {{{ DOM LENSES</span>
+
+<span class="comment">/* Tests for LTextTag */</span>
+(<span class="reserved">function</span> () {
+    var text = text_tag();
+    var num = document.createTextNode(5);
+    var foo = document.createTextNode(<span class="literal">'foo'</span>);  
+    
+    $T(<span class="literal">'the text_tag lens'</span>,
+       text.getput(0),
+       text.getput(5),
+       text.getput(<span class="literal">'foo'</span>),
+       text.putget(num, undefined),
+       text.putget(num, <span class="literal">'0'</span>),
+       text.putget(num, <span class="literal">'foo'</span>),
+       text.putget(foo, undefined),
+       text.putget(foo, 0),
+       text.putget(foo, <span class="literal">'bar'</span>),
+       text.get_is(undefined, document.createTextNode(<span class="literal">'undefined'</span>)),
+       text.get_is(5, num),
+       text.get_is(<span class="literal">'foo'</span>, foo),
+       text.putback_is(document.createTextNode(<span class="literal">'undefined'</span>), undefined, <span class="literal">'undefined'</span>), <span class="comment">// violates PUTGET</span>
+       text.putback_is(num, 3, 5),
+       text.putback_is(foo, <span class="literal">'bar'</span>, <span class="literal">'foo'</span>));
+})();
+
+<span class="comment">/* Tests for LConstTag */</span>
+(<span class="reserved">function</span> () {
+    <span class="reserved">function</span> run_tests(msg, br, e) {
+        $T(<span class="literal">'the constant_tag lens ('</span> + msg + <span class="literal">')'</span>,
+           br.getput(undefined),
+           br.getput(0),
+           br.getput(20),
+           br.getput({ foo: 5 }),
+           br.putget(e, undefined),
+           br.putget(e, 0),
+           br.putget(e, 20),
+           br.putget(e, { foo: 5 }),
+           br.get_is(undefined, e),
+           br.get_is(20, e),
+           br.putback_is(e, 5, 5),
+           br.putback_is(e, undefined, 5));
+    }
+    
+    var e = document.createElement(<span class="literal">'br'</span>);
+    run_tests(<span class="literal">'constant_tag BR'</span>, constant_tag(<span class="literal">'br'</span>, 5), e);
+    run_tests(<span class="literal">'br_tag'</span>, br_tag(5), e);
+    
+    e = document.createElement(<span class="literal">'hr'</span>);
+    e.setAttribute(<span class="literal">'width'</span>, <span class="literal">'50%'</span>);
+    run_tests(<span class="literal">'constant_tag HR'</span>, constant_tag(<span class="literal">'hr'</span>, 5, { width: <span class="literal">'50%'</span> }), e);
+    run_tests(<span class="literal">'hr_tag'</span>, hr_tag(5, { width: <span class="literal">'50%'</span> }));
+})();
+
+<span class="comment">/* Tests for LTag */</span>
+(<span class="reserved">function</span> () {
+    var div = tag(<span class="literal">'div'</span>);
+    
+    var num_div = document.createElement(<span class="literal">'div'</span>);
+    num_div.appendChild(document.createTextNode(5));    
+    
+    var foo_div = document.createElement(<span class="literal">'div'</span>);
+    foo_div.appendChild(document.createTextNode(<span class="literal">'foo'</span>));
+
+    var tag_tests = <span class="reserved">function</span> (tag, lens, num, foo) {
+        $T(<span class="literal">'the tag lens ('</span> + tag + <span class="literal">')'</span>,
+           lens.getput(0),
+           lens.getput(<span class="literal">'foo'</span>),
+           lens.putget(num, undefined, 5),
+           lens.putget(num, 5, 5),
+           lens.putget(num, <span class="literal">'foo'</span>, 5),
+           lens.putget(foo, undefined, <span class="literal">'foo'</span>),
+           lens.putget(foo, 5, <span class="literal">'foo'</span>),
+           lens.putget(foo, <span class="literal">'foo'</span>, <span class="literal">'foo'</span>),
+           lens.get_is(5, num),
+           lens.get_is(<span class="literal">'foo'</span>, foo),
+           lens.putback_is(num, 3, 5),
+           lens.putback_is(foo, <span class="literal">'bar'</span>, <span class="literal">'foo'</span>));
+    };
+
+    tag_tests(<span class="literal">'DIV'</span>, div, num_div, foo_div);
+    tag_tests(<span class="literal">'real DIV'</span>, div_tag(), num_div, foo_div);
+       
+    var input = tag(<span class="literal">'input'</span>, <span class="literal">'value'</span>, { id: <span class="literal">'text'</span> });
+    
+    var num_input = document.createElement(<span class="literal">'input'</span>);
+    num_input.setAttribute(<span class="literal">'id'</span>, <span class="literal">'text'</span>);
+    num_input.setAttribute(<span class="literal">'value'</span>, 5);
+    
+    var foo_input = document.createElement(<span class="literal">'input'</span>);
+    foo_input.setAttribute(<span class="literal">'id'</span>, <span class="literal">'text'</span>);
+    foo_input.setAttribute(<span class="literal">'value'</span>, <span class="literal">'foo'</span>);
+    
+    tag_tests(<span class="literal">'INPUT'</span>, input, num_input, foo_input);
+    tag_tests(<span class="literal">'real INPUT'</span>, input_tag({ id: <span class="literal">'text'</span> }),
+              num_input, foo_input);
+    
+    var big_div = tag(<span class="literal">'div'</span>, <span class="literal">'child'</span>,
+                      { id: <span class="literal">'big_div'</span>, <span class="literal">'class'</span>: <span class="literal">'big_things'</span> },
+                      [<span class="literal">'Some preliminary text.'</span>]);
+    var big_lay = plunge(<span class="literal">'foo'</span>).
+                  div_tag({ id: <span class="literal">'big_div'</span>, <span class="literal">'class'</span>: <span class="literal">'big_things'</span> },
+                          <span class="literal">'text'</span>, <span class="literal">'Some preliminary text.'</span>,
+                          <span class="literal">'foo'</span>, id_lens());
+
+    <span class="reserved">function</span> makeBigDiv(v) {
+        var node = document.createElement(<span class="literal">'div'</span>);
+        node.setAttribute(<span class="literal">'id'</span>, <span class="literal">'big_div'</span>);
+        node.setAttribute(<span class="literal">'class'</span>, <span class="literal">'big_things'</span>);
+        node.appendChild(document.createTextNode(<span class="literal">'Some preliminary text.'</span>));
+        node.appendChild(document.createTextNode(v));
+        
+        <span class="reserved">return</span> node;         
+    }    
+    
+    var num_bdv = makeBigDiv(5);
+    var foo_bdv = makeBigDiv(<span class="literal">'foo'</span>);
+    
+    tag_tests(<span class="literal">'complex DIV'</span>, big_div, num_bdv, foo_bdv);
+    tag_tests(<span class="literal">'complex DIV with layout'</span>, big_lay, num_bdv, foo_bdv);
+    
+    var big_seq = input_tag({ id: <span class="literal">'text'</span> },
+                            plus(5, 0));
+    $T(<span class="literal">'the tag lens (complex DIV with seq)'</span>,
+       big_seq.getput(0),
+       big_seq.getput(5),
+       big_seq.putget(num_input, undefined),
+       big_seq.putget(num_input, 0),
+       big_seq.putget(num_input, 5),
+       big_seq.get_is(0, num_input),
+       big_seq.putback_is(num_input, 0, 0),
+       big_seq.putback_is(num_input, 5, 0),
+       big_seq.putback_is(num_input, undefined, 0));
+})();
+
+<span class="comment">/* Tests for LOptionTag */</span>
+(<span class="reserved">function</span> () {
+    var option = option_tag();
+
+    var simple_node = document.createElement(<span class="literal">'option'</span>);
+    simple_node.setAttribute(<span class="literal">'value'</span>, <span class="literal">'foo'</span>);
+    simple_node.appendChild(document.createTextNode(<span class="literal">'foo'</span>));
+    
+    var complex_node = document.createElement(<span class="literal">'option'</span>);
+    complex_node.setAttribute(<span class="literal">'value'</span>, <span class="literal">'bar'</span>);
+    complex_node.appendChild(document.createTextNode(<span class="literal">'foo'</span>));
+    var barfoo = { value: <span class="literal">'bar'</span>, text: <span class="literal">'foo'</span> };  
+    
+    $T(<span class="literal">'the option_tag lens'</span>,
+       option.getput(5),
+       option.getput(<span class="literal">'foo'</span>),
+       option.getput({ value: 5, text: <span class="literal">'foo'</span> }),
+       option.putget(simple_node, <span class="literal">'foo'</span>),
+       option.putget(complex_node, barfoo),
+       option.get_is(<span class="literal">'foo'</span>, simple_node),
+       option.putback_is(simple_node, <span class="literal">'bar'</span>, <span class="literal">'foo'</span>),
+       option.putback_is(simple_node, barfoo, { value: <span class="literal">'foo'</span>, text: <span class="literal">'foo'</span> }),
+       option.get_is(barfoo, complex_node),
+       option.putback_is(complex_node, {}, barfoo),
+       option.putback_is(complex_node, <span class="literal">'foo'</span>, <span class="literal">'foo'</span>)); 
+     
+})();
+
+<span class="comment">// DOM LENSES }}}</span>
+
+<span class="comment">// TESTS }}}</span>
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Wed Feb 14 15:36:01 2007</div>
+</body>
+</html>

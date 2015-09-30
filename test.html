@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>time_display lens with Flapjax</title>
+<script type="text/javascript" src="lens.js"></script>
+<script type="text/javascript" src="flapjax.js"></script>
+<script type="text/javascript">
+function loader() {
+fx = flapjaxInit();
+initLenses(fx);
+
+var model = model_b({ h: 12, m: 45 });
+
+/*
+var lens = span_tag({}, 
+  'label', 'Time: ', 
+  'h', input_tag(), 
+  'sep', ' : ', 
+  'm', input_tag());
+*/
+
+var lens = div_tag({}, 'h', input_tag(), 'm', input_tag(), 'foo', 'text');
+lens.bind_to_b(model, 'hook');
+
+insertDomB(model.transform(function (v) { return v.h; }), 'dh');
+insertDomB(model.transform(function (v) { return v.m; }), 'dm');
+
+}
+</script>
+</head>
+<body onload="loader();">
+<span id="hook"></span>
+<span id="dh"></span><span id="dm"></span>
+</body>
+</html>

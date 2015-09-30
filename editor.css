@@ -1,0 +1,192 @@
+.lens {
+    background-color: #fec
+}
+
+.model {
+    background-color: #ccf;
+}
+
+.view {
+    background-color: #cfc
+}
+
+.error {
+    color: #f33;
+}
+
+h1#header {
+	text-align: center;
+}
+
+div#container {
+    text-align: center;
+}
+
+div#model_view {
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+div#model {
+    display: table-cell;
+    float: right;
+}
+
+div#active {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    float: none;
+    padding: 3em;
+}
+
+a.dir {
+    text-decoration: none;
+}
+
+a.active_dir {
+    font-weight: bold;
+}
+
+a#model_dir {
+    color: blue;
+}
+
+a#view_dir {
+    color: green;
+}
+
+div#view {
+    display: table-cell;
+    float: left;
+}
+
+div#lens {
+    clear: left;
+    padding-top: 1em;
+    margin: 0 auto;
+}
+
+div#view_slections {
+    display: block;
+    text-align: left;
+}
+
+a.selection {
+    border-top: 1px solid green;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+    border-bottom-width: 0px;
+    padding: 4px 1em 4px 1em;
+    text-decoration: none;
+    color: #06a;
+    position: relative;
+    z-index: 100;
+}
+
+a.active_selection {
+    border-top: 3px solid green;
+    border-left: 3px solid green;
+    border-right: 3px solid green;
+    font-weight: bold;
+    position: relative;
+    z-index: 102;
+}
+
+a#view_render.active_selection {
+    top: -1px;
+}
+
+textarea {
+    overflow: scroll;
+}
+
+textarea#model_out {
+    border: 3px solid blue;
+}
+
+textarea#view_out {
+    border: 3px solid green;
+    position: relative;
+    z-index: 101;
+}
+
+div#view_out {
+    border: 3px solid green;
+    position: relative;
+    z-index: 101;
+    width: 26em;
+    height: 14em;
+}
+
+textarea#lens_out {
+    border: 3px solid orange;
+}
+
+div#log {
+    text-align: left;
+    margin-top: 1em;
+    border: 3px solid red;
+    background-color: #fcc;
+    height: 8em;
+    overflow: auto;
+    position: relative;
+}
+
+div.stack_trace {
+    position: relative;
+    left: 2em;
+    background-color: #fbb;
+    border: 2px solid #f66;
+    padding: 0;
+    max-width: 90%;
+}
+
+div.stack_frame {
+    position: relative;
+    top: -1px;
+    border-top: 1px dotted #f66;
+    padding: 2px;
+    display: table-row;
+}
+
+span.stack_frame {
+    display: table-cell;
+}
+
+span.stack_frame.call {
+    font-family: monospace;
+}
+
+span.stack_frame.ctx {
+    padding-left: 2em;
+}
+
+div.stack_buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+a.stack_button {
+    margin-right: 2em;
+    padding: 2px;
+    z-index: 101;
+    position: relative;
+    top: 2px;
+    
+    background-color: #faa;
+    border: 1px solid #f66;
+    color: #f33;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input#clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
